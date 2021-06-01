@@ -6,8 +6,9 @@ import FusionTheme from "fusioncharts/themes/fusioncharts.theme.fusion";
 
 ReactFC.fcRoot(FusionCharts,Column2D,FusionTheme);
 
+
 // STEP 2 - Chart Data
-const chartData = [
+const ChartData = [
   {
     label: "Venezuela",
     value: "290"
@@ -43,7 +44,7 @@ const chartData = [
 ];
 
 // STEP 3 - Creating the JSON object to store the chart configurations
-const chartConfigs = {
+const ChartConfigs = {
   type: "column2d", // The chart type
   width: "700", // Width of the chart
   height: "400", // Height of the chart
@@ -64,9 +65,9 @@ const chartConfigs = {
       theme: "fusion"
     },
     // Chart Data
-    data: chartData
+    data: ChartData
   }
 };
 
 
-export default chartConfigs;
+export default ChartConfigs;
