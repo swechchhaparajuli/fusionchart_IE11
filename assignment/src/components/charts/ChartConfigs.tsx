@@ -6,9 +6,8 @@ import FusionTheme from "fusioncharts/themes/fusioncharts.theme.fusion";
 
 ReactFC.fcRoot(FusionCharts,Column2D,FusionTheme);
 
-
 // STEP 2 - Chart Data
-const ChartData = [
+const ChartConfigs = [
   {
     label: "Venezuela",
     value: "290"

@@ -5,10 +5,10 @@
 #   How to Navigate 
 
 **GIF or Video**
-    ScreenCast of Fusion Run-Through: 
+-   ScreenCast of Fusion Run-Through: 
     ('https://drive.google.com/file/d/1uZsjViq0lWBAHubusueWvmH1zvPmOp7J/view)
-    ScreenCast of Code:
-    ()
+- ScreenCast of Code Run-Through:
+    ('https://drive.google.com/file/d/1FA0w5Mpjf7Ksi_DKbfGycFG4EZ5bq5pJ/view')
 
 #   Technology Used 
 
@@ -17,8 +17,6 @@
 - Axios
 - FusionCharts
 - core-js
-
-
 
 
 ##  Polyfills
@@ -33,8 +31,10 @@
 ##  CONFUGURATIONS
 - Babel and Webpack Config for IE11
     ('https://medium.com/@ramez.aijaz/transpile-typescript-to-es5-using-babel-and-webpack-f3b72a157399')
-    
+
 - webpack server replaced with 'webpack serve' 
+
+- 
  
 ##  APIs
    - mockaroo 
@@ -42,7 +42,7 @@
 
 #   Citations
 
-##  Online Resources 
+## Online Resources 
 
 ### Images/Logos
 

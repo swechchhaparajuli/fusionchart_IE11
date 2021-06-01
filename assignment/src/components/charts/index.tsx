@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import ReactFC from "react-fusioncharts";
-import CountryConfigs from './CountryConfigs'
-import ContinentConfigs from './ContinentConfigs'
+
+import CountryConfigs from './CountryConfigs';
+import ContinentConfigs from './ContinentConfigs';
 
 
 
