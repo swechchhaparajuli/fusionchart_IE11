@@ -14,10 +14,23 @@
 
 - PACKAGES
 
+##  Polyfills
+        - ES6-Polyfill for Promises 
+            ('https://github.com/stefanpenner/es6-promise')
+        - Babel 
+            ('https://medium.com/@vikasharry03/react-setup-on-local-computer-912f9a551af3)
+        - 
+##      
+
+
 - CONFUGURATIONS
+##    -     Async - Await npm
+
+        
 
 - APIs
-    --> mockaroo 
+##    - mockaroo 
+##    - Athena WHO (in progress ...)
 
 
 #   Learn More... 
@@ -27,4 +40,14 @@
 - Online Resources 
 
 ### Images/Logos
+
+
+
+### Good Posts to go back to 
+
+*Re-rendering Components, Used for button API refresher*
+- ('https://stackoverflow.com/questions/53215285/how-can-i-force-a-component-to-re-render-with-hooks-in-react')
+
+*Asynchronous JS Explanation/Tutorial*
+- ('https://scotch.io/tutorials/asynchronous-javascript-using-async-await)
 
