@@ -12,36 +12,39 @@
 
 #   Technology Used 
 
-- PACKAGES
+## PACKAGES
+- Async - Await npm
+- Axios
+- FusionCharts
+- core-js
+
+
+
 
 ##  Polyfills
-        - ES6-Polyfill for Promises 
+- ES6-Polyfill for Promises 
             ('https://github.com/stefanpenner/es6-promise')
-        - Babel 
+- Babel 
             ('https://medium.com/@vikasharry03/react-setup-on-local-computer-912f9a551af3)
-        - 
-##      
+- 
 
 
-- CONFUGURATIONS
-##    -     Async - Await npm
 
-        
-
-- APIs
-##    - mockaroo 
-##    - Athena WHO (in progress ...)
-
-
-#   Learn More... 
+##  CONFUGURATIONS
+- Babel and Webpack Config for IE11
+    ('https://medium.com/@ramez.aijaz/transpile-typescript-to-es5-using-babel-and-webpack-f3b72a157399')
+    
+- webpack server replaced with 'webpack serve' 
+ 
+##  APIs
+   - mockaroo 
+   - Athena WHO (in progress ...)
 
 #   Citations
 
-- Online Resources 
+##  Online Resources 
 
 ### Images/Logos
-
-
 
 ### Good Posts to go back to 
 
