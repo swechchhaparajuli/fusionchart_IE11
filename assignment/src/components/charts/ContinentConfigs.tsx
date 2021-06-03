@@ -1,22 +1,19 @@
+import React, { Component } from 'react';
 
-import ReactFC from "react-fusioncharts";
-import FusionCharts from "fusioncharts";
 
-import CandyTheme from 'fusioncharts/themes/fusioncharts.theme.candy';
-
-import FusionMaps from 'fusioncharts/maps/es/fusioncharts.world';
-import World from 'fusioncharts/fusioncharts.maps';
+import FusionCharts from "fusioncharts"
+import charts from 'fusioncharts/fusioncharts.charts';
+import ReactFC from 'react-fusioncharts';
 import chartData from '../../api/ContinentData';
+import CandyTheme from "fusioncharts/themes/fusioncharts.theme.candy";
+import FusionMaps from 'fusioncharts/fusioncharts.maps';
+import World from 'fusioncharts/maps/fusioncharts.world';
 
+charts(FusionCharts)
 ReactFC.fcRoot(FusionCharts, World, FusionMaps, CandyTheme);
 
 // STEP 3 - Creating the JSON object to store the chart configurations
-const ContinentConfigs = {
-  type: "maps/world", // The chart type
-  width: "100%", // Width of the chart
-  dataFormat: "json", // Data type
-
-  dataSource: {
+const dataSource = {
     // Chart Configuration
     chart: {
         caption: "Continent COVID Vaccination",
@@ -58,7 +55,60 @@ const ContinentConfigs = {
     },
     // Chart Data
     data: chartData
-  },
 };
+
+type DataConfig = {
+  chart: {caption: string, 
+      theme: string,
+      legendposition: string, 
+      entitytooltext:string,
+      legendcaption:string, 
+      entityfillhovercolor:string
+  };
+}
+
+class ContinentConfigs extends Component <{dtype: DataConfig}>{
+  state = {data: {
+    chart: this.props.dtype.chart,
+    colorRange: dataSource.colorrange,
+    data: chartData
+  }};
+
+
+  fillDay = () =>{
+    this.setState({data : 
+      {
+        chart: this.props.dtype.chart,
+        colorRange: dataSource.colorrange,
+        data: chartData
+      }});
+  }
+
+  fillMonth = () =>{
+    this.setState({data : 
+      {
+        chart: this.props.dtype.chart,
+        colorRange: dataSource.colorrange,
+        data: chartData
+      }});
+  }
+
+  
+
+
+  render() {
+    return (
+        <div>
+          <button onClick={this.fillDay} id="fill-day"> Vaccinations Per Day </button>
+          <button onClick={this.fillMonth} id="fill-month"> Vaccinations Per Month </button>
+        <ReactFC
+          type="maps/world"
+          width= "100%"
+          dataFormat="JSON"
+          dataSource={this.state.data}
+        /></div>
+    );
+  }
+}
 
 export default ContinentConfigs;

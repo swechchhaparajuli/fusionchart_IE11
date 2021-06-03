@@ -4,8 +4,54 @@ object-assign
 @license MIT
 */
 
+/*!
+ * The buffer module from node.js, for the browser.
+ *
+ * @author   Feross Aboukhadijeh <http://feross.org>
+ * @license  MIT
+ */
+
+/*! dontAppend && */
+
+/**
+ * Checks if an event is supported in the current execution environment.
+ *
+ * NOTE: This will not work correctly for non-generic events such as `change`,
+ * `reset`, `load`, `error`, and `select`.
+ *
+ * Borrows from Modernizr.
+ *
+ * @param {string} eventNameSuffix Event name, e.g. "click".
+ * @return {boolean} True if the event is supported.
+ * @internal
+ * @license Modernizr 3.0.0pre (Custom Build) | MIT
+ */
+
+/** !
+ * @license FusionCharts JavaScript Library
+ * Copyright FusionCharts, Inc.
+ * License Information at <http://www.fusioncharts.com/license>
+ */
+
+/** !
+ * @license FusionCharts JavaScript Library - KDtree
+ * Copyright FusionCharts, Inc.
+ * License Information at <http://www.fusioncharts.com/license>
+ *
+ * @version //? write(JSON.parse(require('fs').readFileSync('./package.json')).version);
+ */
+
 /** @license React v0.20.2
- * scheduler.production.min.js
+ * scheduler-tracing.development.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/** @license React v0.20.2
+ * scheduler.development.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
  *
@@ -14,7 +60,7 @@ object-assign
  */
 
 /** @license React v17.0.2
- * react-dom.production.min.js
+ * react-dom.development.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
  *
@@ -23,10 +69,33 @@ object-assign
  */
 
 /** @license React v17.0.2
- * react.production.min.js
+ * react.development.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
+
+/**!
+ * @license FusionCharts JavaScript Library
+ * Copyright FusionCharts, Inc.
+ * License Information at <http://www.fusioncharts.com/license>
+ *
+ * @author FusionCharts, Inc.
+ * @meta package_map_pack
+ * @id fusionmaps.World.20.10-30-2012 07:55:31
+ */
+
+/**!
+* @license FusionCharts JavaScript Library
+* Copyright FusionCharts, Inc.
+* License Information at <http://www.fusioncharts.com/license>
+*
+* @version 3.17.0
+*
+* @attributions (infers respective third-party copyrights)
+* Raphael 2.1.0 (modified as 'Red Raphael') <http://raphaeljs.com/license.html>
+* JSON v2 <http://www.JSON.org/js.html>
+* Firebug Lite 1.3.0 <http://getfirebug.com/firebuglite>
+*/

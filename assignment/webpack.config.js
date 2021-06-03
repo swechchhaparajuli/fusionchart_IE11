@@ -5,6 +5,7 @@ const webpack = require("webpack")
 
 
 module.exports = {
+    mode: 'development',
     entry: {
         app: ['core-js/stable', './src/index.tsx']
     },
@@ -73,6 +74,6 @@ module.exports = {
 
     devServer: {
         historyApiFallback: true, 
-        port:5500
+        port:5000
     }
 }

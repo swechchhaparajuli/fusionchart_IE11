@@ -1,28 +1,26 @@
+import React, { Component } from 'react';
 
 import ReactFC from "react-fusioncharts";
 import FusionCharts from "fusioncharts";
 
-import FusionTheme from "fusioncharts/themes/fusioncharts.theme.fusion";
+import UmberTheme from "fusioncharts/themes/fusioncharts.theme.umber";
+import CandyTheme from "fusioncharts/themes/fusioncharts.theme.candy";
 
-import FusionMaps from 'fusioncharts/maps/es/fusioncharts.usa';
-import USA from 'fusioncharts/fusioncharts.maps';
+import FusionMaps from 'fusioncharts/fusioncharts.maps';
+import USA from 'fusioncharts/maps/fusioncharts.usa';
 import FakeData from '../../api/WHOAPI'
+import FakeDataD from '../../api/whodAPI'
 import "../../api/WHOAPI"
 
 
-ReactFC.fcRoot(FusionCharts, USA, FusionMaps, FusionTheme);
+ReactFC.fcRoot(FusionCharts, USA, FusionMaps, CandyTheme);
 
 // STEP 3 - Creating the JSON object to store the chart configurations
-const CountryConfigs = {
-  type: "maps/usa", // The chart type
-  width: "100%", // Width of the chart
-  dataFormat: "json", // Data type
-
-  dataSource: {
+const dataSource = {
     // Chart Configuration
     chart: {
         caption: "Country COVID Vaccination",
-        theme: "fusion",
+        theme: "candy",
         legendposition: "BOTTOM",
         entitytooltext: "$lname: <b>$datavalue</b> vaccinations",
         legendcaption: "Number of vaccinations per day",
@@ -60,7 +58,62 @@ const CountryConfigs = {
     },
     // Chart Data
     data: FakeData
-  }
 };
+
+type DataConfig = {
+  chart: {caption: string, 
+      theme: string,
+      legendposition: string, 
+      entitytooltext:string,
+      legendcaption:string, 
+      entityfillhovercolor:string
+  };
+}
+
+  
+class CountryConfigs extends Component <{dtype: DataConfig}>{
+  
+  state = {data: {
+    chart: this.props.dtype.chart,
+    colorRange: dataSource.colorrange,
+    data: FakeData
+  }};
+  
+
+  fillDay = () =>{
+    this.setState({data : 
+    {
+      chart: this.props.dtype.chart,
+      colorRange: dataSource.colorrange,
+      data: FakeDataD
+    }});
+  }
+  
+  fillMonth = () => {
+    this.setState({data : 
+      {
+        chart: this.props.dtype.chart,
+        colorRange: dataSource.colorrange,
+        data: FakeData
+      }});
+  }
+
+
+
+  render() {
+    return (
+    <div>
+      <button onClick={this.fillDay} id="fill-day"> Vaccinations Per Day </button>
+      <button onClick={this.fillMonth} id="fill-month"> Vaccinations Per Month </button>
+      <ReactFC
+        type="usa"
+        width="100%"
+        dataFormat="JSON"
+        dataSource={this.state.data}
+      />
+    </div>
+    );
+  }
+}
 
 export default CountryConfigs;

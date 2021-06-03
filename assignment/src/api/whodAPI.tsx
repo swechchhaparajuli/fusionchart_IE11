@@ -4,6 +4,9 @@ import axios from 'axios';
 
 import 'jquery-fusioncharts';
 
+
+import FakeData from './WHOAPI';
+
 var FakeDataD = [{id:"CA",value:"200"}, {id:"MN",value:"2080"}, {id:"TX",value:"209850"}];
 
 

@@ -1,11 +1,14 @@
-import React from "react";
+import React, { Component } from 'react';
 
-const SomethingPretty = () => {
+class SomethingPretty extends Component{
+    render() {
     return(
         <div>
             <p>Testing TypeScript</p>
         </div>
+
     );
+    }
 }
 
 export default SomethingPretty;

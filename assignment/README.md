@@ -5,9 +5,9 @@
 #   How to Navigate 
 
 **GIF or Video**
--   ScreenCast of Fusion Run-Through: 
-    ('https://drive.google.com/file/d/1uZsjViq0lWBAHubusueWvmH1zvPmOp7J/view)
-- ScreenCast of Code Run-Through:
+-   ScreenCast of Fusion Run-Through With API & Shared-State Components: 
+    ('https://drive.google.com/file/d/1uOnMeFx_6xBYILzse_H8aIdgxeN4GRNf/view')
+- ScreenCast of Code Run-Through With API & Shared-State Components:
     ('https://drive.google.com/file/d/1FA0w5Mpjf7Ksi_DKbfGycFG4EZ5bq5pJ/view')
 
 #   Technology Used 
