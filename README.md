@@ -37,8 +37,20 @@
 - 
  
 ##  APIs
-   - mockaroo 
-   - Athena WHO (in progress ...)
+- mockaroo 
+- Athena WHO (in progress ...)
+
+#   Working Features
+- shared state components 
+- mockaroo API display 
+- toggle different data 
+- IE_11 compatible 
+
+##   Pending Features...
+- Athena WHO integration 
+- separating map components from app.tsx
+- choose map type to display 
+- auto re-rendering when state updates with no button click 
 
 #   Citations
 
