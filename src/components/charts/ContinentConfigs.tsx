@@ -93,14 +93,11 @@ class ContinentConfigs extends Component <{dtype: DataConfig}>{
       }});
   }
 
-  
-
-
   render() {
     return (
         <div>
-          <button onClick={this.fillDay} id="fill-day"> Vaccinations Per Day </button>
-          <button onClick={this.fillMonth} id="fill-month"> Vaccinations Per Month </button>
+          <button onClick={this.fillDay} id="fill-day"> Local Data </button>
+          <button onClick={this.fillMonth} id="fill-month"> API Data </button>
         <ReactFC
           type="maps/world"
           width= "100%"

@@ -39,7 +39,7 @@ const App:FC = () => {
     const [chart, setState] = useState(changeLabel("Annee")); 
 
     return(
-        <div key={chart.chart.caption}>
+        <div >
             <h1>{env}</h1>
             <MyMaps />
             {/* <button onClick={() => setState(changeLabel("Day"))}> Day Label </button>

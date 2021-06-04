@@ -17,11 +17,11 @@
 - mockaroo API display 
 - toggle different data 
 - IE_11 compatible 
+- choose map type to display 
+- separating map components from app.tsx
 
 ##   Pending Features...
 - Athena WHO integration 
-- separating map components from app.tsx
-- choose map type to display 
 - auto re-rendering when state updates with no button click 
     --> looks awkward right now, fix to be more graceful
 

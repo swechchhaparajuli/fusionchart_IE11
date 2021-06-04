@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 
 import EuroData from '../../api/eurodata';
 
-
+import MapConfig from '../charts/MapConfig'
 import CountryConfigs from './CountryConfigs';
 import ContinentConfigs from './ContinentConfigs';
 import EuroChart from './EuroChart';
@@ -107,16 +107,6 @@ var changeLabel = (val: string) =>{
     
 // }
 
-type DataConfig = {
-  chart: {caption: string, 
-      theme: string,
-      legendposition: string, 
-      entitytooltext:string,
-      legendcaption:string, 
-      entityfillhovercolor:string
-  };
-}
-
 
 
 class MyMaps extends Component {
@@ -130,7 +120,28 @@ class MyMaps extends Component {
       legendcaption: "Vaccines Per Year",
       entityfillhovercolor: " Vaccines"
     }
-  }};
+  },
+    showUSA: false,
+    showEurope: false, 
+    showWorld: false
+};
+
+
+  showMap = (map:string) => {
+    switch(map){
+      case "showUSA":
+        this.setState({showUSA: !this.state.showUSA});
+        break;
+      case "showEurope":
+        this.setState({showEurope: !this.state.showEurope});
+        break;
+      case "showWorld":
+        this.setState({showWorld: !this.state.showWorld});
+        break;
+      default: 
+        null;
+    }
+  }
 
   changeLabelDay = () =>{
     this.setState({data: {
@@ -158,13 +169,21 @@ class MyMaps extends Component {
   }
 
   render() {
+    const {showUSA, showEurope, showWorld} = this.state;
     return(
-    <div key={this.state.data.chart.caption}>
-        <button onClick={this.changeLabelDay}> Day Label </button>
-        <button onClick={this.changeLabelMonth}> Month Label </button>
-        <EuroChart dtype={this.state.data}/>
-        <CountryConfigs dtype={this.state.data}/>
-        <ContinentConfigs dtype={this.state.data}/>
+    // <div>
+      <div key={this.state.data.chart.caption}> 
+        <button onClick={this.changeLabelDay}> Rate Per Day </button>
+        <button onClick={this.changeLabelMonth}> Rate Per Month </button>
+        {!showUSA && <button onClick={() => this.showMap("showUSA")}>Show USA Map</button>}
+        {showUSA && <button onClick={() => this.showMap("showUSA")}>Hide USA Map</button>}
+        {!showEurope && <button onClick={() => this.showMap("showEurope")}>Show Europe Map</button>}
+        {showEurope && <button onClick={() => this.showMap("showEurope")}>Hide Europe Map</button>}
+        {!showWorld && <button onClick={() => this.showMap("showWorld")}>Show World Map</button>}
+        {showWorld && <button onClick={() => this.showMap("showWorld")}>Hide World Map</button>}
+        {showEurope && <EuroChart dtype={this.state.data}/>}
+        {showUSA && <CountryConfigs dtype={this.state.data}/>}
+        {showWorld && <ContinentConfigs dtype={this.state.data}/>}
     </div>
   )}
 

@@ -96,7 +96,7 @@ class EuroChart extends Component <{dtype: DataConfig}>{
     render() {
       return (
         <div>
-        <button onClick={this.fillDay} id="fill-day"> JSON </button>
+        <button onClick={this.fillDay} id="fill-day"> Local Data </button>
         <button onClick={this.fillMonth} id="fill-month"> API Data </button>
         <ReactFC
           type="europe"
