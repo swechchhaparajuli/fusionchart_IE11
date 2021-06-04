@@ -3,6 +3,8 @@ import {FC} from "react";
 import "./styles.scss";
 import CandyTheme from "fusioncharts/themes/fusioncharts.theme.candy";
 import EuroChart from "./components/charts/EuroChart"
+
+import MyMaps from "./components/charts/index"
 import ContinentConfigs from "./components/charts/ContinentConfigs"
 import CountryConfigs from "./components/charts/CountryConfigs"
 
@@ -39,11 +41,12 @@ const App:FC = () => {
     return(
         <div key={chart.chart.caption}>
             <h1>{env}</h1>
-            <button onClick={() => setState(changeLabel("Day"))}> Day Label </button>
+            <MyMaps />
+            {/* <button onClick={() => setState(changeLabel("Day"))}> Day Label </button>
             <button onClick={() => setState(changeLabel("Month"))}> Month Label </button>
             <EuroChart dtype={chart}/>
             <CountryConfigs dtype={chart}/>
-            <ContinentConfigs dtype={chart}/>
+            <ContinentConfigs dtype={chart}/> */}
         </div>
     )
 }

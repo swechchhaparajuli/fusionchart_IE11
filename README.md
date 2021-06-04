@@ -23,6 +23,7 @@
 - separating map components from app.tsx
 - choose map type to display 
 - auto re-rendering when state updates with no button click 
+    --> looks awkward right now, fix to be more graceful
 
 ## PACKAGES
 - Async - Await npm
