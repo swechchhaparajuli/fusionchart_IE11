@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 
 import EuroData from '../../api/eurodata';
 
-import MapConfig from '../charts/MapConfig'
 import CountryConfigs from './CountryConfigs';
 import ContinentConfigs from './ContinentConfigs';
 import EuroChart from './EuroChart';

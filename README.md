@@ -6,7 +6,7 @@
 
 **GIF or Video**
 -   ScreenCast of Fusion Run-Through With API & Shared-State Components: 
-    ('https://drive.google.com/file/d/1uOnMeFx_6xBYILzse_H8aIdgxeN4GRNf/view')
+    ('https://drive.google.com/file/d/1nsIAUiey3NhfwUvGFbmGGeZ7f_hq27de/view')
 - ScreenCast of Code Run-Through With API & Shared-State Components:
     ('https://drive.google.com/file/d/1lrhppE2TP8BXCiHBiX6_KXiJAPf8dj2x/view')
 
@@ -29,6 +29,8 @@
 - Async - Await npm
 - Axios
 - FusionCharts
+- FusionMaps 
+*Necessary for EuropeMap*
 - core-js
 
 
