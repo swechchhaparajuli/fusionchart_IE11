@@ -75,9 +75,10 @@ class CountryConfigs extends Component <{dtype: DataConfig}>{
   
   state = {data: {
     chart: this.props.dtype.chart,
-    colorRange: dataSource.colorrange,
+    colorrange: dataSource.colorrange,
     data: FakeData
   }};
+  
   
 
   fillDay = () =>{
@@ -98,11 +99,9 @@ class CountryConfigs extends Component <{dtype: DataConfig}>{
       }});
   }
 
-
-
   render() {
     return (
-    <div>
+    <div >
       <button onClick={this.fillDay} id="fill-day"> Vaccinations Per Day </button>
       <button onClick={this.fillMonth} id="fill-month"> Vaccinations Per Month </button>
       <ReactFC

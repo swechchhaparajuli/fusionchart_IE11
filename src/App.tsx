@@ -2,9 +2,9 @@ import React, {useState} from "react";
 import {FC} from "react";
 import "./styles.scss";
 import CandyTheme from "fusioncharts/themes/fusioncharts.theme.candy";
-import EuroChart from "../src/components/charts/EuroChart"
-import ContinentConfigs from "../src/components/charts/ContinentConfigs"
-import CountryConfigs from "../src/components/charts/CountryConfigs"
+import EuroChart from "./components/charts/EuroChart"
+import ContinentConfigs from "./components/charts/ContinentConfigs"
+import CountryConfigs from "./components/charts/CountryConfigs"
 
 type DataConfig = {
     chart: {caption: string, 
@@ -36,9 +36,8 @@ const App:FC = () => {
     const env = process.env.NODE_ENV;
     const [chart, setState] = useState(changeLabel("Annee")); 
 
-
     return(
-        <div>
+        <div key={chart.chart.caption}>
             <h1>{env}</h1>
             <button onClick={() => setState(changeLabel("Day"))}> Day Label </button>
             <button onClick={() => setState(changeLabel("Month"))}> Month Label </button>

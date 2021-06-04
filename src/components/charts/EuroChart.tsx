@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 
 import FusionCharts from "fusioncharts"
 import charts from 'fusioncharts/fusioncharts.charts';
@@ -96,7 +95,7 @@ class EuroChart extends Component <{dtype: DataConfig}>{
 
     render() {
       return (
-        <div>
+        <div key={this.props.dtype.chart.caption}>
         <button onClick={this.fillDay} id="fill-day"> JSON </button>
         <button onClick={this.fillMonth} id="fill-month"> API Data </button>
         <ReactFC
