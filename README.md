@@ -13,12 +13,17 @@
 #   Technology Used 
 
 #   Working Features
-- shared state components 
+- shared state components
+    --> basic shared state features
+        - toggle theme
+        - toggle map labels
+        
 - mockaroo API display 
 - toggle different data 
 - IE_11 compatible 
 - choose map type to display 
 - separating map components from app.tsx
+
 
 ##   Pending Features...
 - Athena WHO integration 

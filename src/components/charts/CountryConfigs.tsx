@@ -71,38 +71,58 @@ type DataConfig = {
 }
 
   
-class CountryConfigs extends Component <{dtype: DataConfig}>{
-  
+class CountryConfigs extends Component <{colors: string, dtype: string}>{
   state = {data: {
-    chart: this.props.dtype.chart,
-    colorrange: dataSource.colorrange,
+    chart: { 
+      caption: this.props.dtype,
+      theme: this.props.colors,
+      legendposition: dataSource.chart.legendposition,
+      entitytooltext: dataSource.chart.entitytooltext,
+      legendcaption: dataSource.chart.legendcaption,
+      entityfillhovercolor: dataSource.chart.entityfillhovercolor
+    },
+    colorRange: dataSource.colorrange,
     data: FakeData
-  }};
-  
+  }
+  };
   
 
   fillDay = () =>{
     this.setState({data : 
-    {
-      chart: this.props.dtype.chart,
-      colorRange: dataSource.colorrange,
-      data: FakeDataD
-    }});
-  }
+      {
+        chart: { 
+          caption: this.props.dtype,
+          theme: this.props.colors,
+          legendposition: dataSource.chart.legendposition,
+          entitytooltext: dataSource.chart.entitytooltext,
+          legendcaption: dataSource.chart.legendcaption,
+          entityfillhovercolor: dataSource.chart.entityfillhovercolor
+        },
+        colorRange: dataSource.colorrange,
+        data: FakeDataD
+      }});
+    }
   
   fillMonth = () => {
     this.setState({data : 
       {
-        chart: this.props.dtype.chart,
+        chart: { 
+          caption: this.props.dtype,
+          theme: this.props.colors,
+          legendposition: dataSource.chart.legendposition,
+          entitytooltext: dataSource.chart.entitytooltext,
+          legendcaption: dataSource.chart.legendcaption,
+          entityfillhovercolor: dataSource.chart.entityfillhovercolor
+        },
         colorRange: dataSource.colorrange,
         data: FakeData
       }});
-  }
+    }
 
   render() {
     return (
     <div >
-
+      <h3>USA Map in '{this.state.data.chart.theme}' Theme</h3>
       <button onClick={this.fillDay} id="fill-day"> Local Data</button>
       <button onClick={this.fillMonth} id="fill-month"> API Data </button>
       <ReactFC

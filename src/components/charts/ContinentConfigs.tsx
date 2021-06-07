@@ -67,35 +67,74 @@ type DataConfig = {
   };
 }
 
-class ContinentConfigs extends Component <{dtype: DataConfig}>{
+class ContinentConfigs extends Component <{colors: string, dtype: string}>{
   state = {data: {
-    chart: this.props.dtype.chart,
+    chart: { 
+      caption: this.props.dtype,
+      theme: this.props.colors,
+      legendposition: dataSource.chart.legendposition,
+      entitytooltext: dataSource.chart.entitytooltext,
+      legendcaption: dataSource.chart.legendcaption,
+      entityfillhovercolor: dataSource.chart.entityfillhovercolor
+    },
     colorRange: dataSource.colorrange,
     data: chartData
-  }};
+  }
+  };
+
+  componentWillReceiveProps = (nextProps) =>{
+    this.setState({data : 
+     {
+       chart: { 
+         caption: nextProps.dtype,
+         theme: nextProps.colors,
+         legendposition: dataSource.chart.legendposition,
+         entitytooltext: dataSource.chart.entitytooltext,
+         legendcaption: dataSource.chart.legendcaption,
+         entityfillhovercolor: dataSource.chart.entityfillhovercolor
+       },
+       colorRange: dataSource.colorrange,
+       data: chartData
+     }});
+}
 
 
   fillDay = () =>{
     this.setState({data : 
       {
-        chart: this.props.dtype.chart,
+        chart: { 
+          caption: this.props.dtype,
+          theme: this.props.colors,
+          legendposition: dataSource.chart.legendposition,
+          entitytooltext: dataSource.chart.entitytooltext,
+          legendcaption: dataSource.chart.legendcaption,
+          entityfillhovercolor: dataSource.chart.entityfillhovercolor
+        },
         colorRange: dataSource.colorrange,
         data: chartData
       }});
-  }
+    }
 
   fillMonth = () =>{
     this.setState({data : 
       {
-        chart: this.props.dtype.chart,
+        chart: { 
+          caption: this.props.dtype,
+          theme: this.props.colors,
+          legendposition: dataSource.chart.legendposition,
+          entitytooltext: dataSource.chart.entitytooltext,
+          legendcaption: dataSource.chart.legendcaption,
+          entityfillhovercolor: dataSource.chart.entityfillhovercolor
+        },
         colorRange: dataSource.colorrange,
         data: chartData
       }});
-  }
+    }
 
   render() {
     return (
         <div>
+          <h3>World Map in '{this.state.data.chart.theme}' Theme</h3>
           <button onClick={this.fillDay} id="fill-day"> Local Data </button>
           <button onClick={this.fillMonth} id="fill-month"> API Data </button>
         <ReactFC

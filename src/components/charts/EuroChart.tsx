@@ -69,33 +69,34 @@ const dataSource = {
     };
   }
 
-class EuroChart extends Component <{colors: string, dtype: DataConfig}>{
+class EuroChart extends Component <{colors: string, dtype: string}>{
 
   state = {data: {
     chart: { 
-      caption: this.props.dtype.chart.caption,
+      caption: this.props.dtype,
       theme: this.props.colors,
-      legendposition: this.props.dtype.chart.legendposition,
-      entitytooltext: this.props.dtype.chart.entitytooltext,
-      legendcaption: this.props.dtype.chart.legendcaption,
-      entityfillhovercolor: this.props.dtype.chart.entityfillhovercolor
+      legendposition: dataSource.chart.legendposition,
+      entitytooltext: dataSource.chart.entitytooltext,
+      legendcaption: dataSource.chart.legendcaption,
+      entityfillhovercolor: dataSource.chart.entityfillhovercolor
     },
     colorRange: dataSource.colorrange,
     data: EuroData
   }
   };
 
+
   fillDay = () =>{
 
     this.setState({data : 
     {
       chart: { 
-        caption: this.props.dtype.chart.caption,
+        caption: this.props.dtype,
         theme: this.props.colors,
-        legendposition: this.props.dtype.chart.legendposition,
-        entitytooltext: this.props.dtype.chart.entitytooltext,
-        legendcaption: this.props.dtype.chart.legendcaption,
-        entityfillhovercolor: this.props.dtype.chart.entityfillhovercolor
+        legendposition: dataSource.chart.legendposition,
+        entitytooltext: dataSource.chart.entitytooltext,
+        legendcaption: dataSource.chart.legendcaption,
+        entityfillhovercolor: dataSource.chart.entityfillhovercolor
       },
       colorRange: dataSource.colorrange,
       data: EuroData
@@ -106,12 +107,12 @@ class EuroChart extends Component <{colors: string, dtype: DataConfig}>{
     this.setState({data : 
       {
       chart: { 
-        caption: this.props.dtype.chart.caption,
+        caption: this.props.dtype,
         theme: this.props.colors,
-        legendposition: this.props.dtype.chart.legendposition,
-        entitytooltext: this.props.dtype.chart.entitytooltext,
-        legendcaption: this.props.dtype.chart.legendcaption,
-        entityfillhovercolor: this.props.dtype.chart.entityfillhovercolor
+        legendposition: dataSource.chart.legendposition,
+        entitytooltext: dataSource.chart.entitytooltext,
+        legendcaption: dataSource.chart.legendcaption,
+        entityfillhovercolor: dataSource.chart.entityfillhovercolor
       },
         colorRange: dataSource.colorrange,
         data: FakeDataD
