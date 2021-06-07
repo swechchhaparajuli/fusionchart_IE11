@@ -110,15 +110,19 @@ var changeLabel = (val: string) =>{
 
 class MyMaps extends Component {
 
-  state = {data: {
-    chart: {
-      caption: "Vaccines Per Year",
-      theme: "candy",
-      legendposition: "BOTTOM",
-      entitytooltext: "$lname: <b>$datavalue </b> vaccines",
-      legendcaption: "Vaccines Per Year",
-      entityfillhovercolor: " Vaccines"
-    }
+  state = { mapinfo: {
+    data: {
+      chart: {
+        caption: "Vaccines Per Year",
+        theme: "candy",
+        legendposition: "BOTTOM",
+        entitytooltext: "$lname: <b>$datavalue </b> vaccines",
+        legendcaption: "Vaccines Per Year",
+        entityfillhovercolor: " Vaccines"
+      }
+    },
+    interval: "exponential",
+    colorscheme: "candy"
   },
     showUSA: false,
     showEurope: false, 
@@ -143,51 +147,87 @@ class MyMaps extends Component {
   }
 
   changeLabelDay = () =>{
-    this.setState({data: {
+    this.setState({ mapinfo: {
+      data: {
     chart : {
         caption: "Vaccines Per Day",
-        theme: "candy",
+        theme: this.state.mapinfo.data.chart.theme,
         legendposition: "BOTTOM",
         entitytooltext: "$lname: <b>$datavalue </b> vaccines",
         legendcaption: "Vaccines Per Day",
         entityfillhovercolor: " Vaccines"
-    }
+    }},
+      interval: "exponential",
+      colorscheme: "candy"
     }});
   }
   changeLabelMonth = () =>{
-    this.setState({data: {
+
+    this.setState({mapinfo: { 
+      data: {
     chart : {
         caption: "Vaccines Per Month",
-        theme: "candy",
+        theme: this.state.mapinfo.data.chart.theme,
         legendposition: "BOTTOM",
         entitytooltext: "$lname: <b>$datavalue </b> vaccines",
         legendcaption: "Vaccines Per Month",
         entityfillhovercolor: " Vaccines"
     }
-    }});
+    },
+    interval: "exponential",
+    colorscheme: "candy"
+  }});
+
+  }
+
+  selectChange = (e:string) =>{
+    this.setState({mapinfo: { 
+      data: {
+          chart : this.state.mapinfo.data.chart
+      },
+    interval: "exponential",
+    colorscheme: e
+  }});
+    console.log("theme select change:" + this.state.mapinfo.colorscheme);
   }
 
   render() {
     const {showUSA, showEurope, showWorld} = this.state;
     return(
-    // <div>
-      <div key={this.state.data.chart.caption}> 
+    // <div  key={this.state.mapinfo.data.chart.caption} >
+      <div key={this.state.mapinfo.data.chart.caption && this.state.mapinfo.colorscheme}> 
+      <div> Shared States of Theme
+      <br></br>
+        <label>Choose a color scheme for maps:</label>
+        <select name="colorscheme" onChange={e => this.selectChange(e.target.value)} id="themes">
+          <option value="candy">Candy</option>
+          <option value="fusion">Fusion</option>
+          <option value="ocean">Ocean</option>
+          <option value="umber">Umber</option>
+        </select>
+      </div>
+
+      <div> Shared States of Rate Per month OR Day 
+        <br></br>
         <button onClick={this.changeLabelDay}> Rate Per Day </button>
         <button onClick={this.changeLabelMonth}> Rate Per Month </button>
+      </div>
+      <div>
         {!showUSA && <button onClick={() => this.showMap("showUSA")}>Show USA Map</button>}
         {showUSA && <button onClick={() => this.showMap("showUSA")}>Hide USA Map</button>}
         {!showEurope && <button onClick={() => this.showMap("showEurope")}>Show Europe Map</button>}
         {showEurope && <button onClick={() => this.showMap("showEurope")}>Hide Europe Map</button>}
         {!showWorld && <button onClick={() => this.showMap("showWorld")}>Show World Map</button>}
         {showWorld && <button onClick={() => this.showMap("showWorld")}>Hide World Map</button>}
-        {showEurope && <EuroChart dtype={this.state.data}/>}
-        {showUSA && <CountryConfigs dtype={this.state.data}/>}
-        {showWorld && <ContinentConfigs dtype={this.state.data}/>}
+      </div>
+
+      <div>
+          {showEurope && <EuroChart colors={this.state.mapinfo.colorscheme} dtype={this.state.mapinfo.data}/>}
+          {showUSA && <CountryConfigs dtype={this.state.mapinfo.data}/>}
+          {showWorld && <ContinentConfigs dtype={this.state.mapinfo.data}/>}
+      </div>
     </div>
   )}
-
 }
-
-
 
 export default MyMaps;

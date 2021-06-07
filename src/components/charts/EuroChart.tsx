@@ -4,13 +4,16 @@ import FusionCharts from "fusioncharts"
 import charts from 'fusioncharts/fusioncharts.charts';
 import ReactFC from 'react-fusioncharts';
 import CandyTheme from 'fusioncharts/themes/fusioncharts.theme.candy';
+import FusionTheme from 'fusioncharts/themes/fusioncharts.theme.fusion';
+import UmberTheme from 'fusioncharts/themes/fusioncharts.theme.umber';
+import OceanTheme from 'fusioncharts/themes/fusioncharts.theme.ocean';
 import EuroData from '../../api/eurodata';
 import FakeDataD from '../../api/whodAPI'
 import FusionMaps from 'fusionmaps/fusioncharts.maps';
 import Europe from 'fusionmaps/maps/fusioncharts.europe';
 
 charts(FusionCharts);
-ReactFC.fcRoot(FusionCharts, FusionMaps, Europe, CandyTheme);
+ReactFC.fcRoot(FusionCharts, FusionMaps, Europe, CandyTheme, FusionTheme,UmberTheme, OceanTheme);
 
 const dataSource = {
     chart: {
@@ -66,19 +69,34 @@ const dataSource = {
     };
   }
 
-class EuroChart extends Component <{dtype: DataConfig}>{
+class EuroChart extends Component <{colors: string, dtype: DataConfig}>{
 
   state = {data: {
-    chart: this.props.dtype.chart,
+    chart: { 
+      caption: this.props.dtype.chart.caption,
+      theme: this.props.colors,
+      legendposition: this.props.dtype.chart.legendposition,
+      entitytooltext: this.props.dtype.chart.entitytooltext,
+      legendcaption: this.props.dtype.chart.legendcaption,
+      entityfillhovercolor: this.props.dtype.chart.entityfillhovercolor
+    },
     colorRange: dataSource.colorrange,
     data: EuroData
-  }};
-  
+  }
+  };
 
   fillDay = () =>{
+
     this.setState({data : 
     {
-      chart: this.props.dtype.chart,
+      chart: { 
+        caption: this.props.dtype.chart.caption,
+        theme: this.props.colors,
+        legendposition: this.props.dtype.chart.legendposition,
+        entitytooltext: this.props.dtype.chart.entitytooltext,
+        legendcaption: this.props.dtype.chart.legendcaption,
+        entityfillhovercolor: this.props.dtype.chart.entityfillhovercolor
+      },
       colorRange: dataSource.colorrange,
       data: EuroData
     }});
@@ -87,7 +105,14 @@ class EuroChart extends Component <{dtype: DataConfig}>{
   fillMonth = () =>{
     this.setState({data : 
       {
-        chart: this.props.dtype.chart,
+      chart: { 
+        caption: this.props.dtype.chart.caption,
+        theme: this.props.colors,
+        legendposition: this.props.dtype.chart.legendposition,
+        entitytooltext: this.props.dtype.chart.entitytooltext,
+        legendcaption: this.props.dtype.chart.legendcaption,
+        entityfillhovercolor: this.props.dtype.chart.entityfillhovercolor
+      },
         colorRange: dataSource.colorrange,
         data: FakeDataD
       }});
@@ -96,6 +121,7 @@ class EuroChart extends Component <{dtype: DataConfig}>{
     render() {
       return (
         <div>
+        <h3>Europe Map in '{this.state.data.chart.theme}' Theme</h3>
         <button onClick={this.fillDay} id="fill-day"> Local Data </button>
         <button onClick={this.fillMonth} id="fill-month"> API Data </button>
         <ReactFC
