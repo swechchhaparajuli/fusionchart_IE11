@@ -85,6 +85,22 @@ class CountryConfigs extends Component <{colors: string, dtype: string}>{
     data: FakeData
   }
   };
+
+  componentWillReceiveProps = (nextProps) =>{
+    this.setState({data : 
+     {
+       chart: { 
+         caption: nextProps.dtype,
+         theme: nextProps.colors,
+         legendposition: dataSource.chart.legendposition,
+         entitytooltext: dataSource.chart.entitytooltext,
+         legendcaption: dataSource.chart.legendcaption,
+         entityfillhovercolor: dataSource.chart.entityfillhovercolor
+       },
+       colorRange: dataSource.colorrange,
+       data: this.state.data.data
+     }});
+}
   
 
   fillDay = () =>{

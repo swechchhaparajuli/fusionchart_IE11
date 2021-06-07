@@ -85,6 +85,22 @@ class EuroChart extends Component <{colors: string, dtype: string}>{
   }
   };
 
+  componentWillReceiveProps = (nextProps) =>{
+    this.setState({data : 
+     {
+       chart: { 
+         caption: nextProps.dtype,
+         theme: nextProps.colors,
+         legendposition: dataSource.chart.legendposition,
+         entitytooltext: dataSource.chart.entitytooltext,
+         legendcaption: dataSource.chart.legendcaption,
+         entityfillhovercolor: dataSource.chart.entityfillhovercolor
+       },
+       colorRange: dataSource.colorrange,
+       data: EuroData
+     }});
+}
+
 
   fillDay = () =>{
 

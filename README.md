@@ -10,6 +10,12 @@
 - ScreenCast of Code Run-Through With API & Shared-State Components:
     ('https://drive.google.com/file/d/1lrhppE2TP8BXCiHBiX6_KXiJAPf8dj2x/view')
 
+- ScreenCast of Shared State Run-through
+    ('https://drive.google.com/file/d/1mCpRGX2h2fLf0k4vbqJiEBjiK_gFnXGy/view)
+
+- Screen Cast of Code Snippets enabling Shared-State Components:
+    ('https://drive.google.com/file/d/1Ri_oy98UaqQ4i0rlgRkYv0tkeu8bT1YA/view')
+
 #   Technology Used 
 
 #   Working Features
