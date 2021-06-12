@@ -59,16 +59,6 @@ const dataSource = {
   };
   
 
-  type DataConfig = {
-    chart: {caption: string, 
-        theme: string,
-        legendposition: string, 
-        entitytooltext:string,
-        legendcaption:string, 
-        entityfillhovercolor:string
-    };
-  }
-
 class EuroChart extends Component <{colors: string, dtype: string}>{
 
   state = {data: {
@@ -81,29 +71,52 @@ class EuroChart extends Component <{colors: string, dtype: string}>{
       entityfillhovercolor: dataSource.chart.entityfillhovercolor
     },
     colorRange: dataSource.colorrange,
-    data: EuroData
+    data: dataSource.data
   }
-  };
+};
+
+  callAPI = () =>{
+    fetch("http://localhost:3000/testAPI")
+      .then(res => res.text())
+      .then(res =>
+          {this.setState({data: {
+            chart: { 
+              caption: this.state.data.chart.caption,
+              theme: this.state.data.chart.theme,
+              legendposition: this.state.data.chart.legendposition,
+              entitytooltext: this.state.data.chart.entitytooltext,
+              legendcaption: this.state.data.chart.legendcaption,
+              entityfillhovercolor: this.state.data.chart.entityfillhovercolor
+            },
+            colorRange: this.state.data.colorRange,
+            data: JSON.parse(res)
+          }});
+          console.log(JSON.parse(res));
+        });
+  }
 
   componentWillReceiveProps = (nextProps) =>{
-    this.setState({data : 
-     {
-       chart: { 
-         caption: nextProps.dtype,
-         theme: nextProps.colors,
-         legendposition: dataSource.chart.legendposition,
-         entitytooltext: dataSource.chart.entitytooltext,
-         legendcaption: dataSource.chart.legendcaption,
-         entityfillhovercolor: dataSource.chart.entityfillhovercolor
-       },
-       colorRange: dataSource.colorrange,
-       data: EuroData
-     }});
-}
+          this.setState({data : 
+          {
+          chart: { 
+          caption: nextProps.dtype,
+          theme: nextProps.colors,
+          legendposition: this.state.data.chart.legendposition,
+          entitytooltext: this.state.data.chart.entitytooltext,
+          legendcaption: this.state.data.chart.legendcaption,
+          entityfillhovercolor: this.state.data.chart.entityfillhovercolor
+        },
+        colorRange: this.state.data.colorRange,
+        data: this.state.data.data
+      }}); 
+  }
+
+  componentDidMount = () => {
+    this.callAPI();
+  }
 
 
   fillDay = () =>{
-
     this.setState({data : 
     {
       chart: { 
@@ -115,7 +128,7 @@ class EuroChart extends Component <{colors: string, dtype: string}>{
         entityfillhovercolor: dataSource.chart.entityfillhovercolor
       },
       colorRange: dataSource.colorrange,
-      data: EuroData
+      data: this.state.data.data
     }});
   }
   
@@ -131,7 +144,7 @@ class EuroChart extends Component <{colors: string, dtype: string}>{
         entityfillhovercolor: dataSource.chart.entityfillhovercolor
       },
         colorRange: dataSource.colorrange,
-        data: FakeDataD
+        data: this.state.data.data
       }});
   }
 

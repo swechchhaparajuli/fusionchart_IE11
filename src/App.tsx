@@ -7,6 +7,7 @@ import EuroChart from "./components/charts/EuroChart"
 import MyMaps from "./components/charts/index"
 import ContinentConfigs from "./components/charts/ContinentConfigs"
 import CountryConfigs from "./components/charts/CountryConfigs"
+import CMSComponent from "./components/demo/global"
 
 type DataConfig = {
     chart: {caption: string, 
@@ -38,12 +39,11 @@ const App:FC = () => {
     const env = process.env.NODE_ENV;
     const [chart, setState] = useState(changeLabel("Annee")); 
 
-    
-
     return(
         <div >
             <h1>{env}</h1>
-            <MyMaps />
+            <CMSComponent />
+          {/*  <MyMaps /> */}
             {/* <button onClick={() => setState(changeLabel("Day"))}> Day Label </button>
             <button onClick={() => setState(changeLabel("Month"))}> Month Label </button>
             <EuroChart dtype={chart}/>

@@ -1,0 +1,17 @@
+[{
+    "id": 1,
+    "country": "RU",
+    "vaccinated": 215721875
+  }, {
+    "id": 2,
+    "country": "FI",
+    "vaccinated": 942021575
+  }, {
+    "id": 39,
+    "country": "MT",
+    "vaccinated": 229946794
+  }, {
+    "id": 40,
+    "country": "IS",
+    "vaccinated": 902168718
+  }]

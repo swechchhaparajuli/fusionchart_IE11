@@ -17,13 +17,12 @@ async function VaxData(){
     
     try {
             const resp = await axios.get('./src/data/d.json')
-            console.log("data: ");
-            console.log(resp.data);
+
             for (let i = 0; i<resp.data.length; i++){
                 var obj = {id:resp.data[i].country,value:resp.data[i].vaccinated.toString()};
                 FakeData.push(obj);
             }
-            PrintData();
+
         } catch (error) {
             console.log(error);
         }

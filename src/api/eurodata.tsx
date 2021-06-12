@@ -2,8 +2,6 @@
 import axios from 'axios';
 
 
-import 'jquery-fusioncharts';
-
 
 var EuroData = [{id:"021",value:"20000000"}, {id:"046",value:"2"}, {id:"003",value:"209850"}];
 
@@ -16,9 +14,7 @@ async function EurData(){
     //const url = 'https://my.api.mockaroo.com/fake_vacc.json?key=41f2a030';
 
     try {
-            const resp = await axios.get('./src/data/eurod.json')
-            console.log("data: ");
-            console.log(resp.data);
+            const resp = await axios.get('./src/data/eurod.json');
             for (let i = 0; i<resp.data.length; i++){
                 var eurid = "0";
                 if(resp.data[i].id<10){
@@ -34,7 +30,7 @@ async function EurData(){
                 };
                 EuroData.push(obj);
             }
-            PrintData();
+
         } catch (error) {
             console.log(error);
         }

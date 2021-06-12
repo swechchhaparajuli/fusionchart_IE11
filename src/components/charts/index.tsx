@@ -12,9 +12,11 @@ import EuroChart from './EuroChart';
 class MyMaps extends Component {
 
   state = { mapinfo: {
-    interval: "exponential",
+    interval: 10,
     colorscheme: "candy",
-    caption: "Vaccines Per Year"
+    caption: "Vaccines Per Year",
+    min: 0,
+    max:20000000000
   },
     showUSA: false,
     showEurope: false, 
@@ -40,29 +42,63 @@ class MyMaps extends Component {
 
   changeLabelDay = () =>{
     this.setState({ mapinfo: {
-      interval: "exponential",
+      interval: this.state.mapinfo.interval,
       colorscheme: this.state.mapinfo.colorscheme,
-      caption: "Vaccines per Day"
+      caption: "Vaccines per Day",
+      min: this.state.mapinfo.min,
+      max:this.state.mapinfo.max
     }});
   }
 
   changeLabelMonth = () =>{
     this.setState({ mapinfo: {
-      interval: "exponential",
+      interval: this.state.mapinfo.interval,
       colorscheme: this.state.mapinfo.colorscheme,
-      caption: "Vaccines per Month"
+      caption: "Vaccines per Month",
+      min: this.state.mapinfo.min,
+      max:this.state.mapinfo.max
     }});
 
   }
 
   selectChange = (e:string) =>{
     this.setState({mapinfo: {
-    interval: "exponential",
+    interval: this.state.mapinfo.interval,
     colorscheme: e,
-    caption: this.state.mapinfo.caption
+    caption: this.state.mapinfo.caption,
+    min: this.state.mapinfo.min,
+    max:this.state.mapinfo.max
   }});
-    console.log("theme select change:" + this.state.mapinfo.colorscheme);
+   
   }
+
+  handleMaxInput(event:number) {
+    this.setState({
+      interval: this.state.mapinfo.interval,
+      colorscheme: this.state.mapinfo.interval,
+      caption: this.state.mapinfo.caption,
+      min: this.state.mapinfo.min,
+      max: event
+    });
+    console.log(event);
+  }
+
+  handleMinInput(event:number){
+    this.setState({
+      interval: this.state.mapinfo.interval,
+      colorscheme: this.state.mapinfo.interval,
+      caption: this.state.mapinfo.caption,
+      min: event,
+      max: this.state.mapinfo.max
+    });
+    console.log(event);
+  }
+
+  handleSubmit(){
+    console.log("submitted");
+  }
+
+
 
   render() {
     const {showUSA, showEurope, showWorld} = this.state;
@@ -79,6 +115,22 @@ class MyMaps extends Component {
           <option value="umber">Umber</option>
         </select>
       </div>
+
+
+      <h2>Shared States of Interval</h2>
+      <form>
+        <label>Enter range max
+        <input type="number" id="maxIn" value={this.state.mapinfo.max} onChange={event => this.handleMaxInput(event.currentTarget.value)}/>
+        <input type="submit" value="Submit"></input>
+        </label>
+      </form>
+      <form>
+      <label>Enter range min
+      <input type="number" id="minIn" value={this.state.mapinfo.min} onChange={event => this.handleMinInput(event.currentTarget.value)}/>
+      <input type="submit" value="Submit"></input>
+      </label>
+      </form>
+
 
       <div> <h2>Shared States of Rate Per month OR Day</h2>
         <br></br>
