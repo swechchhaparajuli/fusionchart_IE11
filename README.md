@@ -32,9 +32,11 @@
 
 
 ##   Pending Features...
-- Athena WHO integration 
-- auto re-rendering when state updates with no button click 
-    --> looks awkward right now, fix to be more graceful
+- Redux 
+- Event-driven API calls 
+- functional components instead of class components 
+- bar graph/chart functioning 
+- figure out how to make US maps work with lots of data---?
 
 ## PACKAGES
 - Async - Await npm
