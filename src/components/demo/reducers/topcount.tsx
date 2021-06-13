@@ -2,7 +2,7 @@
 const topCountReducer = (state = 0, action) => {
     switch (action.type){
         case "TOPCOUNT":
-            return action.payload
+            return action.interval
         default:
             return state;
     }

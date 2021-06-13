@@ -32,8 +32,8 @@ const App:FC = () => {
     return(
         <div >
             <h1>{env}</h1>
-            {/*<CMSComponent />*/}
-            <MyMaps /> 
+            <CMSComponent />
+            {/*<MyMaps /> */}
             {/* <button onClick={() => setState(changeLabel("Day"))}> Day Label </button>
             <button onClick={() => setState(changeLabel("Month"))}> Month Label </button>
             <EuroChart dtype={chart}/>

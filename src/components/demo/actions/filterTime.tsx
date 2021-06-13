@@ -55,11 +55,10 @@ const dataSource = {
   }
 
 export const filterTime = (time:number) => {
-    callAPI();
     return {
         type:"TIME",
         interval: time,
-        payload: dataSource
+        payload: callAPI()
     };
 }
 
