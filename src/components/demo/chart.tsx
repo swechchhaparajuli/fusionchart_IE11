@@ -1,10 +1,19 @@
+
+
 import React, {useState} from "react";
 import {FC} from "react";
 import FusionCharts from "fusioncharts";
 import ReactFC from 'react-fusioncharts';
 import charts from "fusioncharts/fusioncharts.charts";
 import ReactFusioncharts from "react-fusioncharts";
+import FusionTheme from "fusioncharts/themes/fusioncharts.theme.fusion";
+import Column2D from "fusioncharts/fusioncharts.charts";
+import {useSelector, useDispatch} from 'react-redux';
+import {filterTime} from './actions/filterTime'
+import {filterTopCount} from './actions/filterTop15'
 
+
+ReactFC.fcRoot(FusionCharts,Column2D,FusionTheme);
 charts(FusionCharts);
 
 
@@ -55,9 +64,16 @@ const dataSource = {
 
 const ChartComponent:FC = () => {
 
+    const topcount = useSelector(state => state.topCount);
+    const years = useSelector(state => state.yearBack);
+
+    const dispatch = useDispatch();
 
     return(
-        <div >
+        <div className="container">
+            <h1>Filter Year {years}</h1>
+            <button onClick={() => dispatch(filterTime(2020))}>2020</button>
+            <button onClick={() => dispatch(filterTime(1990))}>1990</button>
             <p>CHART COMPONENT</p>  
             <ReactFusioncharts
                 type="column2d"

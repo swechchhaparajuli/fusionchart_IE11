@@ -30,10 +30,11 @@
 - choose map type to display 
 - separating map components from app.tsx
 
+- Event-driven API Calls 
+
 
 ##   Pending Features...
 - Redux 
-- Event-driven API calls 
 - functional components instead of class components 
 - bar graph/chart functioning 
 - figure out how to make US maps work with lots of data---?

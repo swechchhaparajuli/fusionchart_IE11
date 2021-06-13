@@ -1,85 +1,101 @@
 [{
     "id": 12345,
     "date": "08121997",
-    "company": 215721875,
-    "details": 215721875
+    "company": "215721875",
+    "details": "detail info",
+    "value" : "434607"
   }, {
     "id": 223446,
     "date": "12042021",
-    "company": 215721875,
-    "details": 215721875
+    "company": "215721875",
+    "details": "detail info",
+    "value" : "463760"
   }, {
     "id": 394267,
     "date": "02281834",
-    "company": 215721875,
-    "details": 215721875
+    "company": "215721875",
+    "details": "detail info",
+    "value" : "463074"
   }, {
     "id": 405673,
     "date": "03211984",
-    "company": 215721875,
-    "details": 215721875
+    "company": "215721875",
+    "details": "detail info",
+    "value" : "743460"
   },
   {
     "id": 126645,
     "date": "08121997",
-    "company": 215721875,
-    "details": 215721875
+    "company": "215721875",
+    "details": "detail info",
+    "value" : "743460"
   }, {
     "id": 243456,
     "date": "12042021",
-    "company": 215721875,
-    "details": 215721875
+    "company": "215721875",
+    "details": "detail info",
+    "value" : "46730"
   }, {
     "id": 394367,
     "date": "02281834",
-    "company": 215721875,
-    "details": 215721875
+    "company": "215721875",
+    "details": "detail info",
+    "value" : "34670"
   }, {
     "id": 404678,
     "date": "03211984",
-    "company": 215721875,
-    "details": 215721875
+    "company": "215721875",
+    "details": "detail info",
+    "value" : "33760"
   },
   {
     "id": 123355,
     "date": "08121997",
-    "company": 215721875,
-    "details": 215721875
+    "company": "215721875",
+    "details": "detail info",
+    "value" : "37640"
   }, {
     "id": 223856,
     "date": "12042021",
-    "company": 215721875,
-    "details": 215721875
+    "company": "215721875",
+    "details": "detail info",
+    "value" : "85330"
   }, {
     "id": 393567,
     "date": "02281834",
-    "company": 215721875,
-    "details": 215721875
+    "company": "215721875",
+    "details": "detail info",
+    "value" : "768830"
   }, {
     "id": 405178,
     "date": "03211984",
-    "company": 215721875,
-    "details": 215721875
+    "company": "215721875",
+    "details": "detail info",
+    "value" : "56330"
   },
   {
     "id": 12745,
     "date": "08121997",
-    "company": 215721875,
-    "details": 215721875
+    "company": "215721875",
+    "details": "detail info",
+    "value" : "35630"
   }, {
     "id": 223436,
     "date": "12042021",
-    "company": 215721875,
-    "details": 215721875
+    "company": "215721875",
+    "details": "detail info",
+    "value" : "30356"
   }, {
     "id": 364567,
     "date": "02281834",
-    "company": 215721875,
-    "details": 215721875
+    "company": "215721875",
+    "details": "detail info",
+    "value" : "33670"
   }, {
     "id": 405378,
     "date": "03211984",
-    "company": 215721875,
-    "details": 215721875
+    "company": "215721875",
+    "details": "detail info",
+    "value" : "34630"
   }
 ]
