@@ -79,7 +79,10 @@ class EuroChart extends Component <{colors: string, dtype: string}>{
     fetch("http://localhost:3000/testAPI")
       .then(res => res.text())
       .then(res =>
-          {this.setState({data: {
+          {
+            
+            
+            this.setState({data: {
             chart: { 
               caption: this.state.data.chart.caption,
               theme: this.state.data.chart.theme,

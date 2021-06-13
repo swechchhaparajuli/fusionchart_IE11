@@ -1,17 +1,13 @@
 [{
-    "id": 1,
-    "country": "RU",
-    "vaccinated": 215721875
+    "id": "001",
+    "value": "215721875"
   }, {
-    "id": 2,
-    "country": "FI",
-    "vaccinated": 942021575
+    "id": "002",
+    "value": "942021575"
   }, {
-    "id": 39,
-    "country": "MT",
-    "vaccinated": 229946794
+    "id": "039",
+    "value": "229946794"
   }, {
-    "id": 40,
-    "country": "IS",
-    "vaccinated": 902168718
+    "id": "040",
+    "value": "902168718"
   }]

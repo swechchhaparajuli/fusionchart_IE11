@@ -11,7 +11,7 @@ router.get('/', function(req, res, next) {
     const url = 'http://localhost:5000/src/data/maps/eurod.json'
 
     axios.get(url).then(response => {
-        res.send(JSON.stringify(response.data.message));
+        res.send(JSON.stringify(response.data));
     }).catch (function (error) {
         console.log(error);
         res.send(JSON.stringify([{id:"046", value: "10000"}]));

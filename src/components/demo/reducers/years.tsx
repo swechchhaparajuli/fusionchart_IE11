@@ -3,7 +3,7 @@
 const  yearBackReducer= (state = 0, action) => {
     switch (action.type){
         case "TIME":
-            return state + action.interval
+            return action.payload
         default:
             return state;
     }

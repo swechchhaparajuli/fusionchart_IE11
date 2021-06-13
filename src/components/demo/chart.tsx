@@ -1,5 +1,3 @@
-
-
 import React, {useState} from "react";
 import {FC} from "react";
 import FusionCharts from "fusioncharts";
@@ -11,7 +9,6 @@ import Column2D from "fusioncharts/fusioncharts.charts";
 import {useSelector, useDispatch} from 'react-redux';
 import {filterTime} from './actions/filterTime'
 import {filterTopCount} from './actions/filterTop15'
-
 
 ReactFC.fcRoot(FusionCharts,Column2D,FusionTheme);
 charts(FusionCharts);
@@ -66,21 +63,30 @@ const ChartComponent:FC = () => {
 
     const topcount = useSelector(state => state.topCount);
     const years = useSelector(state => state.yearBack);
+    //const datasource = useSelector(state => state.payload);
 
     const dispatch = useDispatch();
 
     return(
         <div className="container">
-            <h1>Filter Year {years}</h1>
-            <button onClick={() => dispatch(filterTime(2020))}>2020</button>
-            <button onClick={() => dispatch(filterTime(1990))}>1990</button>
+            <h1>Filter Year </h1>
+            <button onClick={() => dispatch(filterTime(2020))}>Past Year</button>
+            <button onClick={() => dispatch(filterTime(2019))}>Past Two Years</button>
+            <button onClick={() => dispatch(filterTime(2010))}>Past Ten Years</button>
+
+            <h1> Filter Top Count</h1>
+            <button onClick={() => dispatch(filterTopCount(10))}>Top Ten</button>
+            <button onClick={() => dispatch(filterTopCount(15))}>Top 15</button>
+            <button onClick={() => dispatch(filterTopCount(0))}>All</button>
+
+
             <p>CHART COMPONENT</p>  
             <ReactFusioncharts
                 type="column2d"
                 width="100%"
                 height="100%"
                 dataFormat="JSON"
-                dataSource={dataSource}
+                dataSource={years}
       />
         </div>
     )

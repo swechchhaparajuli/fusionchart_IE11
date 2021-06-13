@@ -9,16 +9,6 @@ import ContinentConfigs from "./components/charts/ContinentConfigs"
 import CountryConfigs from "./components/charts/CountryConfigs"
 import CMSComponent from "./components/demo/global"
 
-type DataConfig = {
-    chart: {caption: string, 
-        theme: string,
-        legendposition: string, 
-        entitytooltext:string,
-        legendcaption:string, 
-        entityfillhovercolor:string
-    };
-}
-
 
 var changeLabel = (val: string) =>{
   
@@ -42,8 +32,8 @@ const App:FC = () => {
     return(
         <div >
             <h1>{env}</h1>
-            <CMSComponent />
-          {/*  <MyMaps /> */}
+            {/*<CMSComponent />*/}
+            <MyMaps /> 
             {/* <button onClick={() => setState(changeLabel("Day"))}> Day Label </button>
             <button onClick={() => setState(changeLabel("Month"))}> Month Label </button>
             <EuroChart dtype={chart}/>

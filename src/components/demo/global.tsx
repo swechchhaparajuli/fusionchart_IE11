@@ -4,9 +4,6 @@ import ChartComponent from "./chart";
 import DetailsComponent from "./details";
 
 const CMSComponent:FC = () => {
-
-    
-
     return(
         <div >
             <h1>CMS COMPONENT</h1>  
