@@ -10,45 +10,22 @@ const dataSource = {
     data: [
       {
         label: "Venezuela",
-        value: "290"
-      },
-      {
-        label: "Saudi",
-        value: "260"
-      },
-      {
-        label: "Canada",
-        value: "180"
-      },
-      {
-        label: "Iran",
-        value: "140"
-      },
-      {
-        label: "Russia",
-        value: "115"
-      },
-      {
-        label: "UAE",
-        value: "100"
-      },
-      {
-        label: "US",
-        value: "30"
-      },
-      {
-        label: "China",
-        value: "30"
+        value: "29"
       }
     ]
   };
 
-  const callAPI = () =>{
+  const getListFiltered = (parsedlist:string, time:number) =>{
+    const items = JSON.parse(parsedlist).filter(item => item.value>time);
+    return items;
+  }
+
+  const callAPI = (time:number) =>{
     fetch("http://localhost:3000/testAPI")
       .then(res => res.text())
       .then(res => 
         {
-            dataSource.data = JSON.parse(res);
+            dataSource.data = getListFiltered(res,time);
             console.log(JSON.parse(res));
         });
         return dataSource;
@@ -58,7 +35,7 @@ export const filterTime = (time:number) => {
     return {
         type:"TIME",
         interval: time,
-        payload: callAPI()
+        payload: callAPI(2020-time)
     };
 }
 

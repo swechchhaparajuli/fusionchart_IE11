@@ -7,7 +7,13 @@ import EuroChart from "./components/charts/EuroChart"
 import MyMaps from "./components/charts/index"
 import ContinentConfigs from "./components/charts/ContinentConfigs"
 import CountryConfigs from "./components/charts/CountryConfigs"
-import CMSComponent from "./components/demo/global"
+import {useDispatch, useSelector} from 'react-redux';
+import {displayType} from './components/demo/actions/graphsDisplay'
+import Form from 'react-bootstrap/Form';
+import Navbar from 'react-bootstrap/Navbar';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import CMSComponent from "./components/demo/index"
 
 
 var changeLabel = (val: string) =>{
@@ -25,13 +31,32 @@ var changeLabel = (val: string) =>{
     return config;
 }
 
+//const env = process.env.NODE_ENV;
+// <h1>{env}</h1>
+
 const App:FC = () => {
-    const env = process.env.NODE_ENV;
+
     const [chart, setState] = useState(changeLabel("Annee")); 
+    const dispatch = useDispatch();
 
     return(
         <div >
-            <h1>{env}</h1>
+            <Navbar className="bg-light justify-content-end">
+            <Form>
+                    
+                    <Form.Group controlId="formBasicCheckbox">
+                    <Row>
+                    <Col>
+                        <Form.Check onChange={() => {dispatch(displayType("CHART"))}} type="checkbox" label="Graph" />
+                    </Col>
+                    <Col>
+                        <Form.Check onChange={() => {dispatch(displayType("GRID"))}} type="checkbox" label="Data List" />
+                    </Col>
+                    </Row>
+                        </Form.Group>
+            </Form>
+            </Navbar>
+           
             <CMSComponent />
             {/*<MyMaps /> */}
             {/* <button onClick={() => setState(changeLabel("Day"))}> Day Label </button>

@@ -50,11 +50,13 @@
   },
   "dependencies": {
     "axios": "^0.21.1",
+    "bootstrap": "^4.6.0",
     "core-js": "^3.13.0",
     "es6-promise": "^4.2.8",
     "fusioncharts": "^3.17.0",
     "fusionmaps": "^3.17.0",
     "jquery-fusioncharts": "^1.2.1",
+    "react-bootstrap": "^1.6.1",
     "react-fusioncharts": "^3.1.2",
     "react-redux": "^7.2.4",
     "redux": "^4.1.0",

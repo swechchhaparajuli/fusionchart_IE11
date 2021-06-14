@@ -17,11 +17,11 @@ charts(FusionCharts);
 const ChartComponent:FC = () => {
 
     const years = useSelector(state => state.yearBack);
-    //const datasource = useSelector(state => state.payload);
+    const datasource = useSelector(state => state.choiceName);
 
     return(
         <div className="container">
-            <p>CHART COMPONENT</p>  
+            <p>CHART COMPONENT {datasource}</p>  
             <ReactFusioncharts
                 type="column2d"
                 width="100%"
