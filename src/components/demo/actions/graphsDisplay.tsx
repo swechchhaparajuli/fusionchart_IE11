@@ -1,7 +1,5 @@
 
 
-
-
 export const displayType = (display: string) => {
     let chartdis = true;
     let griddis = true;

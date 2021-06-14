@@ -24,31 +24,25 @@ const CMSComponent:FC = () => {
     let timeSelection = useSelector(state => state.timeChoice);
 
     const action1 = (numSel: number, timeSel: number) => {
-          dispatch(filterTopCount(numSel));
-          console.log("NUM" + numSel);
-          dispatch(filterTime(timeSel));
-          console.log("TIME" + timeSel);
+        dispatch(filterTime(timeSel));
+        dispatch(filterTopCount(numSel));
+        console.log("NUM" + numSel);
+        console.log("TIME" + timeSel);
       }
-
-/*    const stateshift = (numSelection: number, timeSelection: number) =>{
-        dispatch(filterTopCount(numSelection));
-        dispatch(filterTime(timeSelection));
-    }*/
 
     return(
         <div className="chartbody">
     <Navbar>
-    <Container>{currentChart && <p>Chart by </p>}</Container>
     <Container className="justify-content-end ">
         <Form>
             <Row>
-                <Col className="col-sm-auto">
+                <Col className="col-md-auto">
                     <Container>
                     <Row>
-                        <Col className="col-sm-auto formlabel">
+                        <Col className="col-md-auto formlabel">
                             <Form.Label>Year</Form.Label>
                         </Col>
-                        <Col className="col-sm-auto">
+                        <Col className="col-md-auto">
                             <Form.Group controlId="exampleForm.ControlSelect1">
                                 <Form.Control as="select"  onChange={e => timeSelection = e.target.value}>
                                     <option value={1} >Past Year</option>
@@ -60,13 +54,13 @@ const CMSComponent:FC = () => {
                     </Row>
                     </Container>
                 </Col>
-                <Col className="col-sm-auto">
+                <Col className="col-md-auto">
                     <Container>
                     <Row>
-                    <Col className="col-sm-auto">
+                    <Col className="col-md-auto">
                         <Form.Label> Top Count </Form.Label>
                     </Col>
-                    <Col className="col-sm-auto">
+                    <Col className="col-md-auto">
                         <Form.Group controlId="exampleForm.ControlSelect1">
                             <Form.Control as="select"  onChange={e => numSelection = e.target.value} >
                             <option value={10} >Top Ten</option>
@@ -78,10 +72,9 @@ const CMSComponent:FC = () => {
                     </Row>
                     </Container>
                 </Col>
-                    <Col> 
-                        {<Button onClick={() => action1(numSelection,timeSelection)}>FILTER</Button>}
-                    </Col>
-                
+                <Col className="col-md-auto"> 
+                    {<Button onClick={() => action1(numSelection,timeSelection)}>FILTER</Button>}
+                </Col>
             </Row>
         </Form> 
         </Container>

@@ -25,6 +25,7 @@ const ChartComponent:FC = () => {
 
     return(
         <div className="container">
+            <p>Contract by {years.chart.xaxisname}</p>
             <ReactFusioncharts
                 type="column2d"
                 width="100%"
