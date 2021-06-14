@@ -1,7 +1,7 @@
 import "core-js/stable";
 import React from "react";
-import ReactDOM from "react-dom";
 import "./styles.scss";
+import ReactDOM from "react-dom";
 import App from './App'
 import {createStore} from 'redux';
 import allReducers from "./components/demo/reducers";

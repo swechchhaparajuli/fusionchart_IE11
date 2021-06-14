@@ -1,10 +1,10 @@
 const dataSource = {
     chart: {
-      caption: "Countries With Most Oil Reserves [2017-18]",
-      subcaption: "In MMbbl = One Million barrels",
-      xaxisname: "Country",
-      yaxisname: "Reserves (MMbbl)",
-      numbersuffix: "K",
+      caption: "   ",
+      subcaption: "   ",
+      xaxisname: "Companies",
+      yaxisname: "Contracts",
+      numbersuffix: "",
       theme: "fusion"
     },
     data: [
@@ -16,12 +16,14 @@ const dataSource = {
   };
 
   const getListFiltered = (parsedlist:string, count:number, time:number) =>{
-    const items = JSON.parse(parsedlist).filter(item => item.date<time).sort().slice(0,count);
+    const items = JSON.parse(parsedlist).filter(item => item.date<time).sort((a,b) => 0 - (parseInt(a.value) > parseInt(b.value) ? -1 : 1));
+    const temp = items.slice(0,count);
+    
     var newdata = [{label:"Test", value:"1000"}];
-    for (let i = 0; i<items.length; i++){
+    for (let i = 0; i<temp.length; i++){
       var obj = {
-          label:items[i].label.toString(),
-          value:items[i].value.toString()    
+          label:temp[i].label.toString(),
+          value:temp[i].value.toString()    
       }
       newdata.push(obj);
   }
