@@ -4,7 +4,25 @@
 
 #   How to Navigate 
 
+**API CALL for Dummy Data** 
+    npm start 
+    localhost:3000
+
+**RUNNING PROGRAM**
+    localhost:5000
+
+
 **GIF or Video**
+
+- ScreenCast of CMS Run-Through
+    ('https://drive.google.com/file/d/1NeNpHtgMYt-kDoIu5oguimjvszgBuFVh/view')
+
+- ScreenCast of Redux Overview 
+    ('https://drive.google.com/file/d/1dR3RvFsdSz0ZFifraDW4myvEdrV_Oh8d/view')
+
+- ScreenCast of API Call stuff 
+    ('https://drive.google.com/file/d/1wzngDe1rG79q8ZIgQFWCTJ1Fz57H1Kem/view)
+
 -   ScreenCast of Fusion Run-Through With API & Shared-State Components: 
     ('https://drive.google.com/file/d/1nsIAUiey3NhfwUvGFbmGGeZ7f_hq27de/view')
 - ScreenCast of Code Run-Through With API & Shared-State Components:
@@ -15,6 +33,13 @@
 
 - Screen Cast of Code Snippets enabling Shared-State Components:
     ('https://drive.google.com/file/d/1Ri_oy98UaqQ4i0rlgRkYv0tkeu8bT1YA/view')
+
+
+
+
+
+
+
 
 #   Technology Used 
 
@@ -44,6 +69,8 @@
 - Axios
 - FusionCharts
 - FusionMaps 
+- express.js
+
 *Necessary for EuropeMap*
 - core-js
 
@@ -67,13 +94,16 @@
  
 ##  APIs
 - mockaroo 
-- Athena WHO (in progress ...)
+
 
 #   Citations
 
+
 ## Online Resources 
 
+
 ### Images/Logos
+
 
 ### Good Posts to go back to 
 

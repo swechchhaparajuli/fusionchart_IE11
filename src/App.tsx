@@ -11,6 +11,7 @@ import {useDispatch, useSelector} from 'react-redux';
 import {displayType} from './components/demo/actions/graphsDisplay'
 import Form from 'react-bootstrap/Form';
 import Navbar from 'react-bootstrap/Navbar';
+import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import CMSComponent from "./components/demo/index"
@@ -41,20 +42,22 @@ const App:FC = () => {
 
     return(
         <div >
-            <Navbar className="bg-light justify-content-end">
+            <Navbar className="bg-light">
+                <Container className="justify-content-end">
             <Form>
                     
                     <Form.Group controlId="formBasicCheckbox">
                     <Row>
-                    <Col>
+                    <Col className="col-sm-auto">
                         <Form.Check onChange={() => {dispatch(displayType("CHART"))}} type="checkbox" label="Graph" />
                     </Col>
-                    <Col>
+                    <Col className="col-sm-auto">
                         <Form.Check onChange={() => {dispatch(displayType("GRID"))}} type="checkbox" label="Data List" />
                     </Col>
                     </Row>
                         </Form.Group>
             </Form>
+            </Container>
             </Navbar>
            
             <CMSComponent />

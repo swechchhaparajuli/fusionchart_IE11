@@ -3,6 +3,8 @@ var router = express.Router();
 const axios = require('axios').default;
 
 
+// For the Europe Maps 
+
 var fakedat = [{id:"021",value:"20000000"}, {id:"046",value:"2"}, {id:"003",value:"209850"}];
 
 

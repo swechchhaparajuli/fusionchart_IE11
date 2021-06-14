@@ -17,15 +17,18 @@ charts(FusionCharts);
 const ChartComponent:FC = () => {
 
     const years = useSelector(state => state.yearBack);
-    const datasource = useSelector(state => state.choiceName);
+
+    console.log("IN CHART"+JSON.stringify(years));
+    /*componentDidMount = () =>{
+
+    }*/
 
     return(
         <div className="container">
-            <p>CHART COMPONENT {datasource}</p>  
             <ReactFusioncharts
                 type="column2d"
                 width="100%"
-                height="100%"
+                height="400"
                 dataFormat="JSON"
                 dataSource={years}
       />
