@@ -19,10 +19,9 @@ const CMSComponent:FC = () => {
     const dispatch = useDispatch();
     let currentChart = useSelector(state => state.displayCharts);
     let currentDetail = useSelector(state => state.displayDetails);
-    const datasource = useSelector(state => state.choiceName);
 
-    let numSelection = datasource;
-    let timeSelection = datasource;
+    let numSelection = useSelector(state => state.topChoice);
+    let timeSelection = useSelector(state => state.timeChoice);
 
     const action1 = (numSel: number, timeSel: number) => {
           dispatch(filterTopCount(numSel));
@@ -30,11 +29,6 @@ const CMSComponent:FC = () => {
           dispatch(filterTime(timeSel));
           console.log("TIME" + timeSel);
       }
-
-    
-      
-
-
 
 /*    const stateshift = (numSelection: number, timeSelection: number) =>{
         dispatch(filterTopCount(numSelection));
@@ -44,7 +38,7 @@ const CMSComponent:FC = () => {
     return(
         <div className="chartbody">
     <Navbar>
-    <Container>{currentChart && <p>Chart by {datasource}</p>}</Container>
+    <Container>{currentChart && <p>Chart by </p>}</Container>
     <Container className="justify-content-end ">
         <Form>
             <Row>

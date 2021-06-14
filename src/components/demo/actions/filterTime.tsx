@@ -17,6 +17,7 @@ const dataSource = {
 
   const getListFiltered = (parsedlist:string, time:number) =>{
     const items = JSON.parse(parsedlist).filter(item => item.value>time);
+    console.log(items);
     return items;
   }
 
@@ -34,8 +35,8 @@ const dataSource = {
 export const filterTime = (time:number) => {
     return {
         type:"TIME",
-        interval: time,
-        payload: callAPI(229946794-time)
+        timeinterval: time,
+        payload: callAPI(200000000*time)
     };
 }
 

@@ -34,7 +34,7 @@ const dataSource = {
 export const filterTopCount = (count: number) => {
     return {
         type:"TOPCOUNT",
-        interval: count,
+        topinterval: count,
         payload: callAPI(count)
     };
 }
