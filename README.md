@@ -64,6 +64,8 @@
 
 ##   Pending Features...
 - Redux Thunk
+- Layout fix 
+- View issues
 - figure out how to make US maps work with lots of data---?
 
 ## PACKAGES

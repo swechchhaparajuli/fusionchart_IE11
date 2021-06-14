@@ -1,7 +1,7 @@
 
 
 // state # of highest values
-const displayChart = (state = false, action) => {
+const displayChart = (state = true, action) => {
     switch (action.type){
         case "CHART":
             return !state

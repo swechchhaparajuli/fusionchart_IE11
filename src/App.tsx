@@ -49,10 +49,10 @@ const App:FC = () => {
                     <Form.Group controlId="formBasicCheckbox">
                     <Row>
                     <Col className="col-sm-auto">
-                        <Form.Check onChange={() => {dispatch(displayType("CHART"))}} type="checkbox" label="Graph" />
+                        <Form.Check onChange={() => {dispatch(displayType("CHART"))}} checked={useSelector(state => state.displayCharts)} type="checkbox" label="Graph" />
                     </Col>
                     <Col className="col-sm-auto">
-                        <Form.Check onChange={() => {dispatch(displayType("GRID"))}} type="checkbox" label="Data List" />
+                        <Form.Check onChange={() => {dispatch(displayType("GRID"))}} checked={useSelector(state => state.displayDetails)} type="checkbox" label="Data List" />
                     </Col>
                     </Row>
                         </Form.Group>

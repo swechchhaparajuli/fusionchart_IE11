@@ -6,6 +6,8 @@ const topChoiceName = (state = 0, action) => {
     switch (action.type){
         case "TOPCOUNT":
             return action.topinterval
+        case "FILTERALL":
+            return action.topinterval
         default:
             return state;
     }

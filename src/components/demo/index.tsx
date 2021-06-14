@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import ChartComponent from "./chart";
 import DetailsComponent from "./details";
 import {filterTime} from './actions/filterTime'
+import {filterAll} from './actions/setFilter'
 import {filterTopCount} from './actions/filterTop15'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
@@ -24,10 +25,14 @@ const CMSComponent:FC = () => {
     let timeSelection = useSelector(state => state.timeChoice);
 
     const action1 = (numSel: number, timeSel: number) => {
-        dispatch(filterTime(timeSel));
+        /*dispatch(filterTime(timeSel));
         dispatch(filterTopCount(numSel));
         console.log("NUM" + numSel);
+        console.log("TIME" + timeSel);*/
+        dispatch(filterAll(numSel,timeSel));
         console.log("TIME" + timeSel);
+        console.log("NUM" + numSel);
+
       }
 
     return(
@@ -81,8 +86,8 @@ const CMSComponent:FC = () => {
     </Navbar>
         <Container fluid>
             <Row>
-            {currentChart && <Col><ChartComponent /></Col>}
-            {currentDetail && <Col><DetailsComponent /></Col>}
+            {currentChart && <Col ><ChartComponent /></Col>}
+            {currentDetail && <Col ><DetailsComponent /></Col>}
             </Row>
         </Container>
         </div>

@@ -36,11 +36,6 @@ const dataSource = {
     ]
   };
 
-  const combine = (incomingload, existingload) =>{
-      if(incomingload != 0) existingload.data.push(incomingload);
-      return existingload;
-  }
-
 
 // state == num years to go back to from 2021
 const  yearBackReducer= (state = 0, action) => {
@@ -48,7 +43,8 @@ const  yearBackReducer= (state = 0, action) => {
         case "TIME":
             return action.payload
         case "TOPCOUNT":
-            //return combine(state,action.payload);
+            return action.payload
+        case "FILTERALL":
             return action.payload
         default:
             return dataSource;

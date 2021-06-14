@@ -1,7 +1,7 @@
 
 
 // state # of highest values
-const displayGraph = (state = false, action) => {
+const displayGraph = (state = true, action) => {
     switch (action.type){
         case "GRID":
             return !state

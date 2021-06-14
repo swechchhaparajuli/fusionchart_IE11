@@ -1,8 +1,8 @@
 
 
 export const displayType = (display: string) => {
-    let chartdis = true;
-    let griddis = true;
+    let chartdis = false;
+    let griddis = false;
     if(display == "GRID") {chartdis = !griddis}
     if(display == "CHART") {griddis = !chartdis}  
     return {
