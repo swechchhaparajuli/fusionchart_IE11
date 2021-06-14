@@ -22,7 +22,7 @@ const dataSource = {
   }
 
   const callAPI = (time:number) =>{
-    fetch("http://localhost:3000/testAPI")
+    fetch("http://localhost:3000/CMSRoutes")
       .then(res => res.text())
       .then(res => 
         {

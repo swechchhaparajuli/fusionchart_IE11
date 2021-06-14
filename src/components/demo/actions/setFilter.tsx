@@ -16,13 +16,21 @@ const dataSource = {
   };
 
   const getListFiltered = (parsedlist:string, count:number, time:number) =>{
-    const items = JSON.parse(parsedlist).filter(item => item.value>time).sort().slice(0,count);
-    console.log(items);
-    return items;
+    const items = JSON.parse(parsedlist).filter(item => item.date<time).sort().slice(0,count);
+    var newdata = [{label:"Test", value:"1000"}];
+    for (let i = 0; i<items.length; i++){
+      var obj = {
+          label:items[i].label.toString(),
+          value:items[i].value.toString()    
+      }
+      newdata.push(obj);
+  }
+    console.log(newdata);
+    return newdata;
   }
 
   const callAPI = (count:number, time:number) =>{
-    fetch("http://localhost:3000/testAPI")
+    fetch("http://localhost:3000/CMSRoutes")
       .then(res => res.text())
       .then(res => 
         {
@@ -36,7 +44,7 @@ export const filterAll = (count: number, time: number) => {
         type:"FILTERALL",
         topinterval: count,
         timeinterval: time,
-        payload: callAPI(count,time)
+        payload: callAPI(count,1010000+time)
     };
 }
 

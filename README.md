@@ -15,8 +15,7 @@
 **GIF or Video**
 
 - ScreenCast of CMS Run-Through
-    ('https://drive.google.com/file/d/1Ch3oahkOGf7Efza-MYBEfw0AbDF6W3Lm/view')
-
+    ('https://drive.google.com/file/d/1YxEG-pPT-Ug2NaMwfJdt9sam2TCYAeBS/view')
 
 - ScreenCast of Redux Overview 
     ('https://drive.google.com/file/d/1dR3RvFsdSz0ZFifraDW4myvEdrV_Oh8d/view')
