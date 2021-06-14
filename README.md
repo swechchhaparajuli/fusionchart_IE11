@@ -15,7 +15,8 @@
 **GIF or Video**
 
 - ScreenCast of CMS Run-Through
-    ('https://drive.google.com/file/d/1NeNpHtgMYt-kDoIu5oguimjvszgBuFVh/view')
+    ('https://drive.google.com/file/d/1Ch3oahkOGf7Efza-MYBEfw0AbDF6W3Lm/view')
+
 
 - ScreenCast of Redux Overview 
     ('https://drive.google.com/file/d/1dR3RvFsdSz0ZFifraDW4myvEdrV_Oh8d/view')
@@ -54,14 +55,15 @@
 - IE_11 compatible 
 - choose map type to display 
 - separating map components from app.tsx
+- Redux 
+- functional components instead of class components 
+- bar graph/chart functioning 
 
 - Event-driven API Calls 
 
 
 ##   Pending Features...
-- Redux 
-- functional components instead of class components 
-- bar graph/chart functioning 
+- Redux Thunk
 - figure out how to make US maps work with lots of data---?
 
 ## PACKAGES
