@@ -12,6 +12,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import { Component } from "react";
 
 const CMSComponent:FC = () => {
 
@@ -20,8 +21,18 @@ const CMSComponent:FC = () => {
     let currentDetail = useSelector(state => state.displayDetails);
     const datasource = useSelector(state => state.choiceName);
 
-    let numSelection = 30;
-    let timeSelection = 30;
+    let numSelection = datasource;
+    let timeSelection = datasource;
+
+    const action1 = (numSel: number, timeSel: number) => {
+          dispatch(filterTopCount(numSel));
+          console.log("NUM" + numSel);
+          dispatch(filterTime(timeSel));
+          console.log("TIME" + timeSel);
+      }
+
+    
+      
 
 
 
@@ -29,8 +40,6 @@ const CMSComponent:FC = () => {
         dispatch(filterTopCount(numSelection));
         dispatch(filterTime(timeSelection));
     }*/
-
-    console.log(numSelection);
 
     return(
         <div className="chartbody">
@@ -65,7 +74,7 @@ const CMSComponent:FC = () => {
                     </Col>
                     <Col className="col-sm-auto">
                         <Form.Group controlId="exampleForm.ControlSelect1">
-                            <Form.Control as="select" onChange={e => numSelection = e.target.value} >
+                            <Form.Control as="select"  onChange={e => numSelection = e.target.value} >
                             <option value={10} >Top Ten</option>
                             <option value={15} >Top 15</option>
                             <option value={30} >All</option>
@@ -76,7 +85,7 @@ const CMSComponent:FC = () => {
                     </Container>
                 </Col>
                     <Col> 
-                        {<Button onClick={() => dispatch(filterTopCount(numSelection))}>FILTER</Button>}
+                        {<Button onClick={() => action1(numSelection,timeSelection)}>FILTER</Button>}
                     </Col>
                 
             </Row>

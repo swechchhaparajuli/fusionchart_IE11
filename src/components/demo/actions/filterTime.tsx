@@ -35,7 +35,7 @@ export const filterTime = (time:number) => {
     return {
         type:"TIME",
         interval: time,
-        payload: callAPI(2020-time)
+        payload: callAPI(229946794-time)
     };
 }
 

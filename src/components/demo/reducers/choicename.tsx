@@ -50,9 +50,9 @@ const dataSource = {
 const topChoiceName = (state = 0, action) => {
     switch (action.type){
         case "TOPCOUNT":
-            return action.type
+            return action.interval
         case "TIME":
-            return action.type
+            return action.interval
         default:
             return state;
     }

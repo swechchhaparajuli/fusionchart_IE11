@@ -18,7 +18,7 @@ const ChartComponent:FC = () => {
 
     const years = useSelector(state => state.yearBack);
 
-    console.log("IN CHART"+JSON.stringify(years));
+    //console.log("IN CHART"+JSON.stringify(years));
     /*componentDidMount = () =>{
 
     }*/
