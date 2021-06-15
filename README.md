@@ -77,6 +77,13 @@
 *Necessary for EuropeMap*
 - core-js
 
+## Issues 
+
+    - Kendo Grid CSS not working, so stylesheet plugged into index.html for now 
+    - Async API data not loading, one step behind 
+    - Navbar is funky 
+    - Need to add Specific year selector 
+
 
 ##  Polyfills
 - ES6-Polyfill for Promises 

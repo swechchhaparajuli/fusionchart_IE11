@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import {FC} from "react";
+
 import {useDispatch, useSelector} from 'react-redux';
 import { connect } from 'react-redux';
 import ChartComponent from "./Charts";
@@ -15,35 +16,26 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import { Component } from "react";
 
+
+
 const CMSComponent:FC = () => {
 
     const dispatch = useDispatch();
     let currentChart = useSelector(state => state.displayCharts);
     let currentDetail = useSelector(state => state.displayDetails);
-
+    let years = useSelector(state => state.yearBack);
     let numSelection = useSelector(state => state.topChoice);
     let timeSelection = useSelector(state => state.timeChoice);
-
-    const action1 = (numSel: number, timeSel: number) => {
-        /*dispatch(filterTime(timeSel));
-        dispatch(filterTopCount(numSel));
-        console.log("NUM" + numSel);
-        console.log("TIME" + timeSel);*/
-        dispatch(filterAll(numSel,timeSel));
-        console.log("TIME" + timeSel);
-        console.log("NUM" + numSel);
-
-      }
-
-
 
     return(
         <div className="chartbody">
     <Navbar>
+    <p>Top {numSelection} {years.chart.xaxisname}</p> 
     <Container className="justify-content-end ">
         <Form>
+            <Container>
             <Row>
-                <Col className="col-md-auto">
+                <Col className="col-md-auto" style={{padding: 0}}>
                     <Container>
                     <Row>
                         <Col className="col-md-auto formlabel">
@@ -80,16 +72,17 @@ const CMSComponent:FC = () => {
                     </Container>
                 </Col>
                 <Col className="col-md-auto"> 
-                    {<Button onClick={() => action1(numSelection,timeSelection)}>FILTER</Button>}
+                    {<Button onClick={() =>  dispatch(filterAll(numSelection,timeSelection))}>FILTER</Button>}
                 </Col>
             </Row>
+            </Container>
         </Form> 
         </Container>
     </Navbar>
         <Container fluid>
             <Row>
-            {currentChart && <Col ><ChartComponent /></Col>}
-            {currentDetail && <Col ><DetailsComponent /></Col>}
+            {currentChart && <Col className="col-xs-auto"><ChartComponent /></Col>}
+            {currentDetail && <Col className="col-xs-auto"><DetailsComponent /></Col>}
             </Row>
         </Container>
         </div>

@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import {FC} from "react";
+
 import "./styles.scss";
 import CandyTheme from "fusioncharts/themes/fusioncharts.theme.candy";
 import EuroChart from "./components/charts/EuroChart"

@@ -49,6 +49,17 @@
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
+    "@progress/kendo-data-query": "^1.5.5",
+    "@progress/kendo-drawing": "^1.10.1",
+    "@progress/kendo-licensing": "^1.1.4",
+    "@progress/kendo-react-animation": "^4.6.0",
+    "@progress/kendo-react-data-tools": "^4.6.0",
+    "@progress/kendo-react-dateinputs": "^4.6.0",
+    "@progress/kendo-react-dropdowns": "^4.6.0",
+    "@progress/kendo-react-grid": "^4.6.0",
+    "@progress/kendo-react-inputs": "^4.6.0",
+    "@progress/kendo-react-intl": "^4.6.0",
+    "@progress/kendo-theme-default": "^4.39.0",
     "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
     "core-js": "^3.13.0",
@@ -60,6 +71,7 @@
     "react-fusioncharts": "^3.1.2",
     "react-redux": "^7.2.4",
     "redux": "^4.1.0",
+    "redux-thunk": "^2.3.0",
     "ts-polyfill": "^3.8.2"
   }
 }

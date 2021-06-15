@@ -28,11 +28,14 @@ const dataSource = {
     const items = JSON.parse(parsedlist).filter(item => {var temp = new Date(item.date); return temp<time}).sort((a,b) => 0 - (parseInt(a.value) > parseInt(b.value) ? -1 : 1));
     const temp = items.slice(0,count);
     console.log(temp);
-    var newdata = [{label:"Test", value:"1000"}];
+    var newdata = [{label:"Test", value:"1000", date:"08/12/1997", details:"Test dummy ", }];
     for (let i = 0; i<temp.length; i++){
       var obj = {
+          id:(i+2).toString(),
           label:temp[i].label.toString(),
-          value:temp[i].value.toString()    
+          value:temp[i].value.toString(), 
+          date:temp[i].date.toString(),
+          details:temp[i].details.toString() 
       }
       newdata.push(obj);
   }
@@ -58,11 +61,12 @@ export const filterAll = (count: number, time: number) => {
   temp = temp.substring(0,2) + "/" + temp.substring(2,4) + "/" + temp.substring(4,8);
   console.log(temp);
   var actualtime = new Date(temp);
+  callAPI(count,actualtime)
     return {
         type:"FILTERALL",
         topinterval: count,
         timeinterval: time,
-        payload: callAPI(count,actualtime)
+        payload: dataSource
     };
 }
 

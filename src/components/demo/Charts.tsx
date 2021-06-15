@@ -28,11 +28,11 @@ const ChartComponent:FC = () => {
     /*componentDidMount = () =>{
 
     }*/
-
+    console.log(years);
 
     return(
         <div className="container">
-            <p>Top {num} {years.chart.xaxisname}</p>
+            
             <ReactFusioncharts
                 type="column2d"
                 width="100%"

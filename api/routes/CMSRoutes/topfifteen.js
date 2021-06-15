@@ -17,7 +17,9 @@ router.get('/', function(req, res, next) {
             var obj = {
                 label:response.data[i].company.toString(),
                 value:response.data[i].value.toString(),
-                date:response.data[i].date.toString()
+                date:response.data[i].date.toString(),
+                details:response.data[i].details.toString(),
+                id:response.data[i].id.toString()
                 
             }
             newdata.push(obj);
@@ -28,6 +30,7 @@ router.get('/', function(req, res, next) {
         res.send(JSON.stringify([{
             "id": 12345,
             "date": "08121997",
+            "value": 20392910,
             "company": 215721875,
             "details": 215721875
           }]));
