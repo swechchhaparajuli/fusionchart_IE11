@@ -1,5 +1,6 @@
 import React, {useEffect} from "react";
 import {FC} from "react";
+
 import FusionCharts from "fusioncharts";
 import ReactFC from 'react-fusioncharts';
 import charts from "fusioncharts/fusioncharts.charts";
@@ -15,6 +16,7 @@ ReactFC.fcRoot(FusionCharts,Column2D,FusionTheme);
 charts(FusionCharts);
 
 
+
 const ChartComponent:FC = () => {
 
 
@@ -23,17 +25,15 @@ const ChartComponent:FC = () => {
     let years = useSelector(state => state.yearBack);
     let num = useSelector(state => state.topChoice);
     
+   
+    
 
-    //console.log("IN CHART"+JSON.stringify(years));
-    /*componentDidMount = () =>{
-
-    }*/
     console.log(years);
 
     return(
         <div className="container">
             
-            <ReactFusioncharts
+            <ReactFusioncharts 
                 type="column2d"
                 width="100%"
                 height="400"

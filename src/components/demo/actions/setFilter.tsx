@@ -1,11 +1,4 @@
 
-import React, {
-  Fragment,
-  useState,
-  useEffect,
-  useReducer,
-} from 'react';
-import {useSelector, useDispatch} from 'react-redux';
 
 const dataSource = {
     chart: {
@@ -16,19 +9,15 @@ const dataSource = {
       numbersuffix: "",
       theme: "fusion"
     },
-    data: [
-      {
-        label: "Venezuela",
-        value: "290"
-      }
-    ]
+    data: []
   };
 
   const getListFiltered = (parsedlist:string, count:number, time:Date) =>{
-    const items = JSON.parse(parsedlist).filter(item => {var temp = new Date(item.date); return temp<time}).sort((a,b) => 0 - (parseInt(a.value) > parseInt(b.value) ? -1 : 1));
+    const items = JSON.parse(parsedlist).filter(item => {var temp = new Date(item.date); return temp>time}).sort((a,b) => 0 - (parseInt(a.value) > parseInt(b.value) ? -1 : 1));
     const temp = items.slice(0,count);
     console.log(temp);
-    var newdata = [{label:"Test", value:"1000", date:"08/12/1997", details:"Test dummy ", }];
+    
+    dataSource.data = [];
     for (let i = 0; i<temp.length; i++){
       var obj = {
           id:(i+2).toString(),
@@ -37,36 +26,56 @@ const dataSource = {
           date:temp[i].date.toString(),
           details:temp[i].details.toString() 
       }
-      newdata.push(obj);
+      dataSource.data.push(obj);
   }
     //console.log(newdata);
-    return newdata;
+    return dataSource;
   }
 
-  const callAPI = (count:number, time:Date) =>{
-   
-      fetch("http://localhost:3000/CMSRoutes")
-        .then(res => res.text())
-        .then(res => 
-          {
-            dataSource.data = getListFiltered(res,count,time);
-            //dispatch({ type: 'FILTERALL', payload: dataSource.data});
-          });
-         return dataSource;
-
+  const getFilteredExact = (parsedlist:string, count:number, time:Date) =>{
+    const items = JSON.parse(parsedlist).filter(item => {var temp = new Date(item.date); return (temp.getUTCFullYear()==time.getUTCFullYear())}).sort((a,b) => 0 - (parseInt(a.value) > parseInt(b.value) ? -1 : 1));
+    const temp = items.slice(0,count);
+  
+    dataSource.data = [];
+    for (let i = 0; i<temp.length; i++){
+      var obj = {
+          id:(i+2).toString(),
+          label:temp[i].label.toString(),
+          value:temp[i].value.toString(), 
+          date:temp[i].date.toString(),
+          details:temp[i].details.toString() 
+      }
+      dataSource.data.push(obj);
+  }
+    //console.log(newdata);
+    return dataSource;
   }
 
-export const filterAll = (count: number, time: number) => {
-  let temp = "0" + String(1012021-time);
-  temp = temp.substring(0,2) + "/" + temp.substring(2,4) + "/" + temp.substring(4,8);
-  console.log(temp);
-  var actualtime = new Date(temp);
-  callAPI(count,actualtime)
-    return {
-        type:"FILTERALL",
-        topinterval: count,
-        timeinterval: time,
-        payload: dataSource
-    };
+export const filterAll = (loadeddata, count: number, time: number) => {
+  
+  if(time>100){
+    let temp = String(time);
+    temp = "01/01/" + temp;
+    console.log(temp);
+    var actualtime = new Date(temp);
+    console.log(actualtime.getFullYear());
+    return{
+      type:"FILTERALL",
+      topinterval: count,
+      timeinterval: time,
+      payload: getFilteredExact(loadeddata,count,actualtime)
+    }
+  } else {
+    let temp = "0" + String(1012021-time);
+    temp = temp.substring(0,2) + "/" + temp.substring(2,4) + "/" + temp.substring(4,8);
+    console.log(temp);
+    var actualtime = new Date(temp);
+      return {
+          type:"FILTERALL",
+          topinterval: count,
+          timeinterval: time,
+          payload: getListFiltered(loadeddata,count,actualtime)
+      };
+  }
 }
 
