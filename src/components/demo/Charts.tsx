@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect} from "react";
 import {FC} from "react";
 import FusionCharts from "fusioncharts";
 import ReactFC from 'react-fusioncharts';
@@ -7,8 +7,9 @@ import ReactFusioncharts from "react-fusioncharts";
 import FusionTheme from "fusioncharts/themes/fusioncharts.theme.fusion";
 import Column2D from "fusioncharts/fusioncharts.charts";
 import {useSelector, useDispatch} from 'react-redux';
-import {filterTime} from './actions/filterTime'
-import {filterTopCount} from './actions/filterTop15'
+
+import {filterAll} from './actions/setFilter'
+
 
 ReactFC.fcRoot(FusionCharts,Column2D,FusionTheme);
 charts(FusionCharts);
@@ -16,16 +17,22 @@ charts(FusionCharts);
 
 const ChartComponent:FC = () => {
 
-    const years = useSelector(state => state.yearBack);
+
+
+
+    let years = useSelector(state => state.yearBack);
+    let num = useSelector(state => state.topChoice);
+    
 
     //console.log("IN CHART"+JSON.stringify(years));
     /*componentDidMount = () =>{
 
     }*/
 
+
     return(
         <div className="container">
-            <p>Top Fifteen {years.chart.xaxisname}</p>
+            <p>Top {num} {years.chart.xaxisname}</p>
             <ReactFusioncharts
                 type="column2d"
                 width="100%"

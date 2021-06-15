@@ -2,8 +2,8 @@ import React, {useState} from "react";
 import {FC} from "react";
 import {useDispatch, useSelector} from 'react-redux';
 import { connect } from 'react-redux';
-import ChartComponent from "./chart";
-import DetailsComponent from "./details";
+import ChartComponent from "./Charts";
+import DetailsComponent from "./Details";
 import {filterTime} from './actions/filterTime'
 import {filterAll} from './actions/setFilter'
 import {filterTopCount} from './actions/filterTop15'
@@ -34,6 +34,8 @@ const CMSComponent:FC = () => {
         console.log("NUM" + numSel);
 
       }
+
+
 
     return(
         <div className="chartbody">

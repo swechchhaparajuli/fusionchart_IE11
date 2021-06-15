@@ -1,198 +1,198 @@
 [{
     "id": 12345,
-    "date": "08121997",
+    "date": "08/12/1997",
     "company": "Microsoft",
     "details": "detail info",
     "value" : "134607"
   }, {
     "id": 223446,
-    "date": "12042021",
+    "date": "12/04/2021",
     "company": "AT&T",
     "details": "detail info",
     "value" : "263760"
   }, {
     "id": 394267,
-    "date": "02281834",
+    "date": "02/28/1834",
     "company": "Reebook",
     "details": "detail info",
     "value" : "363074"
   }, {
     "id": 405673,
-    "date": "03211984",
+    "date": "03/21/1984",
     "company": "ACE Hardware",
     "details": "detail info",
     "value" : "443460"
   },
   {
     "id": 126645,
-    "date": "08121997",
+    "date": "08/12/1997",
     "company": "Home Depot",
     "details": "detail info",
     "value" : "543460"
   }, {
     "id": 243456,
-    "date": "12042021",
+    "date": "12/04/2021",
     "company": "T-Zone",
     "details": "detail info",
     "value" : "66730"
   }, {
     "id": 394367,
-    "date": "02281834",
+    "date": "02/28/1834",
     "company": "Wells Fargo",
     "details": "detail info",
     "value" : "74670"
   }, {
     "id": 404678,
-    "date": "03211984",
+    "date": "03/21/1984",
     "company": "Chase Bank",
     "details": "detail info",
     "value" : "83760"
   },
   {
     "id": 123355,
-    "date": "08121997",
+    "date": "08/12/1997",
     "company": "Citi Bank",
     "details": "detail info",
     "value" : "97640"
   }, {
     "id": 223856,
-    "date": "12042021",
+    "date": "12/04/2021",
     "company": "Oracle",
     "details": "detail info",
     "value" : "85330"
   }, {
     "id": 393567,
-    "date": "02281834",
+    "date": "02/28/2015",
     "company": "Bechtel Group Inc",
     "details": "detail info",
     "value" : "768830"
   }, {
     "id": 405178,
-    "date": "03211984",
+    "date": "03/21/2012",
     "company": "Hensel Phelps Construction Co.",
     "details": "detail info",
     "value" : "56330"
   },
   {
     "id": 12745,
-    "date": "08121997",
+    "date": "08/12/2019",
     "company": "Skanska USA",
     "details": "detail info",
     "value" : "35630"
   }, {
     "id": 223436,
-    "date": "12042021",
+    "date": "12/04/2021",
     "company": "Suffolk Constructions",
     "details": "detail info",
     "value" : "30356"
   }, {
     "id": 364567,
-    "date": "02281834",
+    "date": "02/28/1834",
     "company": "Clark Constructions",
     "details": "detail info",
     "value" : "33670"
   }, {
     "id": 405378,
-    "date": "03211984",
+    "date": "03/21/2020",
     "company": "Ironworks Co.",
     "details": "detail info",
     "value" : "34630"
   },{
     "id": 12345,
-    "date": "08121997",
+    "date": "08/12/2020",
     "company": "Fenti",
     "details": "detail info",
     "value" : "434607"
   }, {
     "id": 223446,
-    "date": "12042021",
+    "date": "12/04/2021",
     "company": "Versace",
     "details": "detail info",
     "value" : "463760"
   }, {
     "id": 394267,
-    "date": "02281834",
+    "date": "02/28/1834",
     "company": "Baskin Robbins",
     "details": "detail info",
     "value" : "463074"
   }, {
     "id": 405673,
-    "date": "03211984",
+    "date": "03/21/1984",
     "company": "Lululemon",
     "details": "detail info",
     "value" : "743460"
   },
   {
     "id": 126645,
-    "date": "08121997",
+    "date": "08/12/1997",
     "company": "Red Balloon",
     "details": "detail info",
     "value" : "743460"
   }, {
     "id": 243456,
-    "date": "12042021",
+    "date": "12/04/2021",
     "company": "Blue Lagoon",
     "details": "detail info",
     "value" : "46730"
   }, {
     "id": 394367,
-    "date": "02281834",
+    "date": "02/28/2005",
     "company": "Boba Guys",
     "details": "detail info",
     "value" : "34670"
   }, {
     "id": 404678,
-    "date": "03211984",
+    "date": "03/21/2014",
     "company": "Rosetta Stone",
     "details": "detail info",
     "value" : "33760"
   },
   {
     "id": 123355,
-    "date": "08121997",
+    "date": "08/12/2013",
     "company": "Citi Bank",
     "details": "detail info",
     "value" : "37640"
   }, {
     "id": 223856,
-    "date": "12042021",
+    "date": "12/04/2021",
     "company": "Oracle",
     "details": "detail info",
     "value" : "85330"
   }, {
     "id": 393567,
-    "date": "02281834",
+    "date": "02/28/1994",
     "company": "Bechtel Group Inc",
     "details": "detail info",
     "value" : "768830"
   }, {
     "id": 405178,
-    "date": "03211984",
+    "date": "03/21/1994",
     "company": "Hensel Phelps Construction Co.",
     "details": "detail info",
     "value" : "56330"
   },
   {
     "id": 12745,
-    "date": "08121997",
+    "date": "08/12/1997",
     "company": "Skanska USA",
     "details": "detail info",
     "value" : "35630"
   }, {
     "id": 223436,
-    "date": "12042021",
+    "date": "12/04/2021",
     "company": "Suffolk Constructions",
     "details": "detail info",
     "value" : "30356"
   }, {
     "id": 364567,
-    "date": "02281834",
+    "date": "02/28/1834",
     "company": "Clark Constructions",
     "details": "detail info",
     "value" : "33670"
   }, {
     "id": 405378,
-    "date": "03211984",
+    "date": "03/21/1984",
     "company": "Ironworks Co.",
     "details": "detail info",
     "value" : "34630"

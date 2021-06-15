@@ -1,3 +1,12 @@
+
+import React, {
+  Fragment,
+  useState,
+  useEffect,
+  useReducer,
+} from 'react';
+import {useSelector, useDispatch} from 'react-redux';
+
 const dataSource = {
     chart: {
       caption: "   ",
@@ -15,10 +24,10 @@ const dataSource = {
     ]
   };
 
-  const getListFiltered = (parsedlist:string, count:number, time:number) =>{
-    const items = JSON.parse(parsedlist).filter(item => item.date<time).sort((a,b) => 0 - (parseInt(a.value) > parseInt(b.value) ? -1 : 1));
+  const getListFiltered = (parsedlist:string, count:number, time:Date) =>{
+    const items = JSON.parse(parsedlist).filter(item => {var temp = new Date(item.date); return temp<time}).sort((a,b) => 0 - (parseInt(a.value) > parseInt(b.value) ? -1 : 1));
     const temp = items.slice(0,count);
-    
+    console.log(temp);
     var newdata = [{label:"Test", value:"1000"}];
     for (let i = 0; i<temp.length; i++){
       var obj = {
@@ -27,26 +36,33 @@ const dataSource = {
       }
       newdata.push(obj);
   }
-    console.log(newdata);
+    //console.log(newdata);
     return newdata;
   }
 
-  const callAPI = (count:number, time:number) =>{
-    fetch("http://localhost:3000/CMSRoutes")
-      .then(res => res.text())
-      .then(res => 
-        {
+  const callAPI = (count:number, time:Date) =>{
+   
+      fetch("http://localhost:3000/CMSRoutes")
+        .then(res => res.text())
+        .then(res => 
+          {
             dataSource.data = getListFiltered(res,count,time);
-        });
-        return dataSource;
+            //dispatch({ type: 'FILTERALL', payload: dataSource.data});
+          });
+         return dataSource;
+
   }
 
 export const filterAll = (count: number, time: number) => {
+  let temp = "0" + String(1012021-time);
+  temp = temp.substring(0,2) + "/" + temp.substring(2,4) + "/" + temp.substring(4,8);
+  console.log(temp);
+  var actualtime = new Date(temp);
     return {
         type:"FILTERALL",
         topinterval: count,
         timeinterval: time,
-        payload: callAPI(count,1010000+time)
+        payload: callAPI(count,actualtime)
     };
 }
 
