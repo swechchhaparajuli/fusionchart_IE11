@@ -15,7 +15,10 @@
 **GIF or Video**
 
 - ScreenCast of CMS Run-Through
-    ('https://drive.google.com/file/d/1EVYw5Xw1jqRHe4WQYL_GKNL_mDZzlEmU/view')
+- Shows grid v chart v both version
+    ('https://drive.google.com/file/d/10xTzJMOzeS0nlGEnmJoFGKgp3JPnF6PB/view')
+- After few Bugs fixed: 
+    ('https://drive.google.com/file/d/1fWFscwQhipR-oKtJQVGP5ykBP-_0Kokl/view)
 
 - ScreenCast of Redux Overview 
     ('https://drive.google.com/file/d/1dR3RvFsdSz0ZFifraDW4myvEdrV_Oh8d/view')
@@ -81,7 +84,7 @@
 
     - Kendo Grid CSS not working, so stylesheet plugged into index.html for now 
     - Navbar is funky 
-    - Need to add Specific year selector 
+    - Render at start needs fixing
 
 
 ##  Polyfills

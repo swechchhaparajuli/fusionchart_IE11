@@ -20,7 +20,7 @@ const dataSource = {
     dataSource.data = [];
     for (let i = 0; i<temp.length; i++){
       var obj = {
-          id:(i+2).toString(),
+          id:(i+1).toString(),
           label:temp[i].label.toString(),
           value:temp[i].value.toString(), 
           date:temp[i].date.toString(),
@@ -39,7 +39,7 @@ const dataSource = {
     dataSource.data = [];
     for (let i = 0; i<temp.length; i++){
       var obj = {
-          id:(i+2).toString(),
+          id:(i+1).toString(),
           label:temp[i].label.toString(),
           value:temp[i].value.toString(), 
           date:temp[i].date.toString(),
