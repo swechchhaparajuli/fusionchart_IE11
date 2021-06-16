@@ -33,6 +33,23 @@ var changeLabel = (val: string) =>{
     return config;
 }
 
+const dataSource = {
+    chart: {
+      caption: "Countries With Most Oil Reserves [2017-18]",
+      subcaption: "In MMbbl = One Million barrels",
+      xaxisname: "Country",
+      yaxisname: "Reserves (MMbbl)",
+      numbersuffix: "K",
+      theme: "fusion"
+    },
+    data: [
+      {
+        label: "Venezuela",
+        value: "290"
+      }
+    ]
+  };
+
 //const env = process.env.NODE_ENV;
 // <h1>{env}</h1>
 
@@ -40,6 +57,14 @@ const App:FC = () => {
 
     const [chart, setState] = useState(changeLabel("Annee")); 
     const dispatch = useDispatch();
+
+    let years = useSelector(state => state.yearBack);
+
+
+    const callAPI = (type:string) =>{
+        var data = dispatch(displayType(type, years));
+    }
+
 
     return(
         <div >
@@ -50,10 +75,10 @@ const App:FC = () => {
                     <Form.Group controlId="formBasicCheckbox">
                     <Row>
                     <Col className="col-sm-auto">
-                        <Form.Check onChange={() => {dispatch(displayType("CHART"))}} checked={useSelector(state => state.displayCharts)} type="checkbox" label="Graph" />
+                        <Form.Check onChange={() => {callAPI("CHART")}} checked={useSelector(state => state.displayCharts)} type="checkbox" label="Graph" />
                     </Col>
                     <Col className="col-sm-auto">
-                        <Form.Check onChange={() => {dispatch(displayType("GRID"))}} checked={useSelector(state => state.displayDetails)} type="checkbox" label="Data List" />
+                        <Form.Check onChange={() =>  {callAPI("GRID")}} checked={useSelector(state => state.displayDetails)} type="checkbox" label="Data List" />
                     </Col>
                     </Row>
                         </Form.Group>

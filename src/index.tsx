@@ -10,12 +10,31 @@ import allReducers from "./components/demo/reducers";
 import { filterTopCount } from "./components/demo/actions/filterTop15";
 import { filterTime } from "./components/demo/actions/filterTime"
 import {Provider} from 'react-redux';
+import {useSelector, useDispatch} from 'react-redux';
+import {filterAll} from './components/demo/actions/setFilter'
 
 //const composedEnhancer = composeWithDevTools(applyMiddleware(thunkMiddleware))
 
 let store = createStore(allReducers, 
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
     );
+
+
+    
+
+const callAPI = (count:number, time:number) =>{
+    fetch("http://localhost:3000/CMSRoutes")
+        .then(res => res.text())
+        .then(res => 
+            {
+            store.dispatch(filterAll(res,count,time));
+              //console.log(dataSource);
+        });
+}
+
+callAPI(10,1);
+
+
 
 //console.log(store.getState());
 

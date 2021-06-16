@@ -4,9 +4,9 @@
 const displayChart = (state = true, action) => {
     switch (action.type){
         case "CHART":
-            return !state
+            return !state && action.chart
         case "GRIDCHART":
-            return state
+            return !state && action.chart
         default:
             return state;
     }

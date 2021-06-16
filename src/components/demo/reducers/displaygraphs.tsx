@@ -4,9 +4,9 @@
 const displayGraph = (state = true, action) => {
     switch (action.type){
         case "GRID":
-            return !state
+            return !state && action.grid
         case "GRIDCHART":
-            return state
+            return !state && action.grid
         default:
             return state;
     }

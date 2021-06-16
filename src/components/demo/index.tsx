@@ -54,14 +54,15 @@ const CMSComponent:FC = () => {
           .then(res => 
             {
               var data = dispatch(filterAll(res,count,time));
-              //console.log(dataSource);
             });
     }
 
+
     return(
-        <div className="chartbody">
+    <div className="chartbody">
     <Navbar>
-    <p>Top {numSelection} {years.chart.xaxisname}</p> 
+        
+        <p>Top {numSelection} {years.chart.xaxisname}</p>
     <Container className="justify-content-end ">
         <Form>
             <Container>
