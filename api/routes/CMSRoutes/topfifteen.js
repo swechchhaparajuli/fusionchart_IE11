@@ -11,7 +11,9 @@ router.get('/', function(req, res, next) {
     const url = 'http://localhost:5000/src/data/CMSDummyData/cmsdummy.json'
 
     axios.get(url).then(response => {
-        var newdata = [{label:"Test", value:"1000"}];
+        var newdata = [{label:"Test", value:"1000", company: 215721875,
+        details: 215721875, id:"CA", date:"12/12/1997",
+        location: {country:"USA", state:"CA", city:"Marina Bay"}}];
         
         for (let i = 0; i<response.data.length; i++){
             var obj = {
@@ -19,8 +21,8 @@ router.get('/', function(req, res, next) {
                 value:response.data[i].value.toString(),
                 date:response.data[i].date.toString(),
                 details:response.data[i].details.toString(),
-                id:response.data[i].id.toString()
-                
+                id:response.data[i].id.toString(),
+                location:{country: response.data[i].Location.Country.toString(), state: response.data[i].Location.State.toString(), city: response.data[i].Location.City.toString()}
             }
             newdata.push(obj);
         }
@@ -32,7 +34,8 @@ router.get('/', function(req, res, next) {
             "date": "08121997",
             "value": 20392910,
             "company": 215721875,
-            "details": 215721875
+            "details": 215721875,
+            "location": {"country":"USA", "state":"CA", "city":"Marina Bay"}
           }]));
     })
 })

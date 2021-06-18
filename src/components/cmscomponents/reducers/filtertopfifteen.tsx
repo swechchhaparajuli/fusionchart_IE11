@@ -83,6 +83,8 @@ const  yearBackReducer= (state = 15, action) => {
             return action.payload
         case "CHART":
             return action.payload
+        case "FILTERLOCATION":
+            return action.payload
         default:
             dataSource.data = [];
             return callAPI(state,date);

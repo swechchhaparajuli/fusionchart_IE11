@@ -9,8 +9,8 @@ import FusionTheme from "fusioncharts/themes/fusioncharts.theme.fusion";
 import Column2D from "fusioncharts/fusioncharts.charts";
 import {useSelector, useDispatch} from 'react-redux';
 
-import {filterAll} from './actions/setFilter'
-import {filterTopCount} from './actions/filterTop15'
+import {filterAll} from '../actions/setFilter'
+import {filterTopCount} from '../actions/filterTop15'
 
 
 ReactFC.fcRoot(FusionCharts,Column2D,FusionTheme);
@@ -22,14 +22,12 @@ const ChartComponent:FC = () => {
 
     let years = useSelector(state => state.yearBack);
 
-
-
     return(
         <div className="container">
             
             <ReactFusioncharts 
                 type="column2d"
-                width="100%"
+                width="90%"
                 height="400"
                 dataFormat="JSON"
                 dataSource={years}

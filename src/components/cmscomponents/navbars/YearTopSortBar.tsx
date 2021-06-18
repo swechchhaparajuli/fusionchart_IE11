@@ -3,11 +3,11 @@ import {FC} from "react";
 
 import {useDispatch, useSelector} from 'react-redux';
 import { connect } from 'react-redux';
-import ChartComponent from "./Charts";
-import DetailsComponent from "./Details";
-import {filterTime} from './actions/filterTime'
-import {filterAll} from './actions/setFilter'
-import {filterTopCount} from './actions/filterTop15'
+import ChartComponent from "../datadisplays/Charts";
+import DetailsComponent from "../datadisplays/Details";
+import {filterTime} from '../actions/filterTime'
+import {filterAll} from '../actions/setFilter'
+import {filterTopCount} from '../actions/filterTop15'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Navbar from 'react-bootstrap/Navbar';
@@ -113,6 +113,7 @@ const CMSComponent:FC = () => {
                     <Col className="col-md-auto">
                         <Form.Group controlId="exampleForm.ControlSelect1">
                             <Form.Control as="select"  onChange={e => numSelection = e.target.value} >
+                            <option value={15} > </option>
                             <option value={30} >Top 30</option>
                             <option value={15} >Top 15</option>
                             <option value={10} >Top Ten</option>
@@ -133,7 +134,7 @@ const CMSComponent:FC = () => {
         <Container fluid>
             <Row>
             {currentChart && <Col className="col-xs-auto"><ChartComponent /></Col>}
-            {currentDetail && <Col className="col-xs-auto"><DetailsComponent /></Col>}
+            {currentDetail && <Col className="col-xs-auto"><DetailsComponent loadedData={years.data}/></Col>}
             </Row>
         </Container>
         </div>

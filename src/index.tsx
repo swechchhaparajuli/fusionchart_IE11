@@ -6,12 +6,12 @@ import App from './App'
 import {createStore , applyMiddleware} from 'redux';
 import thunkMiddleware from 'redux-thunk'
 
-import allReducers from "./components/demo/reducers";
-import { filterTopCount } from "./components/demo/actions/filterTop15";
-import { filterTime } from "./components/demo/actions/filterTime"
+import allReducers from "./components/cmscomponents/reducers";
+import { filterTopCount } from "./components/cmscomponents/actions/filterTop15";
+import { filterTime } from "./components/cmscomponents/actions/filterTime"
 import {Provider} from 'react-redux';
 import {useSelector, useDispatch} from 'react-redux';
-import {filterAll} from './components/demo/actions/setFilter'
+import {filterAll} from './components/cmscomponents/actions/setFilter'
 
 //const composedEnhancer = composeWithDevTools(applyMiddleware(thunkMiddleware))
 

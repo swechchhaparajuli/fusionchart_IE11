@@ -9,6 +9,36 @@ const dataSource = {
       numbersuffix: "",
       theme: "fusion"
     },
+    colorrange: {
+      gradient: "0",
+      color: [
+        {
+          maxvalue: "50",
+          displayvalue: "0-50",
+          code: "#FFFEB6"
+        },
+        {
+          maxvalue: "500",
+          displayvalue: "51-500",
+          code: "#6BF73C"
+        },
+        {
+          maxvalue: "100000",
+          displayvalue: "501-1000",
+          code: "#33FBFF"
+        },
+        {
+          maxvalue: "5000000000",
+          displayvalue: "1001-5000",
+          code: "#4533FF"
+        },
+        {
+          maxvalue: "100000000000",
+          displayvalue: "5000+",
+          code: "#F73CDC"
+        }
+      ]
+  },
     data: []
   };
 
@@ -20,11 +50,11 @@ const dataSource = {
     dataSource.data = [];
     for (let i = 0; i<temp.length; i++){
       var obj = {
-          id:(i+1).toString(),
           label:temp[i].label.toString(),
           value:temp[i].value.toString(), 
           date:temp[i].date.toString(),
-          details:temp[i].details.toString() 
+          details:temp[i].details.toString(),
+          id: temp[i].location.state.toString()
       }
       dataSource.data.push(obj);
   }
@@ -39,11 +69,11 @@ const dataSource = {
     dataSource.data = [];
     for (let i = 0; i<temp.length; i++){
       var obj = {
-          id:(i+1).toString(),
           label:temp[i].label.toString(),
           value:temp[i].value.toString(), 
           date:temp[i].date.toString(),
-          details:temp[i].details.toString() 
+          details:temp[i].details.toString(),
+          id: temp[i].location.state.toString()
       }
       dataSource.data.push(obj);
   }
@@ -52,7 +82,7 @@ const dataSource = {
   }
 
 export const filterAll = (loadeddata, count: number, time: number) => {
-  
+
   if(time>100){
     let temp = String(time);
     temp = "01/01/" + temp;

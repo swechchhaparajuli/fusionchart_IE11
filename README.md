@@ -15,6 +15,10 @@
 **GIF or Video**
 
 - ScreenCast of CMS Run-Through
+
+- Shows Maps Option
+    ('https://drive.google.com/file/d/1Zc8o9p8qgV_i6t0jFV4_GzV2gSvzVJy4/view)
+
 - Shows grid v chart v both version
     (https://drive.google.com/file/d/1hASGOobY1BrdnpEvPG1GjSKMDCO0YRpN/view)
 
@@ -82,6 +86,9 @@
 
     - Kendo Grid CSS not working, so stylesheet plugged into index.html for now 
     - Navbar is funky 
+    - Exponential API calls on CMS Maps ?
+    - Replace grids with grids inside Popover over the map :(
+    - Switch out of implementing Redux 
 
 
 ##  Polyfills
