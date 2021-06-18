@@ -38,8 +38,8 @@ const dataSource = {
 
 
   const getListFiltered = (parsedlist:string, count:number, time:Date) =>{
-  const items = JSON.parse(parsedlist).filter(item => {var temp = new Date(item.date); return temp<time}).sort((a,b) => 0 - (parseInt(a.value) > parseInt(b.value) ? -1 : 1));
-  const temp = items.slice(0,count);
+  const temp = JSON.parse(parsedlist).filter(item => {var temp = new Date(item.date); return temp<time}).sort((a,b) => 0 - (parseInt(a.value) > parseInt(b.value) ? -1 : 1));
+  //const temp = items.slice(0,count);
   var newdata = [{label:"Test", value:"1000", date:"08/12/1997", details:"Test dummy ", }];
   for (let i = 0; i<temp.length; i++){
     var obj = {
@@ -70,7 +70,7 @@ const callAPI = (count:number, time:Date) =>{
   
 
 // state == num years to go back to from 2021
-const  yearBackReducer= (state = 15, action) => {
+const  yearBackReducer= (state = 0, action) => {
   var date = new Date("01/01/2021");
     switch (action.type){
         case "TIME":

@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useRef} from "react";
+import React, {useState, useEffect, useRef, useReducer} from "react";
 import {FC} from "react";
 
 
@@ -21,6 +21,7 @@ import FusionTheme from "fusioncharts/themes/fusioncharts.theme.fusion";
 import {useSelector, useDispatch} from 'react-redux';
 
 import {usStateFilter} from '../actions/setByUSState'
+import yearBackReducer from "../reducers/filtertopfifteen";
 
 
 ReactFC.fcRoot(FusionCharts, USA, FusionMap, FusionTheme);
@@ -33,7 +34,7 @@ const dataSource = {
         caption: "",
         theme: "fusion",
         legendposition: "NONE",
-        entitytooltext: "$lname: <b>$datavalue</b> constracts",
+        entitytooltext: "$lname: <b>$datavalue</b> contracts",
         legendcaption: "Number of constracts per state",
         entityfillhovercolor: "#FFCDD2"
     },
@@ -68,15 +69,13 @@ const dataSource = {
         ]
     },
     // Chart Data
-    data: [
-      {
-        label:"",
-        value:"2000", 
-        date:"12/12/1998",
-        details:"test data",
-        id: "CA"
-      }
-    ]
+    data:[{
+      label:"",
+      value:"2000", 
+      date:"12/12/1998",
+      details:"test data",
+      id: "CA"
+    }]
 };
 
 const getFilteredByState = (parsedlist, place:string) => {
@@ -99,7 +98,7 @@ const getFilteredByState = (parsedlist, place:string) => {
   //console.log(dataSource.data);
   return dataSource.data;
 }
-/*
+
   const getFilteredExact = (parsedlist:string) =>{
     const items = JSON.parse(parsedlist);
     //console.log(items);
@@ -116,17 +115,16 @@ const getFilteredByState = (parsedlist, place:string) => {
   }
   
     return dataSource;
-  }*/
+  }
 
 
-const USMapComponent:FC = () => {
+const USMapComponent:FC<{loadedData}> = (loadedData) => {
 
-
-    let years = useSelector(state => state.yearBack);
-
-    const [StateData, setData] = useState(years); 
-    const [statename, setState] = useState(""); 
-    var count = 0;
+      console.log(loadedData.loadedData);
+  
+      const [StateData, setData] = useState();
+      const [statename, setState] = useState(""); 
+      var count = 0;
 
 
     const setInfo =(eventObj, dataObj)=>{ 
@@ -135,37 +133,36 @@ const USMapComponent:FC = () => {
 
    FusionCharts.addEventListener('entityClick', setInfo);
 
+
     const isMountedVal = useRef(false);
     useEffect(() => {
-      console.log("use effecting");
+      
       isMountedVal.current = true;
       if(statename != ""){
+        console.log("use effecting");
         callAPI(statename);
-        count = 1;
-        console.log("API was called");
+        count = 0;
       }
       return () => {isMountedVal.current = false};
     },[statename])
 
+
     const callAPI = (usstate:string) =>{
       var data;
-      
         fetch("http://localhost:3000/CMSRoutes")
           .then(res => res.text())
           .then(res => 
             {
+              console.log(usstate);
+            if(usstate != ""){
               if(isMountedVal.current){
                 data = getFilteredByState(res,usstate);
-                setData(data); //this is fine bring it back once i fix weird loop
+                setData(data); 
               }
+            }
             });
-      
-          /*  dataSource.data = getFilteredByState(years.data, (dataObj.id).toUpperCase());
-                  count++;*/
             return data;
     }
-
-   
 
     return(
         <div className="container">
@@ -175,9 +172,10 @@ const USMapComponent:FC = () => {
                 width="90%"
                 height="400"
                 dataFormat="JSON"
-                dataSource={years}
+                dataSource={loadedData.loadedData}
             />
 
+          
             {statename != "" && <Details loadedData={StateData}/>}
         </div>
     )
