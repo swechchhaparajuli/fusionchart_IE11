@@ -1,7 +1,6 @@
 #   About This Project 
 
 
-
 #   How to Navigate 
 
 **API CALL for Dummy Data** 
@@ -11,13 +10,12 @@
 **RUNNING PROGRAM**
     localhost:5000
 
-
 **GIF or Video**
 
 - ScreenCast of CMS Run-Through
 
 - Shows Maps Option with Hover and Click
-    (https://drive.google.com/file/d/1gNOUat0QesaMZgzKa5-JsVRGmb3v1ptT/view)
+    (https://drive.google.com/file/d/1WaWDLlC4ylZbKqeEDjcKvm9x-2o-TWLU/view)
 
 - Shows grid v chart v both version
     (https://drive.google.com/file/d/1hASGOobY1BrdnpEvPG1GjSKMDCO0YRpN/view)
@@ -38,11 +36,6 @@
 
 - Screen Cast of Code Snippets enabling Shared-State Components:
     ('https://drive.google.com/file/d/1Ri_oy98UaqQ4i0rlgRkYv0tkeu8bT1YA/view')
-
-
-
-
-
 
 
 

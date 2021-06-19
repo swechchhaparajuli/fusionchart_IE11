@@ -22,6 +22,7 @@ import {useSelector, useDispatch} from 'react-redux';
 
 import {usStateFilter} from '../actions/setByUSState'
 import yearBackReducer from "../reducers/filtertopfifteen";
+import { validatePackage } from "@progress/kendo-licensing";
 
 
 ReactFC.fcRoot(FusionCharts, USA, FusionMap, FusionTheme);
@@ -44,7 +45,7 @@ const dataSource = {
           {
             maxvalue: "50",
             displayvalue: "0-50",
-            code: "#FFFEB6"
+            code: "#FFFFFF"
           },
           {
             maxvalue: "500",
@@ -132,8 +133,15 @@ const USMapComponent:FC<{loadedData}> = (loadedData) => {
       setState((dataObj.id).toUpperCase());
     }
 
-    const setInfo =()=>{
+    const setInfo =(eventObj, dataObj)=>{
       setGrid(StateData);
+      count = 1;
+     // const data =[{"name":"test1"},{"name":"test2"}];
+      if(GridData != undefined){
+      const listValues = "<ol >" + GridData.map((listitem) => ("<li key={listitem.label}><b>"+listitem.label + "</b> : $" + listitem.value + "</li>")).join('') + "</ol>"
+      console.log(listValues);
+      loadedData.loadedData.chart.entitytooltext=listValues; 
+      }
     }
 
    FusionCharts.addEventListener('entityRollOver', getInfo);
@@ -146,10 +154,19 @@ const USMapComponent:FC<{loadedData}> = (loadedData) => {
       if(statename != ""){
         console.log("use effecting");
         callAPI(statename);
-        count = 0;
       }
       return () => {isMountedVal.current = false};
     },[statename])
+
+    useEffect(() => {
+      
+      isMountedVal.current = true;
+      if(statename != ""){
+        console.log("use effecting grid");
+        setPopover();
+      }
+      return () => {isMountedVal.current = false};
+    },[count])
 
 
     const callAPI = (usstate:string) =>{
@@ -164,11 +181,14 @@ const USMapComponent:FC<{loadedData}> = (loadedData) => {
                 data = getFilteredByState(res,usstate);
                 loadedData.loadedData.chart.entitytooltext= "$lname: <b>" + data.length + "</b> contracts";
                 setData(data); 
-                
               }
             }
             });
             return data;
+    }
+
+    const setPopover = () =>{
+
     }
 
 
@@ -179,13 +199,13 @@ const USMapComponent:FC<{loadedData}> = (loadedData) => {
             <ReactFC
                 type="usa"
                 width="90%"
-                height="400"
+                height="600"
                 dataFormat="JSON"
                 dataSource={loadedData.loadedData}
             />
 
           
-            {statename != "" && <Details loadedData={GridData}/>}
+            {/*statename == "" && <Details loadedData={GridData}/>*/}
         </div>
     )
 }

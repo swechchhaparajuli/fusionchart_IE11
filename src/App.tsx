@@ -35,7 +35,7 @@ const dataSource = {
           {
             maxvalue: "50",
             displayvalue: "0-50",
-            code: "#FFFEB6"
+            code: "#FFFFFF"
           },
           {
             maxvalue: "500",
@@ -90,6 +90,7 @@ const getFilteredExact = (parsedlist:string) =>{
 const App:FC = () => {
 
     const [StateData, setData] = useState(dataSource);
+    const [showmap, setMap] = useState(false);
 
     const callAPI = () =>{
         var data;
@@ -105,11 +106,16 @@ const App:FC = () => {
 
     callAPI();
 
+    var bool = false;
+
+    
+
         //let years = useSelector(state => state.yearBack);  
 
     return(
         <div >
-        <USMapComponent loadedData={StateData}/>
+          {!showmap &&<button onClick={() =>  {setMap(true)}} >Click for US Map</button>}
+        {showmap && <USMapComponent loadedData={StateData}/>}
             {/*
              <GraphChartBar />
              <CMSComponent />
