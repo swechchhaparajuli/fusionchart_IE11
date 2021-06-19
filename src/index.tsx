@@ -21,7 +21,7 @@ let store = createStore(allReducers,
 
 
     
-
+/*
 const callAPI = (count:number, time:number) =>{
     fetch("http://localhost:3000/CMSRoutes")
         .then(res => res.text())
@@ -32,7 +32,7 @@ const callAPI = (count:number, time:number) =>{
         });
 }
 
-callAPI(10,1);
+callAPI(10,1);*/
 
 
 

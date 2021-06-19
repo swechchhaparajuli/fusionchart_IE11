@@ -16,8 +16,8 @@
 
 - ScreenCast of CMS Run-Through
 
-- Shows Maps Option
-    ('https://drive.google.com/file/d/1Zc8o9p8qgV_i6t0jFV4_GzV2gSvzVJy4/view)
+- Shows Maps Option with Hover and Click
+    (https://drive.google.com/file/d/1gNOUat0QesaMZgzKa5-JsVRGmb3v1ptT/view)
 
 - Shows grid v chart v both version
     (https://drive.google.com/file/d/1hASGOobY1BrdnpEvPG1GjSKMDCO0YRpN/view)
@@ -85,10 +85,9 @@
 ## Issues 
 
     - Kendo Grid CSS not working, so stylesheet plugged into index.html for now 
-    - Navbar is funky 
-    - Exponential API calls on CMS Maps ?
+    - Navbar is funky on <CMSComponent>
     - Replace grids with grids inside Popover over the map :(
-    - Switch out of implementing Redux 
+    - Switch out of implementing Redux on <CMSComponents>
 
 
 ##  Polyfills

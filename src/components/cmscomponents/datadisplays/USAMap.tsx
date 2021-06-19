@@ -35,7 +35,7 @@ const dataSource = {
         theme: "fusion",
         legendposition: "NONE",
         entitytooltext: "$lname: <b>$datavalue</b> contracts",
-        legendcaption: "Number of constracts per state",
+        legendcaption: "Number of contracts per state",
         entityfillhovercolor: "#FFCDD2"
     },
     colorrange: {
@@ -122,17 +122,22 @@ const USMapComponent:FC<{loadedData}> = (loadedData) => {
 
       console.log(loadedData.loadedData);
   
+      const [GridData, setGrid] = useState();
       const [StateData, setData] = useState();
       const [statename, setState] = useState(""); 
       var count = 0;
 
 
-    const setInfo =(eventObj, dataObj)=>{ 
+    const getInfo =(eventObj, dataObj)=>{ 
       setState((dataObj.id).toUpperCase());
     }
 
-   FusionCharts.addEventListener('entityClick', setInfo);
+    const setInfo =()=>{
+      setGrid(StateData);
+    }
 
+   FusionCharts.addEventListener('entityRollOver', getInfo);
+   FusionCharts.addEventListener('entityClick', setInfo);
 
     const isMountedVal = useRef(false);
     useEffect(() => {
@@ -157,12 +162,16 @@ const USMapComponent:FC<{loadedData}> = (loadedData) => {
             if(usstate != ""){
               if(isMountedVal.current){
                 data = getFilteredByState(res,usstate);
+                loadedData.loadedData.chart.entitytooltext= "$lname: <b>" + data.length + "</b> contracts";
                 setData(data); 
+                
               }
             }
             });
             return data;
     }
+
+
 
     return(
         <div className="container">
@@ -176,7 +185,7 @@ const USMapComponent:FC<{loadedData}> = (loadedData) => {
             />
 
           
-            {statename != "" && <Details loadedData={StateData}/>}
+            {statename != "" && <Details loadedData={GridData}/>}
         </div>
     )
 }
