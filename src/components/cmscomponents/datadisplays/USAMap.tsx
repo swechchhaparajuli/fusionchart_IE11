@@ -138,7 +138,11 @@ const USMapComponent:FC<{loadedData}> = (loadedData) => {
       count = 1;
      // const data =[{"name":"test1"},{"name":"test2"}];
       if(GridData != undefined){
-      const listValues = "<ol >" + GridData.map((listitem) => ("<li key={listitem.label}><b>"+listitem.label + "</b> : $" + listitem.value + "</li>")).join('') + "</ol>"
+      const listValues = "<table class='table'><thead><tr><th scope='col'> # </th> <th>  </th> <th scope='col'> Company </th> <th>  </th> <th scope='col'> Contract Amount </th> </tr></thead><tbody>" 
+        + GridData.map((listitem) => ("<tr key={listitem.label}><th scope='row'> 1 </th> <td></td> <td>"
+        
+        +listitem.label + "</td><td></td><td> $" + listitem.value + "</td></tr>")).join('') + "</tbody></table>"
+
       console.log(listValues);
       loadedData.loadedData.chart.entitytooltext=listValues; 
       }
