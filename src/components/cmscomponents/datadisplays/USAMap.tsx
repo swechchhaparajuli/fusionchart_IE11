@@ -121,11 +121,11 @@ const getFilteredByState = (parsedlist, place:string) => {
 
 const USMapComponent:FC<{loadedData}> = (loadedData) => {
 
-      console.log(loadedData.loadedData);
+     // console.log(loadedData.loadedData);
   
       const [GridData, setGrid] = useState();
       const [StateData, setData] = useState();
-      const [statename, setState] = useState(""); 
+      const [statename, setState] = useState("NONE"); 
       var count = 0;
 
 
@@ -134,18 +134,10 @@ const USMapComponent:FC<{loadedData}> = (loadedData) => {
     }
 
     const setInfo =(eventObj, dataObj)=>{
+      setState("NONE");
       setGrid(StateData);
       count = 1;
-     // const data =[{"name":"test1"},{"name":"test2"}];
-      if(GridData != undefined){
-      const listValues = "<table class='table'><thead><tr><th scope='col'> # </th> <th>  </th> <th scope='col'> Company </th> <th>  </th> <th scope='col'> Contract Amount </th> </tr></thead><tbody>" 
-        + GridData.map((listitem) => ("<tr key={listitem.label}><th scope='row'> 1 </th> <td></td> <td>"
-        
-        +listitem.label + "</td><td></td><td> $" + listitem.value + "</td></tr>")).join('') + "</tbody></table>"
 
-      console.log(listValues);
-      loadedData.loadedData.chart.entitytooltext=listValues; 
-      }
     }
 
    FusionCharts.addEventListener('entityRollOver', getInfo);
@@ -155,22 +147,15 @@ const USMapComponent:FC<{loadedData}> = (loadedData) => {
     useEffect(() => {
       
       isMountedVal.current = true;
-      if(statename != ""){
+      if(statename != "NONE"){
         console.log("use effecting");
         callAPI(statename);
-      }
-      return () => {isMountedVal.current = false};
-    },[statename])
-
-    useEffect(() => {
-      
-      isMountedVal.current = true;
-      if(statename != ""){
-        console.log("use effecting grid");
+      } else {
+        console.log("pop");
         setPopover();
       }
       return () => {isMountedVal.current = false};
-    },[count])
+    },[statename])
 
 
     const callAPI = (usstate:string) =>{
@@ -193,9 +178,17 @@ const USMapComponent:FC<{loadedData}> = (loadedData) => {
 
     const setPopover = () =>{
 
+      if(StateData != undefined){
+        const listValues = "<table class='table'><thead><tr><th scope='col'> # </th> <th>  </th> <th scope='col'> Company </th> <th>  </th> <th scope='col'> Contract Amount </th> </tr></thead><tbody>" 
+          + StateData.map((listitem, index) => ("<tr key={listitem.label}><th scope='row'>" + (index+1) + "</th> <td></td> <td>"
+          
+          +listitem.label + "</td><td></td><td> $" + listitem.value + "</td></tr>")).join('') + "</tbody></table>"
+  
+       
+        loadedData.loadedData.chart.entitytooltext=listValues; 
+        }
+        
     }
-
-
 
     return(
         <div className="container">

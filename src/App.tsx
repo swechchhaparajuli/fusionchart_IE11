@@ -4,6 +4,7 @@ import {FC} from "react";
 import { useSelector } from "react-redux";
 
 import "./styles.scss";
+import Navbar from 'react-bootstrap/Navbar';
 import CandyTheme from "fusioncharts/themes/fusioncharts.theme.candy";
 import EuroChart from "./components/charts/EuroChart"
 
@@ -71,7 +72,7 @@ const dataSource = {
 
 const getFilteredExact = (parsedlist:string) =>{
     const items = JSON.parse(parsedlist);
-    //console.log(items);
+
     dataSource.data = [];
     for (let i = 0; i<items.length; i++){
       var obj = {
@@ -83,7 +84,6 @@ const getFilteredExact = (parsedlist:string) =>{
       }
       dataSource.data.push(obj);
   }
-  
     return dataSource;
   }
 
@@ -91,6 +91,7 @@ const App:FC = () => {
 
     const [StateData, setData] = useState(dataSource);
     const [showmap, setMap] = useState(false);
+    const [showtop15, setTop15] = useState(false);
 
     const callAPI = () =>{
         var data;
@@ -106,7 +107,7 @@ const App:FC = () => {
 
     callAPI();
 
-    var bool = false;
+
 
     
 
@@ -114,11 +115,18 @@ const App:FC = () => {
 
     return(
         <div >
-          {!showmap &&<button onClick={() =>  {setMap(true)}} >Click for US Map</button>}
+           <Navbar className="bg-light">  
+          {!showmap &&<button className="btn" onClick={() =>  {setMap(true), setTop15(false)}} >Click for US Map</button>}
+          {!showtop15 &&<button className="btn" onClick={() =>  {setTop15(true), setMap(false)}} >Click for Top 15</button>}
+          </Navbar >
         {showmap && <USMapComponent loadedData={StateData}/>}
+        {showtop15 && <GraphChartBar /> && <CMSComponent />}
             {/*
-             <GraphChartBar />
-             <CMSComponent />
+             <Navbar className="bg-light">  
+          {!showmap &&<button className="btn" onClick={() =>  {setMap(true), setTop15(false)}} >Click for US Map</button>}
+          {!showtop15 &&<button className="btn" onClick={() =>  {setTop15(true), setMap(false)}} >Click for Top 15</button>}
+          </Navbar >
+
             <MyMaps /> 
              */}
             {/* <button onClick={() => setState(changeLabel("Day"))}> Day Label </button>
