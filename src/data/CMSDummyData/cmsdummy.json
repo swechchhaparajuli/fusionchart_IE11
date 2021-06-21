@@ -4,8 +4,8 @@
     "company": "Microsoft",
     "details": "detail info",
     "value" : "134607",
-    "Location" : {"Country": "USA", "State":"TX", "City": "Los Angeles"}
-  }, {
+    "Location" : {"Country": "USA", "State":"TX", "City": "Los Angeles"} 
+    }, {
     "id": 223446,
     "date": "12/04/2021",
     "company": "AT&T",

@@ -66,26 +66,7 @@ const dataSource = {
   ]
 };
 
-const getFilteredByState = (parsedlist, place:string) => {
-console.log("FILTERCHECK:")
-//console.log(place);
-// console.log(JSON.parse(parsedlist)[2].location.state);
-const items = JSON.parse(parsedlist); //.filter(item => {return (place == item.location.state)});
-dataSource.data = [];
-for (let i = 0; i<items.length; i++){
-  var obj = {
-      label:items[i].label.toString(),
-      value:items[i].value.toString(), 
-      date:items[i].date.toString(),
-      details:items[i].details.toString(),
-      id: items[i].location.state.toString()
-  }
-  dataSource.data.push(obj);
-}
-//console.log(newdata);
-console.log(dataSource.data);
-return dataSource.data;
-}
+
 
 class DetailsComponent extends Component <{loadedData}> {
 
@@ -96,7 +77,7 @@ class DetailsComponent extends Component <{loadedData}> {
       <div>
         
       <Grid style={{ width: "400", height:"400px", overflow: "scroll"}}  data={this.props.loadedData}>
-        <Column field="id" title="" />
+        <Column field="1" title="" />
         <Column field="date" title="Date" />
         <Column field="label" title="Company" />
         <Column field="value" title="Number of Contracts" />

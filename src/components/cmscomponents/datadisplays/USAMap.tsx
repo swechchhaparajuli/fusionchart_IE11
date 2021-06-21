@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useRef, useReducer} from "react";
+import React, {useState, useEffect, useRef} from "react";
 import {FC} from "react";
 
 
@@ -23,6 +23,7 @@ import {useSelector, useDispatch} from 'react-redux';
 import {usStateFilter} from '../actions/setByUSState'
 import yearBackReducer from "../reducers/filtertopfifteen";
 import { validatePackage } from "@progress/kendo-licensing";
+import { Popover } from "react-bootstrap";
 
 
 ReactFC.fcRoot(FusionCharts, USA, FusionMap, FusionTheme);
@@ -45,7 +46,7 @@ const dataSource = {
           {
             maxvalue: "50",
             displayvalue: "0-50",
-            code: "#FFFFFF"
+            code: "#FFFFF"
           },
           {
             maxvalue: "500",
@@ -75,69 +76,70 @@ const dataSource = {
       value:"2000", 
       date:"12/12/1998",
       details:"test data",
-      id: "CA"
+      location: {state: "CA"}
     }]
 };
 
-const getFilteredByState = (parsedlist, place:string) => {
-  console.log("FILTERCHECK:")
-  //console.log(place);
- // console.log(JSON.parse(parsedlist)[2].location.state);
-  const items = JSON.parse(parsedlist).filter(item => {return (place == item.location.state)});
-  dataSource.data = [];
-  for (let i = 0; i<items.length; i++){
-    var obj = {
-        label:items[i].label.toString(),
-        value:items[i].value.toString(), 
-        date:items[i].date.toString(),
-        details:items[i].details.toString(),
-        id: items[i].location.state.toString()
-    }
-    dataSource.data.push(obj);
-}
-  //console.log(newdata);
-  //console.log(dataSource.data);
-  return dataSource.data;
+const getStateDetails = (place:string) => {
+  const tempdataSource = {
+    chart: dataSource.chart,
+    colorrange: dataSource.colorrange,
+    data: []
+  }
+
+    fetch("http://localhost:3000/CMSRoutes")
+    .then(res => res.text())
+    .then(res => 
+        {
+          let items;
+          if(place != ""){
+            items = JSON.parse(res).filter(item => {return (place == item.location.state.toUpperCase())});
+          } else {
+            items = JSON.parse(res);
+          }
+          for (let i = 0; i<items.length; i++){
+            var obj = {
+                label:items[i].label.toString(),
+                value:items[i].value.toString(), 
+                date:items[i].date.toString(),
+                details:items[i].details.toString(),
+                id: items[i].location.state.toString()
+            }
+            tempdataSource.data.push(obj);
+          }
+          
+        });
+
+        return tempdataSource.data;
 }
 
-  const getFilteredExact = (parsedlist:string) =>{
-    const items = JSON.parse(parsedlist);
-    //console.log(items);
-    dataSource.data = [];
-    for (let i = 0; i<items.length; i++){
-      var obj = {
-        label:items[i].label.toString(),
-        value:items[i].value.toString(), 
-        date:items[i].date.toString(),
-        details:items[i].details.toString(),
-        id: items[i].location.state.toString().toUpperCase()
-      }
-      dataSource.data.push(obj);
+  const filterStateCount = (parsedlist:string, place:string) =>{
+    const items = JSON.parse(parsedlist).filter(item=>{return(place == item.label)});
+    if(items.length>1){
+      return items[0].value;
+    }
+    return items[0].value;
   }
-  
-    return dataSource;
-  }
+
+
 
 
 const USMapComponent:FC<{loadedData}> = (loadedData) => {
 
-     // console.log(loadedData.loadedData);
-  
+    // preloaded in parent component for map color display, if I remove it the map will be gray
+      dataSource.data = loadedData.loadedData.data;
+   
       const [GridData, setGrid] = useState();
-      const [StateData, setData] = useState();
-      const [statename, setState] = useState("NONE"); 
-      var count = 0;
-
-
+      const [StateData, setData] = useState(loadedData.loadedData.data);
+      const [statename, setState] = useState("");
+   
     const getInfo =(eventObj, dataObj)=>{ 
       setState((dataObj.id).toUpperCase());
     }
 
-    const setInfo =(eventObj, dataObj)=>{
-      setState("NONE");
+    const setInfo =()=>{
+      setState("");
       setGrid(StateData);
-      count = 1;
-
     }
 
    FusionCharts.addEventListener('entityRollOver', getInfo);
@@ -145,9 +147,8 @@ const USMapComponent:FC<{loadedData}> = (loadedData) => {
 
     const isMountedVal = useRef(false);
     useEffect(() => {
-      
       isMountedVal.current = true;
-      if(statename != "NONE"){
+      if(statename != ""){
         console.log("use effecting");
         callAPI(statename);
       } else {
@@ -157,52 +158,51 @@ const USMapComponent:FC<{loadedData}> = (loadedData) => {
       return () => {isMountedVal.current = false};
     },[statename])
 
+    
 
     const callAPI = (usstate:string) =>{
-      var data;
-        fetch("http://localhost:3000/CMSRoutes")
-          .then(res => res.text())
+      var hoverdata, clickdata;
+        fetch("http://localhost:3000/USAroutes")
+          .then(res => res.text()
           .then(res => 
             {
               console.log(usstate);
             if(usstate != ""){
               if(isMountedVal.current){
-                data = getFilteredByState(res,usstate);
-                loadedData.loadedData.chart.entitytooltext= "$lname: <b>" + data.length + "</b> contracts";
-                setData(data); 
+                hoverdata = filterStateCount(res,usstate); 
+                clickdata = getStateDetails(usstate);
+                dataSource.chart.entitytooltext= "$lname: <b>" + hoverdata+ "</b> contracts";
+                setGrid(clickdata);
+                setData(clickdata);
               }
             }
-            });
-            return data;
+            }));
+            return hoverdata;
     }
 
     const setPopover = () =>{
-
-      if(StateData != undefined){
+      
+      if(GridData != undefined){
         const listValues = "<table class='table'><thead><tr><th scope='col'> # </th> <th>  </th> <th scope='col'> Company </th> <th>  </th> <th scope='col'> Contract Amount </th> </tr></thead><tbody>" 
-          + StateData.map((listitem, index) => ("<tr key={listitem.label}><th scope='row'>" + (index+1) + "</th> <td></td> <td>"
-          
+          + GridData.map((listitem, index) => ("<tr key={listitem.label}><th scope='row'>" + (index+1) + "</th> <td></td> <td>"
           +listitem.label + "</td><td></td><td> $" + listitem.value + "</td></tr>")).join('') + "</tbody></table>"
-  
-       
-        loadedData.loadedData.chart.entitytooltext=listValues; 
+        dataSource.chart.entitytooltext=listValues; 
         }
-        
     }
 
     return(
         <div className="container">
             
-            <ReactFC
+           <ReactFC
                 type="usa"
                 width="90%"
                 height="600"
                 dataFormat="JSON"
-                dataSource={loadedData.loadedData}
+                dataSource={dataSource}
             />
 
           
-            {/*statename == "" && <Details loadedData={GridData}/>*/}
+            {/*statename != "" && <Details loadedData={GridData}/>*/}
         </div>
     )
 }

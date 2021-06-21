@@ -1,3 +1,19 @@
+body {
+  font-size: small; }
+
+.btn {
+  background-color: #5b84a8;
+  border: transparent; }
+
+.container {
+  padding: 1px; }
+
 p {
-  color: red; }
+  color: gray; }
+
+.formlabel {
+  text-align: justify; }
+
+.chartbody {
+  background-color: #e8f0f7; }
 

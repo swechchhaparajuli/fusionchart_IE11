@@ -1,0 +1,210 @@
+[
+    {
+        "state": "CA",
+        "nclients": 202385028
+    },
+    {
+        "state": "WA",
+        "nclients": 239283
+    },
+    {
+        "state": "OR",
+        "nclients": 212048
+    },
+    {
+        "state": "AL",
+        "nclients": 23245
+    },
+    {
+        "state": "HI",
+        "nclients": 22345
+    },
+    {
+        "state": "NV",
+        "nclients": 22345
+    },
+    {
+        "state": "ID",
+        "nclients": 22345
+    },
+    {
+        "state": "MO",
+        "nclients": 23426
+    },
+    {
+        "state": "WY",
+        "nclients": 22352425
+    },
+    {
+        "state": "CO",
+        "nclients": 21235
+    },
+    {
+        "state": "UT",
+        "nclients": 22346753
+    },
+    {
+        "state": "AZ",
+        "nclients": 21234523
+    },
+    {
+        "state": "NM",
+        "nclients": 232452
+    },
+    {
+        "state": "TX",
+        "nclients": 2234743
+    },
+    {
+        "state": "OK",
+        "nclients": 2234535
+    },
+    {
+        "state": "CA",
+        "nclients": 2234532
+    },
+    {
+        "state": "KS",
+        "nclients": 2234532
+    },
+    {
+        "state": "NE",
+        "nclients": 2324523
+    },
+    {
+        "state": "SD",
+        "nclients": 2234532
+    },
+    {
+        "state": "ND",
+        "nclients": 223525
+    },
+    {
+        "state": "MN",
+        "nclients": 223453252
+    },
+    {
+        "state": "IA",
+        "nclients": 22345352
+    },
+    {
+        "state": "WI",
+        "nclients": 25324523
+    },
+    {
+        "state": "MI",
+        "nclients": 223325
+    },
+    {
+        "state": "IL",
+        "nclients": 2324535
+    },
+    {
+        "state": "IN",
+        "nclients": 2324556
+    },
+    {
+        "state": "KY",
+        "nclients": 2039258093
+    },
+    {
+        "state": "TN",
+        "nclients": 22398592
+    },
+    {
+        "state": "AK",
+        "nclients": 22389459
+    },
+    {
+        "state": "MS",
+        "nclients": 223845
+    },
+    {
+        "state": "SC",
+        "nclients": 229385
+    },
+    {
+        "state": "NC",
+        "nclients": 21234
+    },
+    {
+        "state": "VA",
+        "nclients": 21234
+    },
+    {
+        "state": "MD",
+        "nclients": 23214
+    },
+    {
+        "state": "DE",
+        "nclients": 24532
+    },
+    {
+        "state": "DC",
+        "nclients": 22345
+    },
+    {
+        "state": "GA",
+        "nclients": 2325345
+    },
+    {
+        "state": "FL",
+        "nclients": 22345234
+    },
+    {
+        "state": "LA",
+        "nclients": 2234523
+    },
+    {
+        "state": "MA",
+        "nclients": 232523
+    },
+    {
+        "state": "NH",
+        "nclients": 22345325
+    },
+    {
+        "state": "NJ",
+        "nclients": 2234522
+    },
+    {
+        "state": "NY",
+        "nclients": 223452345
+    },
+    {
+        "state": "ME",
+        "nclients": 22345235
+    },
+    {
+        "state": "MT",
+        "nclients": 22345235
+    },
+    {
+        "state": "OH",
+        "nclients": 223452345
+    },
+    {
+        "state": "RI",
+        "nclients": 2234523
+    },
+    {
+        "state": "WY",
+        "nclients": 22345325
+    },
+    {
+        "state": "WV",
+        "nclients": 22345235
+    },
+    {
+        "state": "VT",
+        "nclients": 22345235
+    },
+    {
+        "state": "PA",
+        "nclients": 2234523
+    },
+    {
+        "state": "AR",
+        "nclients": 2234523
+    }
+]

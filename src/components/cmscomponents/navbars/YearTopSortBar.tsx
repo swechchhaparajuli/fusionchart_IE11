@@ -18,7 +18,7 @@ import { Component } from "react";
 
 
 
-const CMSComponent:FC = () => {
+const TopComponent:FC<{loadedData}> = (loadedData) => {
 
     const dispatch = useDispatch();
     let currentChart = useSelector(state => state.displayCharts);
@@ -133,7 +133,7 @@ const CMSComponent:FC = () => {
     </Navbar>
         <Container fluid>
             <Row>
-            {currentChart && <Col className="col-xs-auto"><ChartComponent /></Col>}
+            {currentChart && <Col className="col-xs-auto"><ChartComponent loadedData={years.data}/></Col>}
             {currentDetail && <Col className="col-xs-auto"><DetailsComponent loadedData={years.data}/></Col>}
             </Row>
         </Container>
@@ -141,4 +141,4 @@ const CMSComponent:FC = () => {
     )
 }
 
-export default CMSComponent;
+export default TopComponent;
