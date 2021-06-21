@@ -22,7 +22,7 @@ const dataSource = {
   }
 
   const callAPI = (count:number) =>{
-    fetch("http://localhost:3000/CMSRoutes")
+    fetch("http://localhost:3000/TopFifteen")
       .then(res => res.text())
       .then(res => 
         {

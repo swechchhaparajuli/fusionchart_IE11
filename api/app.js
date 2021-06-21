@@ -8,7 +8,7 @@ var cors = require('cors');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var testAPIRouter = require("./routes/testAPI");
-var CMSRouter = require("./routes/CMSRoutes/topfifteen");
+var TopFifteen = require("./routes/CMSRoutes/topfifteen");
 var USARouter = require("./routes/CMSRoutes/usmap");
 
 
@@ -28,7 +28,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use("/testAPI", testAPIRouter);
-app.use("/CMSRoutes", CMSRouter);
+app.use("/TopFifteen", TopFifteen);
 app.use("/USAroutes", USARouter);
 
 // catch 404 and forward to error handler

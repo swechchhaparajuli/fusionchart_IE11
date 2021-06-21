@@ -80,14 +80,22 @@ const dataSource = {
     }]
 };
 
-const getStateDetails = (place:string) => {
+const getStateDetails = (place:string, filtertype:string) => {
   const tempdataSource = {
     chart: dataSource.chart,
     colorrange: dataSource.colorrange,
     data: []
   }
 
-    fetch("http://localhost:3000/CMSRoutes")
+    var url = "http://localhost:3000/TopFifteen";
+
+    if("topfifteen" == filtertype){
+      url = "http://localhost:3000/TopFifteen";
+    }else if("yearback" == filtertype){
+      url = "http://localhost:3000/YearsBack";
+    }
+
+    fetch(url)
     .then(res => res.text())
     .then(res => 
         {
@@ -107,14 +115,16 @@ const getStateDetails = (place:string) => {
             }
             tempdataSource.data.push(obj);
           }
-          
         });
 
         return tempdataSource.data;
 }
 
   const filterStateCount = (parsedlist:string, place:string) =>{
-    const items = JSON.parse(parsedlist).filter(item=>{return(place == item.label)});
+
+    console.log(parsedlist)
+    const items = JSON.parse(parsedlist).filter(item => {return (place == item.label.toUpperCase())});
+    //const items = JSON.parse(parsedlist).filter(item=>{return(place == item.label)});
     if(items.length>1){
       return items[0].value;
     }
@@ -124,15 +134,15 @@ const getStateDetails = (place:string) => {
 
 
 
-const USMapComponent:FC<{loadedData}> = (loadedData) => {
+const USMapComponent:FC<{type:string}> = (type) => {
 
-    // preloaded in parent component for map color display, if I remove it the map will be gray
-      dataSource.data = loadedData.loadedData.data;
    
       const [GridData, setGrid] = useState();
-      const [StateData, setData] = useState(loadedData.loadedData.data);
+      const [StateData, setData] = useState(dataSource.data);
       const [statename, setState] = useState("");
-   
+      const [filtertype, setFilter] = useState(type.type);
+
+
     const getInfo =(eventObj, dataObj)=>{ 
       setState((dataObj.id).toUpperCase());
     }
@@ -144,6 +154,18 @@ const USMapComponent:FC<{loadedData}> = (loadedData) => {
 
    FusionCharts.addEventListener('entityRollOver', getInfo);
    FusionCharts.addEventListener('entityClick', setInfo);
+
+    useEffect(() => {
+      dataSource.data = getStateDetails("", filtertype);
+
+      // fetch("http://localhost:3000/USAroutes")
+      //     .then(res => res.text()
+      //     .then(res => 
+      //       {
+      //         dataSource.data = JSON.parse(res);
+      //         console.log(dataSource.data);
+      //       }));
+    },[])
 
     const isMountedVal = useRef(false);
     useEffect(() => {
@@ -162,7 +184,7 @@ const USMapComponent:FC<{loadedData}> = (loadedData) => {
 
     const callAPI = (usstate:string) =>{
       var hoverdata, clickdata;
-        fetch("http://localhost:3000/USAroutes")
+      fetch("http://localhost:3000/USAroutes")
           .then(res => res.text()
           .then(res => 
             {
@@ -170,7 +192,7 @@ const USMapComponent:FC<{loadedData}> = (loadedData) => {
             if(usstate != ""){
               if(isMountedVal.current){
                 hoverdata = filterStateCount(res,usstate); 
-                clickdata = getStateDetails(usstate);
+                clickdata = getStateDetails(usstate, filtertype);
                 dataSource.chart.entitytooltext= "$lname: <b>" + hoverdata+ "</b> contracts";
                 setGrid(clickdata);
                 setData(clickdata);

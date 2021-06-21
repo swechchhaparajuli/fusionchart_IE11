@@ -83,14 +83,14 @@ const getFilteredExact = (parsedlist:string) =>{
 
 const MainMenu:FC = () => {
 
-    const [StateData, setStateData] = useState(dataSource);
     const [TopData, setTopData] = useState(dataSource);
     const [showmap, setMap] = useState(false);
     const [showtop15, setTop15] = useState(false);
+    const [maptype, setMapType] = useState("TopFifteen");
 
     const callDetailedAPI = () =>{
         var data;
-        fetch("http://localhost:3000/CMSRoutes")
+        fetch("http://localhost:3000/TopFifteen")
             .then(res => res.text())
             .then(res => 
                 {
@@ -109,11 +109,16 @@ const MainMenu:FC = () => {
     return(
         <div >
            <Navbar className="bg-light">  
-          {!showmap &&<button className="btn" onClick={() =>  {setMap(true), setTop15(false)}} >Click for US Map</button>}
-          {!showtop15 &&<button className="btn" onClick={() =>  {setTop15(true), setMap(false)}} >Click for Top 15</button>}
+          {!showmap &&<button className="btn" onClick={() =>  {setMapType("TopFifteen"), setMap(true),setTop15(false)}} >Map View</button>}
+          {!showtop15 &&<button className="btn" onClick={() =>  {setTop15(true), setMap(false)}} >Data View</button>}
           </Navbar >
-        {showmap && <USMapComponent loadedData={TopData}/>}
+        {showmap && <USMapComponent loadedData={maptype}/>}
         {showtop15 && <GraphChartBar /> && <TopComponent loadedData={TopData}/>}
+
+
+
+
+        
             {/*
              <Navbar className="bg-light">  
           {!showmap &&<button className="btn" onClick={() =>  {setMap(true), setTop15(false)}} >Click for US Map</button>}
