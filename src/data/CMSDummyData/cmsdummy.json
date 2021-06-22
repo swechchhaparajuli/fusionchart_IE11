@@ -1,232 +1,214 @@
-[{
-    "id": 12345,
-    "date": "08/12/1997",
-    "company": "Microsoft",
-    "details": "detail info",
-    "value" : "134607",
-    "Location" : {"Country": "USA", "State":"TX", "City": "Los Angeles"} 
-    }, {
-    "id": 223446,
-    "date": "12/04/2021",
-    "company": "AT&T",
-    "details": "detail info",
-    "value" : "263760",
-    "Location" : {"Country": "USA", "State":"AL", "City": "Los Angeles"}
-  }, {
-    "id": 394267,
-    "date": "02/28/1834",
-    "company": "Reebook",
-    "details": "detail info",
-    "value" : "363074",
-    "Location" : {"Country": "USA", "State":"AK", "City": "Los Angeles"}
-  }, {
-    "id": 405673,
-    "date": "03/21/1984",
-    "company": "ACE Hardware",
-    "details": "detail info",
-    "value" : "443460",
-    "Location" : {"Country": "USA", "State":"AZ", "City": "Los Angeles"}
+[ {  
+    "id": 4331.934,
+    "Contact_info": {"Name": "LONG DENISE", "Cell": "15103920043"},
+    "Complete": "100",
+    "AwardDate": "08/12/2012",
+    "Project_desc": "clear lake debris cleanup",
+    "Contract$" : "1346.07",
+    "Location" : {"State": "NY", "County":"Sonoma"} 
   },
-  {
-    "id": 126645,
-    "date": "08/12/1997",
-    "company": "Home Depot",
-    "details": "detail info",
-    "value" : "543460",
-    "Location" : {"Country": "USA", "State":"AR", "City": "Los Angeles"}
-  }, {
-    "id": 243456,
-    "date": "12/04/2021",
-    "company": "T-Zone",
-    "details": "detail info",
-    "value" : "66730",
-    "Location" : {"Country": "USA", "State":"CA", "City": "Los Angeles"}
-  }, {
-    "id": 394367,
-    "date": "02/28/1834",
-    "company": "Wells Fargo",
-    "details": "detail info",
-    "value" : "74670",
-    "Location" : {"Country": "USA", "State":"CO", "City": "Los Angeles"}
-  }, {
-    "id": 404678,
-    "date": "03/21/1984",
-    "company": "Chase Bank",
-    "details": "detail info",
-    "value" : "83760",
-    "Location" : {"Country": "USA", "State":"CT", "City": "Los Angeles"}
+  {  
+    "id": 4331.935,
+    "Contact_info": {"Name": "LONG DENISE", "Cell": "15103920043"},
+    "Complete": "100",
+    "AwardDate": "08/12/2019",
+    "Project_desc": "Mount Bailey rock pickup",
+    "Contract$" : "1346.07",
+    "Location" : {"State": "OR", "County":"Sonoma"} 
   },
-  {
-    "id": 123355,
-    "date": "08/12/1997",
-    "company": "Citi Bank",
-    "details": "detail info",
-    "value" : "97640",
-    "Location" : {"Country": "USA", "State":"DE", "City": "Los Angeles"}
-  }, {
-    "id": 223856,
-    "date": "12/04/2021",
-    "company": "Oracle",
-    "details": "detail info",
-    "value" : "85330",
-    "Location" : {"Country": "USA", "State":"DC", "City": "Los Angeles"}
-  }, {
-    "id": 393567,
-    "date": "02/28/2015",
-    "company": "Bechtel Group Inc",
-    "details": "detail info",
-    "value" : "768830",
-    "Location" : {"Country": "USA", "State":"FL", "City": "Los Angeles"}
-  }, {
-    "id": 405178,
-    "date": "03/21/2012",
-    "company": "Hensel Phelps Construction Co.",
-    "details": "detail info",
-    "value" : "56330",
-    "Location" : {"Country": "USA", "State":"GA", "City": "Los Angeles"}
+  {  
+    "id": 4331.936,
+    "Contact_info": {"Name": "RUGGERI DENISE", "Cell": "15103920043"},
+    "Complete": "100",
+    "AwardDate": "08/12/2021",
+    "Project_desc": "Bass lake duck hurdling",
+    "Contract$" : "20.00",
+    "Location" : {"State": "NV", "County":"Yolo"} 
   },
-  {
-    "id": 12745,
-    "date": "08/12/2019",
-    "company": "Skanska USA",
-    "details": "detail info",
-    "value" : "35630",
-    "Location" : {"Country": "USA", "State":"HI", "City": "Los Angeles"}
-  }, {
-    "id": 223436,
-    "date": "12/04/2021",
-    "company": "Suffolk Constructions",
-    "details": "detail info",
-    "value" : "30356",
-    "Location" : {"Country": "USA", "State":"ID", "City": "Los Angeles"}
-  }, {
-    "id": 364567,
-    "date": "02/28/1834",
-    "company": "Clark Constructions",
-    "details": "detail info",
-    "value" : "33670",
-    "Location" : {"Country": "USA", "State":"IL", "City": "Los Angeles"}
-  }, {
-    "id": 405378,
-    "date": "03/21/2020",
-    "company": "Ironworks Co.",
-    "details": "detail info",
-    "value" : "34630",
-    "Location" : {"Country": "USA", "State":"IN", "City": "Los Angeles"}
-  },{
-    "id": 12345,
-    "date": "08/12/2020",
-    "company": "Fenti",
-    "details": "detail info",
-    "value" : "434607",
-    "Location" : {"Country": "USA", "State":"IA", "City": "Los Angeles"}
-  }, {
-    "id": 223446,
-    "date": "12/04/2021",
-    "company": "Versace",
-    "details": "detail info",
-    "value" : "463760",
-    "Location" : {"Country": "USA", "State":"KS", "City": "Los Angeles"}
-  }, {
-    "id": 394267,
-    "date": "02/28/1834",
-    "company": "Baskin Robbins",
-    "details": "detail info",
-    "value" : "463074",
-    "Location" : {"Country": "USA", "State":"KY", "City": "Los Angeles"}
-  }, {
-    "id": 405673,
-    "date": "03/21/1984",
-    "company": "Lululemon",
-    "details": "detail info",
-    "value" : "743460",
-    "Location" : {"Country": "USA", "State":"LA", "City": "Los Angeles"}
+  {  
+    "id": 4331.937,
+    "Contact_info": {"Name": "VIVES MAR", "Cell": "15103920043"},
+    "Complete": "100",
+    "AwardDate": "08/12/1997",
+    "Project_desc": "lake oroville dam cleaning",
+    "Contract$" : "146.07",
+    "Location" : {"State": "WY", "County":"Yolo"} 
   },
-  {
-    "id": 126645,
-    "date": "08/12/1997",
-    "company": "Red Balloon",
-    "details": "detail info",
-    "value" : "743460",
-    "Location" : {"Country": "USA", "State":"ME", "City": "Los Angeles"}
-  }, {
-    "id": 243456,
-    "date": "12/04/2021",
-    "company": "Blue Lagoon",
-    "details": "detail info",
-    "value" : "46730",
-    "Location" : {"Country": "USA", "State":"MD", "City": "Los Angeles"}
-  }, {
-    "id": 394367,
-    "date": "02/28/2005",
-    "company": "Boba Guys",
-    "details": "detail info",
-    "value" : "34670",
-    "Location" : {"Country": "USA", "State":"MA", "City": "Los Angeles"}
-  }, {
-    "id": 404678,
-    "date": "03/21/2014",
-    "company": "Rosetta Stone",
-    "details": "detail info",
-    "value" : "33760",
-    "Location" : {"Country": "USA", "State":"MI", "City": "Los Angeles"}
+  {  
+    "id": 4331.938,
+    "Contact_info": {"Name": "GONZALES ANDREA", "Cell": "15103920043"},
+    "Complete": "100",
+    "AwardDate": "08/12/1997",
+    "Project_desc": "golden gate park tree removal",
+    "Contract$" : "13443.07",
+    "Location" : {"State": "TX", "County":"San Francisco"} 
   },
-  {
-    "id": 123355,
-    "date": "08/12/2013",
-    "company": "Citi Bank",
-    "details": "detail info",
-    "value" : "37640",
-    "Location" : {"Country": "USA", "State":"MN", "City": "Los Angeles"}
-  }, {
-    "id": 223856,
-    "date": "12/04/2021",
-    "company": "Oracle",
-    "details": "detail info",
-    "value" : "85330",
-    "Location" : {"Country": "USA", "State":"MS", "City": "Los Angeles"}
-  }, {
-    "id": 393567,
-    "date": "02/28/1994",
-    "company": "Bechtel Group Inc",
-    "details": "detail info",
-    "value" : "768830",
-    "Location" : {"Country": "USA", "State":"MO", "City": "Los Angeles"}
-  }, {
-    "id": 405178,
-    "date": "03/21/1994",
-    "company": "Hensel Phelps Construction Co.",
-    "details": "detail info",
-    "value" : "56330",
-    "Location" : {"Country": "USA", "State":"MO", "City": "Los Angeles"}
+  {  
+    "id": 4331.939,
+    "Contact_info": {"Name": "GONZALES ANDREA", "Cell": "15103920043"},
+    "Complete": "100",
+    "AwardDate": "08/12/1997",
+    "Project_desc": "jack baskin reservoir consulting",
+    "Contract$" : "1346.07",
+    "Location" : {"State": "IA", "County":"Santa Cruz"} 
+  },{  
+    "id": 4331.934,
+    "Contact_info": {"Name": "LONG DENISE", "Cell": "15103920043"},
+    "Complete": "100",
+    "AwardDate": "08/12/2012",
+    "Project_desc": "clear lake debris cleanup",
+    "Contract$" : "1346.07",
+    "Location" : {"State": "WA", "County":"Sonoma"} 
   },
-  {
-    "id": 12745,
-    "date": "08/12/1997",
-    "company": "Skanska USA",
-    "details": "detail info",
-    "value" : "35630",
-    "Location" : {"Country": "USA", "State":"MT", "City": "Los Angeles"}
-  }, {
-    "id": 223436,
-    "date": "12/04/2021",
-    "company": "Suffolk Constructions",
-    "details": "detail info",
-    "value" : "30356",
-    "Location" : {"Country": "USA", "State":"NB", "City": "Los Angeles"}
-  }, {
-    "id": 364567,
-    "date": "02/28/1834",
-    "company": "Clark Constructions",
-    "details": "detail info",
-    "value" : "33670",
-    "Location" : {"Country": "USA", "State":"NV", "City": "Los Angeles"}
-  }, {
-    "id": 405378,
-    "date": "03/21/1984",
-    "company": "Ironworks Co.",
-    "details": "detail info",
-    "value" : "34630",
-    "Location" : {"Country": "USA", "State":"HI", "City": "Los Angeles"}
+  {  
+    "id": 4331.935,
+    "Contact_info": {"Name": "LONG DENISE", "Cell": "15103920043"},
+    "Complete": "100",
+    "AwardDate": "08/12/2019",
+    "Project_desc": "Mount Bailey rock pickup",
+    "Contract$" : "1346.07",
+    "Location" : {"State": "OR", "County":"Sonoma"} 
+  },
+  {  
+    "id": 4331.936,
+    "Contact_info": {"Name": "RUGGERI DENISE", "Cell": "15103920043"},
+    "Complete": "100",
+    "AwardDate": "08/12/2021",
+    "Project_desc": "Bass lake duck hurdling",
+    "Contract$" : "20.00",
+    "Location" : {"State": "NV", "County":"Yolo"} 
+  },
+  {  
+    "id": 4331.937,
+    "Contact_info": {"Name": "VIVES MAR", "Cell": "15103920043"},
+    "Complete": "100",
+    "AwardDate": "08/12/1997",
+    "Project_desc": "lake oroville dam cleaning",
+    "Contract$" : "146.07",
+    "Location" : {"State": "CA", "County":"Yolo"} 
+  },
+  {  
+    "id": 4331.938,
+    "Contact_info": {"Name": "GONZALES ANDREA", "Cell": "15103920043"},
+    "Complete": "100",
+    "AwardDate": "08/12/1997",
+    "Project_desc": "golden gate park tree removal",
+    "Contract$" : "13443.07",
+    "Location" : {"State": "TX", "County":"San Francisco"} 
+  },
+  {  
+    "id": 4331.939,
+    "Contact_info": {"Name": "GONZALES ANDREA", "Cell": "15103920043"},
+    "Complete": "100",
+    "AwardDate": "08/12/1997",
+    "Project_desc": "jack baskin reservoir consulting",
+    "Contract$" : "1346.07",
+    "Location" : {"State": "IA", "County":"Santa Cruz"} 
+  },{  
+    "id": 4331.934,
+    "Contact_info": {"Name": "LONG DENISE", "Cell": "15103920043"},
+    "Complete": "100",
+    "AwardDate": "08/12/2012",
+    "Project_desc": "clear lake debris cleanup",
+    "Contract$" : "1346.07",
+    "Location" : {"State": "NY", "County":"Sonoma"} 
+  },
+  {  
+    "id": 4331.935,
+    "Contact_info": {"Name": "LONG DENISE", "Cell": "15103920043"},
+    "Complete": "100",
+    "AwardDate": "08/12/2019",
+    "Project_desc": "Mount Bailey rock pickup",
+    "Contract$" : "1346.07",
+    "Location" : {"State": "OR", "County":"Sonoma"} 
+  },
+  {  
+    "id": 4331.936,
+    "Contact_info": {"Name": "RUGGERI DENISE", "Cell": "15103920043"},
+    "Complete": "40",
+    "AwardDate": "08/12/2021",
+    "Project_desc": "Bass lake duck hurdling",
+    "Contract$" : "00.00",
+    "Location" : {"State": "NV", "County":"Yolo"} 
+  },
+  {  
+    "id": 4331.937,
+    "Contact_info": {"Name": "VIVES MAR", "Cell": "15103920043"},
+    "Complete": "30",
+    "AwardDate": "08/12/1997",
+    "Project_desc": "lake oroville dam cleaning",
+    "Contract$" : "146.07",
+    "Location" : {"State": "AZ", "County":"Yolo"} 
+  },
+  {  
+    "id": 4331.938,
+    "Contact_info": {"Name": "GONZALES ANDREA", "Cell": "15103920043"},
+    "Complete": "20",
+    "AwardDate": "08/12/1997",
+    "Project_desc": "golden gate park tree removal",
+    "Contract$" : "13443.07",
+    "Location" : {"State": "TX", "County":"San Francisco"} 
+  },
+  {  
+    "id": 4331.939,
+    "Contact_info": {"Name": "GONZALES ANDREA", "Cell": "15103920043"},
+    "Complete": "30",
+    "AwardDate": "08/12/1997",
+    "Project_desc": "jack baskin reservoir consulting",
+    "Contract$" : "1346.07",
+    "Location" : {"State": "IA", "County":"Santa Cruz"} 
+  },{  
+    "id": 4331.934,
+    "Contact_info": {"Name": "LONG DENISE", "Cell": "15103920043"},
+    "Complete": "40",
+    "AwardDate": "08/12/2012",
+    "Project_desc": "clear lake debris cleanup",
+    "Contract$" : "1346.07",
+    "Location" : {"State": "NY", "County":"Sonoma"} 
+  },
+  {  
+    "id": 4331.935,
+    "Contact_info": {"Name": "LONG DENISE", "Cell": "15103920043"},
+    "Complete": "90",
+    "AwardDate": "08/12/2019",
+    "Project_desc": "Mount Bailey rock pickup",
+    "Contract$" : "1346.07",
+    "Location" : {"State": "AL", "County":"Sonoma"} 
+  },
+  {  
+    "id": 4331.936,
+    "Contact_info": {"Name": "RUGGERI DENISE", "Cell": "15103920043"},
+    "Complete": "60",
+    "AwardDate": "08/12/2021",
+    "Project_desc": "Bass lake duck hurdling",
+    "Contract$" : "00.00",
+    "Location" : {"State": "HI", "County":"Yolo"} 
+  },
+  {  
+    "id": 4331.937,
+    "Contact_info": {"Name": "VIVES MAR", "Cell": "15103920043"},
+    "Complete": "40",
+    "AwardDate": "08/12/1997",
+    "Project_desc": "lake oroville dam cleaning",
+    "Contract$" : "146.07",
+    "Location" : {"State": "ID", "County":"Yolo"} 
+  },
+  {  
+    "id": 4331.938,
+    "Contact_info": {"Name": "GONZALES ANDREA", "Cell": "15103920043"},
+    "Complete": "20",
+    "AwardDate": "08/12/1997",
+    "Project_desc": "golden gate park tree removal",
+    "Contract$" : "13443.07",
+    "Location" : {"State": "WY", "County":"San Francisco"} 
+  },
+  {  
+    "id": 4331.939,
+    "Contact_info": {"Name": "GONZALES ANDREA", "Cell": "15103920043"},
+    "Complete": "10",
+    "AwardDate": "08/12/1997",
+    "Project_desc": "jack baskin reservoir consulting",
+    "Contract$" : "1346.07",
+    "Location" : {"State": "CO", "County":"Santa Cruz"} 
   }
 ]

@@ -5,6 +5,10 @@ import { useSelector } from "react-redux";
 
 
 import Navbar from 'react-bootstrap/Navbar';
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+
 import CandyTheme from "fusioncharts/themes/fusioncharts.theme.candy";
 import EuroChart from "../../charts/EuroChart"
 
@@ -12,9 +16,11 @@ import MyMaps from "../../charts/index"
 import ContinentConfigs from "../../charts/ContinentConfigs"
 import CountryConfigs from "../../charts/CountryConfigs"
 
-import GraphChartBar from "../../cmscomponents/navbars/GraphChartBar";
-import TopComponent from "../../cmscomponents/navbars/YearTopSortBar"
-import USMapComponent from "../../cmscomponents/datadisplays/USAMap";
+import GraphChartBar from "./GraphChartBar";
+import TopComponent from "./YearTopSortBar"
+import USMapComponent from "../datadisplays/USAMap";
+
+
 
 //const env = process.env.NODE_ENV;
 // <h1>{env}</h1>
@@ -90,7 +96,7 @@ const MainMenu:FC = () => {
 
     const callDetailedAPI = () =>{
         var data;
-        fetch("http://localhost:3000/TopFifteen")
+        fetch("http://localhost:3000/"+maptype)
             .then(res => res.text())
             .then(res => 
                 {
@@ -101,22 +107,27 @@ const MainMenu:FC = () => {
     }
 
 
-    useEffect(() => { 
+    /*useEffect(() => { 
         callDetailedAPI();
-    },[])
+    },[])*/
 
 
     return(
         <div >
+          <Container fluid>
+            <Row>
            <Navbar className="bg-light">  
-          {!showmap &&<button className="btn" onClick={() =>  {setMapType("TopFifteen"), setMap(true),setTop15(false)}} >Map View</button>}
+          {!showmap &&<button className="btn" onClick={() =>  { setMap(true),setTop15(false)}} >Map View</button>}
           {!showtop15 &&<button className="btn" onClick={() =>  {setTop15(true), setMap(false)}} >Data View</button>}
           </Navbar >
+          </Row>
+          <Row>
         {showmap && <USMapComponent loadedData={maptype}/>}
-        {showtop15 && <GraphChartBar /> && <TopComponent loadedData={TopData}/>}
-
-
-
+        </Row>
+        {showtop15 && <Row><GraphChartBar /></Row>}
+        {showtop15 && <Row><TopComponent loadedData={TopData}/></Row>}
+        
+        </Container>
 
         
             {/*

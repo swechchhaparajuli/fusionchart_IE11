@@ -17,26 +17,21 @@ router.get('/', function(req, res, next) {
         
         for (let i = 0; i<response.data.length; i++){
             var obj = {
-                label:response.data[i].company.toString(),
-                value:response.data[i].value.toString(),
-                date:response.data[i].date.toString(),
-                details:response.data[i].details.toString(),
+                label:response.data[i].Project_desc.toString(),
+                value:response.data[i].Contract$.toString(),
+                date:response.data[i].AwardDate.toString(),
+                details:response.data[i].Project_desc.toString(),
+                completion:response.data[i].Complete.toString(),
+                contact: {name: response.data[i].Contact_info.Name.toString(), info: response.data[i].Contact_info.Cell.toString()},
                 id:response.data[i].id.toString(),
-                location:{country: response.data[i].Location.Country.toString(), state: response.data[i].Location.State.toString(), city: response.data[i].Location.City.toString()}
+                location:{state: response.data[i].Location.State.toString(), county: response.data[i].Location.County.toString()}
             }
             newdata.push(obj);
         }
         res.send(JSON.stringify(newdata));
     }).catch (function (error) {
         console.log(error);
-        res.send(JSON.stringify([{
-            "id": 12345,
-            "date": "08121997",
-            "value": 20392910,
-            "company": 215721875,
-            "details": 215721875,
-            "location": {"country":"USA", "state":"CA", "city":"Marina Bay"}
-          }]));
+        res.send(JSON.stringify([]));
     })
 })
 

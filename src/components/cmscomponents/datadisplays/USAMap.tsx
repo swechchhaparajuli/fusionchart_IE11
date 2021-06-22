@@ -24,6 +24,7 @@ import {usStateFilter} from '../actions/setByUSState'
 import yearBackReducer from "../reducers/filtertopfifteen";
 import { validatePackage } from "@progress/kendo-licensing";
 import { Popover } from "react-bootstrap";
+import { setExpandedState, tableKeyboardNavigationBodyAttributes } from "@progress/kendo-react-data-tools";
 
 
 ReactFC.fcRoot(FusionCharts, USA, FusionMap, FusionTheme);
@@ -38,46 +39,31 @@ const dataSource = {
         legendposition: "NONE",
         entitytooltext: "$lname: <b>$datavalue</b> contracts",
         legendcaption: "Number of contracts per state",
-        entityfillhovercolor: "#FFCDD2"
+        entityfillhovercolor: "#FBFBFB"
     },
     colorrange: {
         gradient: "0",
+        minvalue: "0",
         color: [
           {
-            maxvalue: "50",
-            displayvalue: "0-50",
-            code: "#FFFFF"
+            maxvalue: "25000",
+            code: "#D1E9F2",
+            displayValue: "Median"
           },
           {
-            maxvalue: "500",
-            displayvalue: "51-500",
-            code: "#6BF73C"
-          },
-          {
-            maxvalue: "100000",
-            displayvalue: "501-1000",
-            code: "#33FBFF"
-          },
-          {
-            maxvalue: "5000000000",
-            displayvalue: "1001-5000",
-            code: "#4533FF"
+            maxvalue: "2500000",
+            code: "#527BB8",
+            displayValue: "Median"
           },
           {
             maxvalue: "100000000000",
-            displayvalue: "5000+",
-            code: "#F73CDC"
+            code: "#0E336B"
           }
+
         ]
     },
     // Chart Data
-    data:[{
-      label:"",
-      value:"2000", 
-      date:"12/12/1998",
-      details:"test data",
-      location: {state: "CA"}
-    }]
+    data:[]
 };
 
 const getStateDetails = (place:string, filtertype:string) => {
@@ -122,23 +108,47 @@ const getStateDetails = (place:string, filtertype:string) => {
 
   const filterStateCount = (parsedlist:string, place:string) =>{
 
-    console.log(parsedlist)
+    //console.log(parsedlist);
     const items = JSON.parse(parsedlist).filter(item => {return (place == item.label.toUpperCase())});
     //const items = JSON.parse(parsedlist).filter(item=>{return(place == item.label)});
-    if(items.length>1){
+
+    if(items.length>0){
       return items[0].value;
     }
-    return items[0].value;
+    return 0;
   }
 
+  const fetchBase = () =>{
+    const tempdataSource = {
+      chart: dataSource.chart,
+      colorrange: dataSource.colorrange,
+      data: []
+    }
+    fetch("http://localhost:3000/USAroutes")
+    .then(res => res.text()
+    .then(res => 
+      {
+        const items = JSON.parse(res);
+        for (let i = 0; i<items.length; i++){
+          var obj = {
+              value:items[i].value.toString(), 
+              id: items[i].label.toString()
+          }
+          tempdataSource.data.push(obj);
+        }
+
+      }));
+      
+      return tempdataSource.data;
+  }
 
 
 
 const USMapComponent:FC<{type:string}> = (type) => {
 
-   
+
       const [GridData, setGrid] = useState();
-      const [StateData, setData] = useState(dataSource.data);
+      const [StateData, setData] = useState();
       const [statename, setState] = useState("");
       const [filtertype, setFilter] = useState(type.type);
 
@@ -156,16 +166,9 @@ const USMapComponent:FC<{type:string}> = (type) => {
    FusionCharts.addEventListener('entityClick', setInfo);
 
     useEffect(() => {
-      dataSource.data = getStateDetails("", filtertype);
-
-      // fetch("http://localhost:3000/USAroutes")
-      //     .then(res => res.text()
-      //     .then(res => 
-      //       {
-      //         dataSource.data = JSON.parse(res);
-      //         console.log(dataSource.data);
-      //       }));
-    },[])
+      dataSource.data = fetchBase();
+      console.log(dataSource.data);
+    },[type.type])
 
     const isMountedVal = useRef(false);
     useEffect(() => {
@@ -193,7 +196,7 @@ const USMapComponent:FC<{type:string}> = (type) => {
               if(isMountedVal.current){
                 hoverdata = filterStateCount(res,usstate); 
                 clickdata = getStateDetails(usstate, filtertype);
-                dataSource.chart.entitytooltext= "$lname: <b>" + hoverdata+ "</b> contracts";
+                dataSource.chart.entitytooltext= "$lname: <b>$" + hoverdata+ "</b>";
                 setGrid(clickdata);
                 setData(clickdata);
               }
@@ -215,14 +218,14 @@ const USMapComponent:FC<{type:string}> = (type) => {
     return(
         <div className="container">
             
-           <ReactFC
+          <ReactFC
                 type="usa"
                 width="90%"
                 height="600"
                 dataFormat="JSON"
                 dataSource={dataSource}
             />
-
+          
           
             {/*statename != "" && <Details loadedData={GridData}/>*/}
         </div>

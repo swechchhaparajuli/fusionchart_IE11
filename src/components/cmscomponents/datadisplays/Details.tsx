@@ -80,7 +80,7 @@ class DetailsComponent extends Component <{loadedData}> {
         <Column field="1" title="" />
         <Column field="date" title="Date" />
         <Column field="label" title="Company" />
-        <Column field="value" title="Number of Contracts" />
+        <Column field="value" title="Contract Value" />
         <Column field="details" title="More Info..." />
       </Grid>
   

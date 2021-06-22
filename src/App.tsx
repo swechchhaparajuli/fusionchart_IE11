@@ -16,7 +16,7 @@ import GraphChartBar from "./components/cmscomponents/navbars/GraphChartBar";
 import TopComponent from "./components/cmscomponents/navbars/YearTopSortBar"
 import USMapComponent from "./components/cmscomponents/datadisplays/USAMap";
 
-import MainMenu from "./components/cmscomponents/navbars/MainMenu";
+import MainMenu from "./components/cmscomponents/navbars/ViewMenu";
 
 //const env = process.env.NODE_ENV;
 // <h1>{env}</h1>
