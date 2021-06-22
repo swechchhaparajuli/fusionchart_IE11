@@ -4,8 +4,8 @@ import FusionCharts from "fusioncharts"
 import charts from 'fusioncharts/fusioncharts.charts';
 import ReactFC from 'react-fusioncharts';
 import CandyTheme from 'fusioncharts/themes/fusioncharts.theme.candy';
-import EuroData from '../../api/eurodata';
-import FakeDataD from '../../api/whodAPI'
+import EuroData from '../../api/mappractice/eurodata';
+import FakeDataD from '../../api/mappractice/whodAPI'
 import FusionMaps from 'fusionmaps/fusioncharts.maps';
 import Europe from 'fusionmaps/maps/fusioncharts.europe';
 

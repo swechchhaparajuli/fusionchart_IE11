@@ -7,8 +7,8 @@ import CandyTheme from 'fusioncharts/themes/fusioncharts.theme.candy';
 import FusionTheme from 'fusioncharts/themes/fusioncharts.theme.fusion';
 import UmberTheme from 'fusioncharts/themes/fusioncharts.theme.umber';
 import OceanTheme from 'fusioncharts/themes/fusioncharts.theme.ocean';
-import EuroData from '../../api/eurodata';
-import FakeDataD from '../../api/whodAPI'
+import EuroData from '../../api/mappractice/eurodata';
+import FakeDataD from '../../api/mappractice/whodAPI'
 import FusionMaps from 'fusionmaps/fusioncharts.maps';
 import Europe from 'fusionmaps/maps/fusioncharts.europe';
 

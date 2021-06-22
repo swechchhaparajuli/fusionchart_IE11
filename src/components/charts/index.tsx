@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 
-import EuroData from '../../api/eurodata';
+import EuroData from '../../api/mappractice/eurodata';
 
 import CountryConfigs from './CountryConfigs';
 import ContinentConfigs from './ContinentConfigs';

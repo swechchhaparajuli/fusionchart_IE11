@@ -8,9 +8,9 @@ import CandyTheme from "fusioncharts/themes/fusioncharts.theme.candy";
 
 import FusionMaps from 'fusioncharts/fusioncharts.maps';
 import USA from 'fusioncharts/maps/fusioncharts.usa';
-import FakeData from '../../api/WHOAPI'
-import FakeDataD from '../../api/whodAPI'
-import "../../api/WHOAPI"
+import FakeData from '../../api/mappractice/WHOAPI'
+import FakeDataD from '../../api/mappractice/whodAPI'
+import "../../api/mappractice/WHOAPI"
 
 
 ReactFC.fcRoot(FusionCharts, USA, FusionMaps, CandyTheme);

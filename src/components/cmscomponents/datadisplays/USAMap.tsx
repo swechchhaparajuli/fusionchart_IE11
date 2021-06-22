@@ -26,6 +26,9 @@ import { validatePackage } from "@progress/kendo-licensing";
 import { Popover } from "react-bootstrap";
 import { setExpandedState, tableKeyboardNavigationBodyAttributes } from "@progress/kendo-react-data-tools";
 
+// API fetches 
+import {stateTotalValue} from '../../../api/USAroutes'
+
 
 ReactFC.fcRoot(FusionCharts, USA, FusionMap, FusionTheme);
 charts(FusionCharts);
@@ -39,7 +42,11 @@ const dataSource = {
         legendposition: "NONE",
         entitytooltext: "$lname: <b>$datavalue</b> contracts",
         legendcaption: "Number of contracts per state",
-        entityfillhovercolor: "#FBFBFB"
+        showEntityHoverEffect: "0",
+        entityfillhovercolor: "#FFFFFF",
+        tooltipbgcolor: "#FFFFFF",
+        entityfillcolor: "#FFFFFF",
+        nullentitycolor: "#ECE9D3"
     },
     colorrange: {
         gradient: "0",
@@ -106,10 +113,10 @@ const getStateDetails = (place:string, filtertype:string) => {
         return tempdataSource.data;
 }
 
-  const filterStateCount = (parsedlist:string, place:string) =>{
+  const filterStateCount = (parsedlist, place:string) =>{
 
     //console.log(parsedlist);
-    const items = JSON.parse(parsedlist).filter(item => {return (place == item.label.toUpperCase())});
+    const items = parsedlist.filter(item => {return (place == item.label.toUpperCase())});
     //const items = JSON.parse(parsedlist).filter(item=>{return(place == item.label)});
 
     if(items.length>0){
@@ -124,11 +131,11 @@ const getStateDetails = (place:string, filtertype:string) => {
       colorrange: dataSource.colorrange,
       data: []
     }
-    fetch("http://localhost:3000/USAroutes")
-    .then(res => res.text()
-    .then(res => 
+    stateTotalValue().then(res => 
       {
-        const items = JSON.parse(res);
+        
+        const items = res;
+        //const items = JSON.parse(res);
         for (let i = 0; i<items.length; i++){
           var obj = {
               value:items[i].value.toString(), 
@@ -137,7 +144,7 @@ const getStateDetails = (place:string, filtertype:string) => {
           tempdataSource.data.push(obj);
         }
 
-      }));
+      });
       
       return tempdataSource.data;
   }
@@ -160,22 +167,23 @@ const USMapComponent:FC<{type:string}> = (type) => {
 
     const setInfo =()=>{
       setState("");
+      
       //setGrid(StateData);
     }
 
    FusionCharts.addEventListener('entityRollOver', getInfo);
    FusionCharts.addEventListener('entityClick', setInfo);
 
+
     useEffect(() => {
       dataSource.data = fetchBase();
-      console.log(dataSource.data);
-    },[type.type])
+      //console.log(dataSource.data);
+    },[])
 
     const isMountedVal = useRef(false);
     useEffect(() => {
       isMountedVal.current = true;
       if(statename != ""){
-        console.log("use effecting");
         callAPI(statename);
       } else {
         console.log("pop");
@@ -188,21 +196,21 @@ const USMapComponent:FC<{type:string}> = (type) => {
 
     const callAPI = (usstate:string) =>{
       var hoverdata, clickdata;
-      fetch("http://localhost:3000/USAroutes")
-          .then(res => res.text()
-          .then(res => 
-            {
+      stateTotalValue().then(res => 
+        {
               console.log(usstate);
             if(usstate != ""){
               if(isMountedVal.current){
                 hoverdata = filterStateCount(res,usstate);  // --> loads and filters intended state and its total contact sum
                 clickdata = getStateDetails(usstate, filtertype);
                 dataSource.chart.entitytooltext= "$lname: <b>$" + hoverdata+ "</b>";
+                dataSource.chart.color= "FFFF";
                 setGrid(clickdata); // --> loads detailed info in case button is clicked
+                
                // setData(clickdata);
               }
             }
-            }));
+            });
             return hoverdata;
     }
 
@@ -213,12 +221,13 @@ const USMapComponent:FC<{type:string}> = (type) => {
           + GridData.map((listitem, index) => ("<tr key={listitem.label}><th scope='row'>" + (index+1) + "</th> <td></td> <td>"
           +listitem.label + "</td><td></td><td> $" + listitem.value + "</td></tr>")).join('') + "</tbody></table>"
         dataSource.chart.entitytooltext=listValues;
-        }
+        dataSource.chart.tooltipbgcolor = "#FFFFFF";
+      }
         setData(GridData); //-->preserves map detail info if we want to connect it to a table or something else
     }
 
     return(
-        <div className="container">
+        <div className="container" >
             
           <ReactFC
                 type="usa"

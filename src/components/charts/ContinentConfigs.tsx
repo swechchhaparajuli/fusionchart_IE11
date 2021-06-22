@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import FusionCharts from "fusioncharts"
 import charts from 'fusioncharts/fusioncharts.charts';
 import ReactFC from 'react-fusioncharts';
-import chartData from '../../api/ContinentData';
+import chartData from '../../api/mappractice/ContinentData';
 import CandyTheme from "fusioncharts/themes/fusioncharts.theme.candy";
 import FusionMaps from 'fusioncharts/fusioncharts.maps';
 import World from 'fusioncharts/maps/fusioncharts.world';
