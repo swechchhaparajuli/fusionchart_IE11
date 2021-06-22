@@ -148,7 +148,8 @@ const USMapComponent:FC<{type:string}> = (type) => {
 
 
       const [GridData, setGrid] = useState();
-      const [StateData, setData] = useState();
+      const [StateData, setData] = useState(); 
+
       const [statename, setState] = useState("");
       const [filtertype, setFilter] = useState(type.type);
 
@@ -159,7 +160,7 @@ const USMapComponent:FC<{type:string}> = (type) => {
 
     const setInfo =()=>{
       setState("");
-      setGrid(StateData);
+      //setGrid(StateData);
     }
 
    FusionCharts.addEventListener('entityRollOver', getInfo);
@@ -194,11 +195,11 @@ const USMapComponent:FC<{type:string}> = (type) => {
               console.log(usstate);
             if(usstate != ""){
               if(isMountedVal.current){
-                hoverdata = filterStateCount(res,usstate); 
+                hoverdata = filterStateCount(res,usstate);  // --> loads and filters intended state and its total contact sum
                 clickdata = getStateDetails(usstate, filtertype);
                 dataSource.chart.entitytooltext= "$lname: <b>$" + hoverdata+ "</b>";
-                setGrid(clickdata);
-                setData(clickdata);
+                setGrid(clickdata); // --> loads detailed info in case button is clicked
+               // setData(clickdata);
               }
             }
             }));
@@ -208,11 +209,12 @@ const USMapComponent:FC<{type:string}> = (type) => {
     const setPopover = () =>{
       
       if(GridData != undefined){
-        const listValues = "<table class='table'><thead><tr><th scope='col'> # </th> <th>  </th> <th scope='col'> Company </th> <th>  </th> <th scope='col'> Contract Amount </th> </tr></thead><tbody>" 
+        const listValues = "<table class='table'><thead><tr><th scope='col'> # </th> <th>  </th> <th scope='col'> Contract </th> <th>  </th> <th scope='col'> Contract Amount </th> </tr></thead><tbody>" 
           + GridData.map((listitem, index) => ("<tr key={listitem.label}><th scope='row'>" + (index+1) + "</th> <td></td> <td>"
           +listitem.label + "</td><td></td><td> $" + listitem.value + "</td></tr>")).join('') + "</tbody></table>"
-        dataSource.chart.entitytooltext=listValues; 
+        dataSource.chart.entitytooltext=listValues;
         }
+        setData(GridData); //-->preserves map detail info if we want to connect it to a table or something else
     }
 
     return(
@@ -227,7 +229,7 @@ const USMapComponent:FC<{type:string}> = (type) => {
             />
           
           
-            {/*statename != "" && <Details loadedData={GridData}/>*/}
+            {/*<Details loadedData={StateData}/>*/}
         </div>
     )
 }
