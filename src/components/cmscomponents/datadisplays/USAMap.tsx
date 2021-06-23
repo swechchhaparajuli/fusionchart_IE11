@@ -1,13 +1,8 @@
 import React, {useState, useEffect, useRef} from "react";
 import {FC} from "react";
 
-
 import ReactFC from "react-fusioncharts";
 import FusionCharts from "fusioncharts";
-import FusionMaps from "fusionmaps"
-
-import UmberTheme from "fusioncharts/themes/fusioncharts.theme.umber";
-import CandyTheme from "fusioncharts/themes/fusioncharts.theme.candy";
 
 import FusionMap from 'fusioncharts/fusioncharts.maps';
 import USA from 'fusioncharts/maps/fusioncharts.usa';
@@ -15,16 +10,9 @@ import USA from 'fusioncharts/maps/fusioncharts.usa';
 import charts from "fusioncharts/fusioncharts.charts";
 import Details from "./Details"
 
-import ReactFusioncharts from "react-fusioncharts";
 import FusionTheme from "fusioncharts/themes/fusioncharts.theme.fusion";
 
 import {useSelector, useDispatch} from 'react-redux';
-
-import {usStateFilter} from '../actions/setByUSState'
-import yearBackReducer from "../reducers/filtertopfifteen";
-import { validatePackage } from "@progress/kendo-licensing";
-import { Popover } from "react-bootstrap";
-import { setExpandedState, tableKeyboardNavigationBodyAttributes } from "@progress/kendo-react-data-tools";
 
 // API fetches 
 import {stateTotalValue} from '../../../api/USAroutes'
@@ -42,7 +30,7 @@ const dataSource = {
         legendposition: "NONE",
         entitytooltext: "$lname: <b>$datavalue</b> contracts",
         legendcaption: "Number of contracts per state",
-        showEntityHoverEffect: "0",
+        showEntityHoverEffect: "1",
         entityfillhovercolor: "#FFFFFF",
         tooltipbgcolor: "#FFFFFF",
         entityfillcolor: "#FFFFFF",
@@ -52,6 +40,11 @@ const dataSource = {
         gradient: "0",
         minvalue: "0",
         color: [
+          {
+            maxvalue: "1",
+            code: "#ECE9D3",
+            displayValue: "None"
+          },
           {
             maxvalue: "25000",
             code: "#D1E9F2",
@@ -81,7 +74,6 @@ const getStateDetails = (place:string, filtertype:string) => {
   }
 
     var url = "http://localhost:3000/TopFifteen";
-
     if("topfifteen" == filtertype){
       url = "http://localhost:3000/TopFifteen";
     }else if("yearback" == filtertype){
@@ -104,12 +96,12 @@ const getStateDetails = (place:string, filtertype:string) => {
                 value:items[i].value.toString(), 
                 date:items[i].date.toString(),
                 details:items[i].details.toString(),
-                id: items[i].location.state.toString()
+                id: items[i].location.state.toString(),
+                project_id: items[i].id.toString(),
             }
             tempdataSource.data.push(obj);
           }
         });
-
         return tempdataSource.data;
 }
 
@@ -125,30 +117,6 @@ const getStateDetails = (place:string, filtertype:string) => {
     return 0;
   }
 
-  const fetchBase = () =>{
-    const tempdataSource = {
-      chart: dataSource.chart,
-      colorrange: dataSource.colorrange,
-      data: []
-    }
-    stateTotalValue().then(res => 
-      {
-        
-        const items = res;
-        //const items = JSON.parse(res);
-        for (let i = 0; i<items.length; i++){
-          var obj = {
-              value:items[i].value.toString(), 
-              id: items[i].label.toString()
-          }
-          tempdataSource.data.push(obj);
-        }
-
-      });
-      
-      return tempdataSource.data;
-  }
-
 
 
 const USMapComponent:FC<{type:string}> = (type) => {
@@ -156,79 +124,114 @@ const USMapComponent:FC<{type:string}> = (type) => {
 
       const [GridData, setGrid] = useState();
       const [StateData, setData] = useState(); 
+      const [BaseData, setBase] = useState();
 
       const [statename, setState] = useState("");
+      const [clickname, setClick] = useState("");
+
+      
       const [filtertype, setFilter] = useState(type.type);
+
+      const fetchBase = () =>{
+        const tempdataSource = {
+          chart: dataSource.chart,
+          colorrange: dataSource.colorrange,
+          data: []
+        }
+        stateTotalValue().then(res => 
+          {
+            const items = res;
+            if(isBaseMounted.current){
+            for (let i = 0; i<items.length; i++){
+              var obj = {
+                  value:items[i].value.toString(), 
+                  id: items[i].label.toString()
+              }
+              tempdataSource.data.push(obj);
+            }
+            setBase(tempdataSource.data);
+          }
+          });
+        
+          return tempdataSource.data;
+      }
+
+      const isBaseMounted = useRef(false);
+// fetches base map data 
+    useEffect(() => {
+      isBaseMounted.current = true;
+      if(BaseData == undefined){
+        dataSource.data = fetchBase();
+      }
+      console.log("useEffect 1");
+      console.log(dataSource.data);
+         //FusionCharts.addEventListener('entityRollOut', setColor);
+      return () => {isBaseMounted.current = false};
+    },[BaseData]);
 
 
     const getInfo =(eventObj, dataObj)=>{ 
       setState((dataObj.id).toUpperCase());
     }
 
-    const setInfo =()=>{
-      setState("");
-      
-      //setGrid(StateData);
+    const setInfo =(eventObj, dataObj)=>{
+      setClick((dataObj.id).toUpperCase());
     }
 
-   FusionCharts.addEventListener('entityRollOver', getInfo);
-   FusionCharts.addEventListener('entityClick', setInfo);
+    FusionCharts.addEventListener('entityRollOver', getInfo);
+    FusionCharts.addEventListener('entityClick', setInfo);
 
 
-    useEffect(() => {
-      dataSource.data = fetchBase();
-      //console.log(dataSource.data);
-    },[])
 
+// allows render of data of hovered state when state changed
     const isMountedVal = useRef(false);
     useEffect(() => {
       isMountedVal.current = true;
-      if(statename != ""){
+       if (statename != ""){
+        console.log("Hovered over:" + statename);
         callAPI(statename);
-      } else {
-        console.log("pop");
-        setPopover();
       }
       return () => {isMountedVal.current = false};
     },[statename])
 
-    
+// allows render of detailed data over state on click 
+    useEffect(() => {
+      if(clickname != ""){
+        console.log("Clicked on:" + statename);
+        setPopover(statename); // statename,'clickname' wont show details if you hover out and click previously clicked state
+      }
+    },[clickname])
 
     const callAPI = (usstate:string) =>{
       var hoverdata, clickdata;
       stateTotalValue().then(res => 
         {
-              console.log(usstate);
+             
             if(usstate != ""){
               if(isMountedVal.current){
                 hoverdata = filterStateCount(res,usstate);  // --> loads and filters intended state and its total contact sum
-                clickdata = getStateDetails(usstate, filtertype);
+               clickdata = getStateDetails(usstate, filtertype);
                 dataSource.chart.entitytooltext= "$lname: <b>$" + hoverdata+ "</b>";
-                dataSource.chart.color= "FFFF";
-                setGrid(clickdata); // --> loads detailed info in case button is clicked
                 
-               // setData(clickdata);
+                setGrid(clickdata); // --> loads detailed info in case button is clicked
               }
             }
             });
             return hoverdata;
     }
 
-    const setPopover = () =>{
-      
+    const setPopover = (usstate:string) =>{
       if(GridData != undefined){
         const listValues = "<table class='table'><thead><tr><th scope='col'> # </th> <th>  </th> <th scope='col'> Contract </th> <th>  </th> <th scope='col'> Contract Amount </th> </tr></thead><tbody>" 
           + GridData.map((listitem, index) => ("<tr key={listitem.label}><th scope='row'>" + (index+1) + "</th> <td></td> <td>"
           +listitem.label + "</td><td></td><td> $" + listitem.value + "</td></tr>")).join('') + "</tbody></table>"
         dataSource.chart.entitytooltext=listValues;
-        dataSource.chart.tooltipbgcolor = "#FFFFFF";
-      }
         setData(GridData); //-->preserves map detail info if we want to connect it to a table or something else
+      }
     }
 
     return(
         <div className="container" >
-            
           <ReactFC
                 type="usa"
                 width="90%"
@@ -238,7 +241,7 @@ const USMapComponent:FC<{type:string}> = (type) => {
             />
           
           
-            {/*<Details loadedData={StateData}/>*/}
+            {<Details loadedData={StateData}/>}
         </div>
     )
 }

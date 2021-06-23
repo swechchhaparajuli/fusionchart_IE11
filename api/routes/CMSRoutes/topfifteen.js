@@ -11,9 +11,7 @@ router.get('/', function(req, res, next) {
     const url = 'http://localhost:5000/src/data/CMSDummyData/cmsdummy.json'
 
     axios.get(url).then(response => {
-        var newdata = [{label:"Test", value:"1000", company: 215721875,
-        details: 215721875, id:"CA", date:"12/12/1997",
-        location: {country:"USA", state:"CA", city:"Marina Bay"}}];
+        var newdata = [];
         
         for (let i = 0; i<response.data.length; i++){
             var obj = {

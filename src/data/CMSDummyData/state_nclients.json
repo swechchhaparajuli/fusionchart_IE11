@@ -33,7 +33,7 @@
     },
     {
         "state": "WY",
-        "nclients": 22352425
+        "nclients": 0
     },
     {
         "state": "CO",
@@ -49,7 +49,7 @@
     },
     {
         "state": "NM",
-        "nclients": 232452
+        "nclients": 0
     },
     {
         "state": "RI",
@@ -65,7 +65,7 @@
     },
     {
         "state": "KS",
-        "nclients": 2234532
+        "nclients": 0
     },
     {
         "state": "NE",
@@ -93,7 +93,7 @@
     },
     {
         "state": "MI",
-        "nclients": 223325
+        "nclients": 0
     },
     {
         "state": "IL",
@@ -141,7 +141,7 @@
     },
     {
         "state": "DC",
-        "nclients": 22345
+        "nclients": 0
     },
     {
         "state": "GA",
@@ -149,11 +149,11 @@
     },
     {
         "state": "FL",
-        "nclients": 22345234
+        "nclients": 0
     },
     {
         "state": "LA",
-        "nclients": 2234523
+        "nclients": 0
     },
     {
         "state": "MA",
@@ -197,11 +197,11 @@
     },
     {
         "state": "VT",
-        "nclients": 22345235
+        "nclients": 0
     },
     {
         "state": "PA",
-        "nclients": 2234523
+        "nclients": 0
     },
     {
         "state": "AR",

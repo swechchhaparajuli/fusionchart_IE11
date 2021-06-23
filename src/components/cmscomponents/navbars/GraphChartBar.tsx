@@ -51,6 +51,9 @@ const dataSource = {
 const GraphChartBar:FC = () => {
 
     const [chart, setState] = useState(changeLabel("Annee")); 
+
+
+    
     const dispatch = useDispatch();
 
     let years = useSelector(state => state.yearBack);
