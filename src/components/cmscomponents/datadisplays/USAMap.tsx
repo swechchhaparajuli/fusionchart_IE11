@@ -30,7 +30,7 @@ const dataSource = {
         legendposition: "NONE",
         entitytooltext: "$lname: <b>$datavalue</b> contracts",
         legendcaption: "Number of contracts per state",
-        showEntityHoverEffect: "1",
+        showEntityHoverEffect: "0",
         entityfillhovercolor: "#FFFFFF",
         tooltipbgcolor: "#FFFFFF",
         entityfillcolor: "#FFFFFF",
@@ -161,6 +161,7 @@ const USMapComponent:FC<{type:string}> = (type) => {
     useEffect(() => {
       isBaseMounted.current = true;
       if(BaseData == undefined){
+        console.log("FETCH BASE");
         dataSource.data = fetchBase();
       }
       console.log("useEffect 1");
@@ -241,7 +242,7 @@ const USMapComponent:FC<{type:string}> = (type) => {
             />
           
           
-            {<Details loadedData={StateData}/>}
+            {/*<Details loadedData={StateData}/>*/}
         </div>
     )
 }

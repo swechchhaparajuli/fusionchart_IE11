@@ -39,6 +39,11 @@
     ('https://drive.google.com/file/d/1Ri_oy98UaqQ4i0rlgRkYv0tkeu8bT1YA/view')
 
 
+# Dummy Data being used in project example:
+
+![Alt text](images/dummydataexampleone.png "For Maps rendering when hovered over state")
+
+![Alt text](images/dummydataexampletwo.png "Detailed State Info")
 
 #   Technology Used 
 
