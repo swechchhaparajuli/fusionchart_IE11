@@ -41,7 +41,7 @@
 
 # Dummy Data being used in project example:
 
-- For Maps rendering when hovered over state
+- For Maps rendering when hovered over state (nclients has been switched to total cost by state instead on implementation, will update in three hours)
 ![For Maps rendering when hovered over state](images/dummydataexampleone.png "For Maps rendering when hovered over state")
 
 - Detailed State Info (after click on maps, also currently used in top15)
