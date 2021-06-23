@@ -6,11 +6,15 @@ import {FC} from "react";
 
 import {useDispatch, useSelector} from 'react-redux';
 import {displayType} from '../actions/graphsDisplay'
+import TopComponent from './YearTopSortBar'
 import Form from 'react-bootstrap/Form';
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+
+import { FOCUSABLE_ELEMENTS } from "@progress/kendo-react-data-tools";
+import { GridGroupCell } from "@progress/kendo-react-grid";
 
 
 var changeLabel = (val: string) =>{
@@ -50,19 +54,8 @@ const dataSource = {
 
 const GraphChartBar:FC = () => {
 
-    const [chart, setState] = useState(changeLabel("Annee")); 
-
-
-    
-    const dispatch = useDispatch();
-
-    let years = useSelector(state => state.yearBack);
-
-
-    const callAPI = (type:string) =>{
-        var data = dispatch(displayType(type, years));
-    }
-
+    const [chart, setChart] = useState(true); 
+    const [grid, setGrid] = useState(true);
 
     return(
         <div >
@@ -73,16 +66,18 @@ const GraphChartBar:FC = () => {
                     <Form.Group controlId="formBasicCheckbox">
                     <Row>
                     <Col className="col-sm-auto">
-                        <Form.Check onChange={() => {callAPI("CHART")}} checked={useSelector(state => state.displayCharts)} type="checkbox" label="Graph" />
+                        <Form.Check onChange={() => {setChart(!chart)}} checked={chart} type="checkbox" label="Graph" />
                     </Col>
                     <Col className="col-sm-auto">
-                        <Form.Check onChange={() =>  {callAPI("GRID")}} checked={useSelector(state => state.displayDetails)} type="checkbox" label="Data List" />
+                        <Form.Check onChange={() =>  {setGrid(!grid)}} checked={grid} type="checkbox" label="Data List" />
                     </Col>
                     </Row>
                         </Form.Group>
             </Form>
             </Container>
             </Navbar>
+
+            <TopComponent showDetail={grid} showChart={chart}/>
             </div>
     )
 }

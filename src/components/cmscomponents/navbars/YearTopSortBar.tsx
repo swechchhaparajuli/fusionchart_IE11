@@ -18,11 +18,11 @@ import { Component } from "react";
 
 
 
-const TopComponent:FC<{loadedData}> = (loadedData) => {
+const TopComponent:FC<{showChart, showDetail}> = (display) => {
 
     const dispatch = useDispatch();
-    let currentChart = useSelector(state => state.displayCharts);
-    let currentDetail = useSelector(state => state.displayDetails);
+    //let currentChart = useSelector(state => state.displayCharts);
+    //let currentDetail = useSelector(state => state.displayDetails);
     let years = useSelector(state => state.yearBack);
     let numSelection = useSelector(state => state.topChoice);
     let timeSelection = useSelector(state => state.timeChoice);
@@ -133,8 +133,8 @@ const TopComponent:FC<{loadedData}> = (loadedData) => {
     </Navbar>
         <Container fluid>
             <Row>
-            {currentChart && <Col className="col-xs-auto"><ChartComponent loadedData={years.data}/></Col>}
-            {currentDetail && <Col className="col-xs-auto"><DetailsComponent loadedData={years.data}/></Col>}
+            {display.showChart && <Col className="col-xs-auto"><ChartComponent loadedData={years.data}/></Col>}
+            {display.showDetail && <Col className="col-xs-auto"><DetailsComponent loadedData={years.data}/></Col>}
             </Row>
         </Container>
         </div>

@@ -125,7 +125,7 @@ const MainMenu:FC = () => {
         {showmap && <USMapComponent loadedData={maptype}/>}
         </Row>
         {showtop15 && <Row><GraphChartBar /></Row>}
-        {showtop15 && <Row><TopComponent loadedData={TopData}/></Row>}
+    
         
         </Container>
 

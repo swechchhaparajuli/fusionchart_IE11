@@ -16,13 +16,11 @@
     (https://drive.google.com/file/d/1g6FSKcImGYkCHNMAXuD2wKOGyx8xQr7z/view)
 
 - Shows Maps Option with Hover and Click
-    (https://drive.google.com/file/d/1g6FSKcImGYkCHNMAXuD2wKOGyx8xQr7z/view)
+    (https://drive.google.com/file/d/1Uxkw6blxQJ8uJS4ZwbyPw8jvD4NurD2k/view)
 
-- Shows grid v chart v both version
+- Shows grid v chart v both version on TopFifteen
     (https://drive.google.com/file/d/1hASGOobY1BrdnpEvPG1GjSKMDCO0YRpN/view)
 
-- ScreenCast of Redux Overview 
-    ('https://drive.google.com/file/d/1dR3RvFsdSz0ZFifraDW4myvEdrV_Oh8d/view')
 
 - ScreenCast of API Call stuff 
     ('https://drive.google.com/file/d/1wzngDe1rG79q8ZIgQFWCTJ1Fz57H1Kem/view)

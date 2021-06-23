@@ -199,7 +199,7 @@ const USMapComponent:FC<{type:string}> = (type) => {
     useEffect(() => {
       if(clickname != ""){
         console.log("Clicked on:" + statename);
-        setPopover(statename); // statename,'clickname' wont show details if you hover out and click previously clicked state
+        setPopover(); // statename,'clickname' wont show details if you hover out and click previously clicked state
       }
     },[clickname])
 
@@ -207,13 +207,11 @@ const USMapComponent:FC<{type:string}> = (type) => {
       var hoverdata, clickdata;
       stateTotalValue().then(res => 
         {
-             
             if(usstate != ""){
               if(isMountedVal.current){
                 hoverdata = filterStateCount(res,usstate);  // --> loads and filters intended state and its total contact sum
-               clickdata = getStateDetails(usstate, filtertype);
+                clickdata = getStateDetails(usstate, filtertype);
                 dataSource.chart.entitytooltext= "$lname: <b>$" + hoverdata+ "</b>";
-                
                 setGrid(clickdata); // --> loads detailed info in case button is clicked
               }
             }
@@ -221,7 +219,7 @@ const USMapComponent:FC<{type:string}> = (type) => {
             return hoverdata;
     }
 
-    const setPopover = (usstate:string) =>{
+    const setPopover = () =>{
       if(GridData != undefined){
         const listValues = "<table class='table'><thead><tr><th scope='col'> # </th> <th>  </th> <th scope='col'> Contract </th> <th>  </th> <th scope='col'> Contract Amount </th> </tr></thead><tbody>" 
           + GridData.map((listitem, index) => ("<tr key={listitem.label}><th scope='row'>" + (index+1) + "</th> <td></td> <td>"
@@ -240,8 +238,7 @@ const USMapComponent:FC<{type:string}> = (type) => {
                 dataFormat="JSON"
                 dataSource={dataSource}
             />
-          
-          
+            
             {/*<Details loadedData={StateData}/>*/}
         </div>
     )

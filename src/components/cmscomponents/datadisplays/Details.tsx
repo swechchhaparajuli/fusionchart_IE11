@@ -15,15 +15,13 @@ import {
 } from "@progress/kendo-react-grid";
 
 
-class DetailsComponent extends Component <{loadedData}> {
-
-    render(){
+const DetailsComponent:FC<{loadedData}> = (loadedData) => {
 
     return(
 
       <div>
         
-      <Grid style={{ width: "400", height:"400px", overflow: "scroll"}}  data={this.props.loadedData}>
+      <Grid style={{ width: "400", height:"400px", overflow: "scroll"}}  data={loadedData.loadedData}>
         <Column field="project_id" title="#" />
         <Column field="date" title="Date" />
         <Column field="label" title="Company" />
@@ -33,7 +31,7 @@ class DetailsComponent extends Component <{loadedData}> {
   
       </div>
     )
-    }
+    
 }
 
 export default DetailsComponent;

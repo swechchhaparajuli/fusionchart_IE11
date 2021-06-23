@@ -136,7 +136,7 @@
     "Contact_info": {"Name": "VIVES MAR", "Cell": "15103920043"},
     "Complete": "30",
     "AwardDate": "08/12/1997",
-    "Project_desc": "why did bella swan leave arizona for washington",
+    "Project_desc": "Arizona sand cleanup ",
     "Contract$" : "146.07",
     "Location" : {"State": "AZ", "County":"Yolo"} 
   },
@@ -145,7 +145,7 @@
     "Contact_info": {"Name": "GONZALES ANDREA", "Cell": "15103920043"},
     "Complete": "20",
     "AwardDate": "08/12/1997",
-    "Project_desc": "Space Launch",
+    "Project_desc": "Space debris cleanup ",
     "Contract$" : "13443.07",
     "Location" : {"State": "TX", "County":"San Francisco"} 
   },
@@ -358,7 +358,7 @@
     "Contact_info": {"Name": "GONZALES ANDREA", "Cell": "15103920043"},
     "Complete": "20",
     "AwardDate": "08/12/1997",
-    "Project_desc": "Space Launch",
+    "Project_desc": "Space Launch inspection",
     "Contract$" : "13443.07",
     "Location" : {"State": "TN", "County":"San Francisco"} 
   },
@@ -367,7 +367,7 @@
     "Contact_info": {"Name": "GONZALES ANDREA", "Cell": "15103920043"},
     "Complete": "30",
     "AwardDate": "08/12/1997",
-    "Project_desc": "KFC ?",
+    "Project_desc": "Kentucky tree removal",
     "Contract$" : "1346.07",
     "Location" : {"State": "KY", "County":"Santa Cruz"} 
   },{  
@@ -384,7 +384,7 @@
     "Contact_info": {"Name": "LONG DENISE", "Cell": "15103920043"},
     "Complete": "90",
     "AwardDate": "08/12/2019",
-    "Project_desc": "Mauna Kea ",
+    "Project_desc": "Chicago Fire  ",
     "Contract$" : "1346.07",
     "Location" : {"State": "IL", "County":"Sonoma"} 
   },
@@ -411,7 +411,7 @@
     "Contact_info": {"Name": "GONZALES ANDREA", "Cell": "15103920043"},
     "Complete": "20",
     "AwardDate": "08/12/1997",
-    "Project_desc": "spooky dakota because u get fined for sleeping with shoes on",
+    "Project_desc": "Street sweeping management",
     "Contract$" : "13443.07",
     "Location" : {"State": "ND", "County":"San Francisco"} 
   },
@@ -428,7 +428,7 @@
     "Contact_info": {"Name": "LONG DENISE", "Cell": "15103920043"},
     "Complete": "100",
     "AwardDate": "08/12/2012",
-    "Project_desc": "People are very nice here and so are the trees",
+    "Project_desc": "Tree cleanup north carolina",
     "Contract$" : "1346.07",
     "Location" : {"State": "NC", "County":"Sonoma"} 
   },
@@ -446,7 +446,7 @@
     "Contact_info": {"Name": "RUGGERI DENISE", "Cell": "15103920043"},
     "Complete": "100",
     "AwardDate": "08/12/2021",
-    "Project_desc": "Where is oklahoma and since when was it a state??",
+    "Project_desc": "Oklahoma details ... ",
     "Contract$" : "20.00",
     "Location" : {"State": "OK", "County":"Yolo"} 
   },
@@ -455,7 +455,7 @@
     "Contact_info": {"Name": "VIVES MAR", "Cell": "15103920043"},
     "Complete": "100",
     "AwardDate": "08/12/1997",
-    "Project_desc": "i can't find rhode island on this map",
+    "Project_desc": "Rhode island boat pickup",
     "Contract$" : "146.07",
     "Location" : {"State": "RI", "County":"Yolo"} 
   },
@@ -561,7 +561,7 @@
     "Contact_info": {"Name": "VIVES MAR", "Cell": "15103920043"},
     "Complete": "30",
     "AwardDate": "08/12/1997",
-    "Project_desc": "why did bella swan leave arizona for washington",
+    "Project_desc": "Arizona Camp fire  ",
     "Contract$" : "146.07",
     "Location" : {"State": "AZ", "County":"Yolo"} 
   },
