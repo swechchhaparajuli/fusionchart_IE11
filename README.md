@@ -41,9 +41,9 @@
 
 # Dummy Data being used in project example:
 
-![Alt text](images/dummydataexampleone.png "For Maps rendering when hovered over state")
+![For Maps rendering when hovered over state](images/dummydataexampleone.png "For Maps rendering when hovered over state")
 
-![Alt text](images/dummydataexampletwo.png "Detailed State Info")
+![Detailed State Info](images/dummydataexampletwo.png "Detailed State Info")
 
 #   Technology Used 
 
@@ -86,9 +86,7 @@
     - Kendo Grid CSS not working, so stylesheet plugged into index.html for now 
     - Navbar is funky on <CMSComponent>
     - Switch out of implementing Redux on <CMSComponents>
-    - doesn't load data until hover over map forces rerendering
     - streamline use with data filters 
-    - 
 
 
 ##  Polyfills
