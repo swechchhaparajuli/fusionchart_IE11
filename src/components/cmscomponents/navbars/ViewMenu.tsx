@@ -89,23 +89,21 @@ const getFilteredExact = (parsedlist:string) =>{
 
 const MainMenu:FC = () => {
 
-    const [TopData, setTopData] = useState(dataSource);
     const [showmap, setMap] = useState(false);
     const [showtop15, setTop15] = useState(false);
     const [maptype, setMapType] = useState("TopFifteen");
 
-    const callDetailedAPI = () =>{
-        var data;
-        fetch("http://localhost:3000/"+maptype)
-            .then(res => res.text())
-            .then(res => 
-                {
-                    data = getFilteredExact(res);
-                    setTopData(data);
-            });
-            return data;
-    }
-
+    // const callDetailedAPI = () =>{
+    //     var data;
+    //     fetch("http://localhost:3000/"+maptype)
+    //         .then(res => res.text())
+    //         .then(res => 
+    //             {
+    //                 data = getFilteredExact(res);
+    //                 setTopData(data);
+    //         });
+    //         return data;
+    // }
 
     /*useEffect(() => { 
         callDetailedAPI();
@@ -122,7 +120,7 @@ const MainMenu:FC = () => {
           </Navbar >
           </Row>
           <Row>
-        {showmap && <USMapComponent loadedData={maptype}/>}
+        {showmap && <USMapComponent type={maptype}/>}
         </Row>
         {showtop15 && <Row><GraphChartBar /></Row>}
     
