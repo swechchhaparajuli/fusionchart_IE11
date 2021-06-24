@@ -15,7 +15,7 @@ router.get('/', function(req, res, next) {
         for (let i = 0; i<response.data.length; i++){
             var obj = {
                 label:response.data[i].state.toString(),
-                value:response.data[i].nclients.toString()
+                value:response.data[i].total_value.toString()
             }
             newdata.push(obj);
         }
