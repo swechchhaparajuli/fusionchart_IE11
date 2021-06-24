@@ -43,7 +43,7 @@
 ![For Maps rendering when hovered over state](images/dummydataexampleone.png "For Maps rendering when hovered over state")
 
 - Detailed State Info (after click on maps, also currently used in top15)
-![Detailed State Info](images/dummydataexampletwo.png "Detailed State Info")
+![Detailed State Info](images/dummydataexample.png "Detailed State Info")
 
 #   Technology Used 
 
