@@ -4,20 +4,20 @@
     "Complete": "100",
     "AwardDate": "08/12/2012",
     "Project_desc": "People are very nice here and so are the trees",
-    "Contract$" : "1346.07",
+    "Contract$" : "1236.07",
     "Location" : {"State": "NC", "County":"Sonoma"} 
   },
   {  
-    "id": 4331.935,
+    "id": 4231.935,
     "Contact_info": {"Name": "LONG DENISE", "Cell": "15103920043"},
     "Complete": "100",
     "AwardDate": "08/12/2019",
     "Project_desc": "Mount Bailey rock pickup",
-    "Contract$" : "1346.07",
+    "Contract$" : "1646.07",
     "Location" : {"State": "OR", "County":"Sonoma"} 
   },
   {  
-    "id": 4331.936,
+    "id": 4334.936,
     "Contact_info": {"Name": "RUGGERI DENISE", "Cell": "15103920043"},
     "Complete": "100",
     "AwardDate": "08/12/2021",
@@ -35,29 +35,29 @@
     "Location" : {"State": "RI", "County":"Yolo"} 
   },
   {  
-    "id": 4331.938,
+    "id": 4351.938,
     "Contact_info": {"Name": "GONZALES ANDREA", "Cell": "15103920043"},
     "Complete": "100",
     "AwardDate": "08/12/1997",
     "Project_desc": "El paso cactus weeding",
-    "Contract$" : "13443.07",
+    "Contract$" : "1943.07",
     "Location" : {"State": "TX", "County":"San Francisco"} 
   },
   {  
-    "id": 4331.939,
+    "id": 4391.939,
     "Contact_info": {"Name": "GONZALES ANDREA", "Cell": "15103920043"},
     "Complete": "100",
     "AwardDate": "08/12/1997",
     "Project_desc": "corn huskers unanimous meeting",
-    "Contract$" : "1346.07",
+    "Contract$" : "130.07",
     "Location" : {"State": "IA", "County":"Santa Cruz"} 
   },{  
-    "id": 4331.934,
+    "id": 4361.904,
     "Contact_info": {"Name": "LONG DENISE", "Cell": "15103920043"},
     "Complete": "100",
     "AwardDate": "08/12/2012",
     "Project_desc": "South of canada convention",
-    "Contract$" : "1346.07",
+    "Contract$" : "1202094.07",
     "Location" : {"State": "WA", "County":"Sonoma"} 
   },
   {  
@@ -66,7 +66,7 @@
     "Complete": "100",
     "AwardDate": "08/12/2019",
     "Project_desc": "Mount Bailey rock pickup",
-    "Contract$" : "1346.07",
+    "Contract$" : "39283.07",
     "Location" : {"State": "OR", "County":"Sonoma"} 
   },
   {  
@@ -75,7 +75,7 @@
     "Complete": "100",
     "AwardDate": "08/12/2021",
     "Project_desc": "Las Vegas ",
-    "Contract$" : "20.00",
+    "Contract$" : "40.00",
     "Location" : {"State": "NV", "County":"Yolo"} 
   },
   {  
@@ -84,7 +84,7 @@
     "Complete": "100",
     "AwardDate": "08/12/1997",
     "Project_desc": "lake oroville dam cleaning",
-    "Contract$" : "146.07",
+    "Contract$" : "14639.07",
     "Location" : {"State": "CA", "County":"Yolo"} 
   },
   {  
@@ -93,7 +93,7 @@
     "Complete": "100",
     "AwardDate": "08/12/1997",
     "Project_desc": "El Paso Cactus growing",
-    "Contract$" : "13443.07",
+    "Contract$" : "1443.07",
     "Location" : {"State": "TX", "County":"San Francisco"} 
   },
   {  
@@ -110,7 +110,7 @@
     "Complete": "100",
     "AwardDate": "08/12/2012",
     "Project_desc": "Long Island tree removal",
-    "Contract$" : "1346.07",
+    "Contract$" : "1396.07",
     "Location" : {"State": "NY", "County":"Sonoma"} 
   },
   {  
@@ -119,7 +119,7 @@
     "Complete": "100",
     "AwardDate": "08/12/2019",
     "Project_desc": "Mount Bailey rock pickup",
-    "Contract$" : "1346.07",
+    "Contract$" : "139.07",
     "Location" : {"State": "OR", "County":"Sonoma"} 
   },
   {  
@@ -137,7 +137,7 @@
     "Complete": "30",
     "AwardDate": "08/12/1997",
     "Project_desc": "Arizona sand cleanup ",
-    "Contract$" : "146.07",
+    "Contract$" : "6.07",
     "Location" : {"State": "AZ", "County":"Yolo"} 
   },
   {  
@@ -146,7 +146,7 @@
     "Complete": "20",
     "AwardDate": "08/12/1997",
     "Project_desc": "Space debris cleanup ",
-    "Contract$" : "13443.07",
+    "Contract$" : "33443.07",
     "Location" : {"State": "TX", "County":"San Francisco"} 
   },
   {  
@@ -155,7 +155,7 @@
     "Complete": "30",
     "AwardDate": "08/12/1997",
     "Project_desc": "KFC ?",
-    "Contract$" : "1346.07",
+    "Contract$" : "13926.07",
     "Location" : {"State": "KY", "County":"Santa Cruz"} 
   },{  
     "id": 4331.934,
@@ -163,7 +163,7 @@
     "Complete": "40",
     "AwardDate": "08/12/2012",
     "Project_desc": "horse camp montana",
-    "Contract$" : "1346.07",
+    "Contract$" : "2346.07",
     "Location" : {"State": "MT", "County":"Sonoma"} 
   },
   {  
@@ -172,7 +172,7 @@
     "Complete": "90",
     "AwardDate": "08/12/2019",
     "Project_desc": "Mauna Kea ",
-    "Contract$" : "1346.07",
+    "Contract$" : "3346.07",
     "Location" : {"State": "HI", "County":"Sonoma"} 
   },
   {  
@@ -199,7 +199,7 @@
     "Complete": "20",
     "AwardDate": "08/12/1997",
     "Project_desc": "colorado snowboard cleaning",
-    "Contract$" : "13443.07",
+    "Contract$" : "393.07",
     "Location" : {"State": "CO", "County":"San Francisco"} 
   },
   {  
@@ -208,7 +208,7 @@
     "Complete": "10",
     "AwardDate": "08/12/1997",
     "Project_desc": "things to do in utah ...",
-    "Contract$" : "1346.07",
+    "Contract$" : "9036.07",
     "Location" : {"State": "UT", "County":"Santa Cruz"} 
   },
   {  
@@ -216,8 +216,8 @@
     "Contact_info": {"Name": "LONG DENISE", "Cell": "15103920043"},
     "Complete": "100",
     "AwardDate": "08/12/2012",
-    "Project_desc": "People are very nice here and so are the trees",
-    "Contract$" : "1346.07",
+    "Project_desc": "North Carolina tree trimming",
+    "Contract$" : "296.07",
     "Location" : {"State": "NC", "County":"Sonoma"} 
   },
   {  
@@ -226,7 +226,7 @@
     "Complete": "100",
     "AwardDate": "08/12/2019",
     "Project_desc": "Mount Bailey rock pickup",
-    "Contract$" : "1346.07",
+    "Contract$" : "2930.07",
     "Location" : {"State": "OR", "County":"Sonoma"} 
   },
   {  
@@ -253,7 +253,7 @@
     "Complete": "100",
     "AwardDate": "08/12/1997",
     "Project_desc": "El paso cactus weeding",
-    "Contract$" : "13443.07",
+    "Contract$" : "3933213.07",
     "Location" : {"State": "TX", "County":"San Francisco"} 
   },
   {  
@@ -262,7 +262,7 @@
     "Complete": "100",
     "AwardDate": "08/12/1997",
     "Project_desc": "corn huskers unanimous meeting",
-    "Contract$" : "1346.07",
+    "Contract$" : "3926.07",
     "Location" : {"State": "IA", "County":"Santa Cruz"} 
   },{  
     "id": 4331.934,
@@ -270,7 +270,7 @@
     "Complete": "100",
     "AwardDate": "08/12/2012",
     "Project_desc": "Hoboken tree pickup",
-    "Contract$" : "1346.07",
+    "Contract$" : "2346.07",
     "Location" : {"State": "NJ", "County":"Sonoma"} 
   },
   {  
@@ -279,7 +279,7 @@
     "Complete": "100",
     "AwardDate": "08/12/2019",
     "Project_desc": "Bilbo Baggins does not live here",
-    "Contract$" : "1346.07",
+    "Contract$" : "2936.07",
     "Location" : {"State": "NH", "County":"Sonoma"} 
   },
   {  
@@ -306,7 +306,7 @@
     "Complete": "100",
     "AwardDate": "08/12/1997",
     "Project_desc": "Vampire diaries was here",
-    "Contract$" : "13443.07",
+    "Contract$" : "2984.07",
     "Location" : {"State": "VA", "County":"San Francisco"} 
   },
   {  
@@ -315,7 +315,7 @@
     "Complete": "100",
     "AwardDate": "08/12/1997",
     "Project_desc": "Maryland ",
-    "Contract$" : "1346.07",
+    "Contract$" : "49306.07",
     "Location" : {"State": "MD", "County":"Santa Cruz"} 
   },{  
     "id": 4331.934,
@@ -323,7 +323,7 @@
     "Complete": "100",
     "AwardDate": "08/12/2012",
     "Project_desc": "not denmark",
-    "Contract$" : "1346.07",
+    "Contract$" : "396.07",
     "Location" : {"State": "DE", "County":"Sonoma"} 
   },
   {  
@@ -332,7 +332,7 @@
     "Complete": "100",
     "AwardDate": "08/12/2019",
     "Project_desc": "Mount Bailey rock pickup",
-    "Contract$" : "1346.07",
+    "Contract$" : "5346.07",
     "Location" : {"State": "SC", "County":"Sonoma"} 
   },
   {  
@@ -359,7 +359,7 @@
     "Complete": "20",
     "AwardDate": "08/12/1997",
     "Project_desc": "Space Launch inspection",
-    "Contract$" : "13443.07",
+    "Contract$" : "23443.07",
     "Location" : {"State": "TN", "County":"San Francisco"} 
   },
   {  
@@ -412,7 +412,7 @@
     "Complete": "20",
     "AwardDate": "08/12/1997",
     "Project_desc": "Street sweeping management",
-    "Contract$" : "13443.07",
+    "Contract$" : "2443.07",
     "Location" : {"State": "ND", "County":"San Francisco"} 
   },
   {  
@@ -465,7 +465,7 @@
     "Complete": "100",
     "AwardDate": "08/12/1997",
     "Project_desc": "El paso cactus weeding",
-    "Contract$" : "13443.07",
+    "Contract$" : "3943.07",
     "Location" : {"State": "TX", "County":"San Francisco"} 
   },
   {  
@@ -527,7 +527,7 @@
     "Complete": "100",
     "AwardDate": "08/12/1997",
     "Project_desc": "Tractor rental",
-    "Contract$" : "1346.07",
+    "Contract$" : "2226.07",
     "Location" : {"State": "IA", "County":"Santa Cruz"} 
   },{  
     "id": 4331.934,
@@ -535,7 +535,7 @@
     "Complete": "100",
     "AwardDate": "08/12/2012",
     "Project_desc": "Long Island tree removal",
-    "Contract$" : "1346.07",
+    "Contract$" : "229.07",
     "Location" : {"State": "NY", "County":"Sonoma"} 
   },
   {  
@@ -544,7 +544,7 @@
     "Complete": "100",
     "AwardDate": "08/12/2019",
     "Project_desc": "Mount Bailey rock pickup",
-    "Contract$" : "1346.07",
+    "Contract$" : "346.07",
     "Location" : {"State": "OR", "County":"Sonoma"} 
   },
   {  
@@ -571,7 +571,7 @@
     "Complete": "20",
     "AwardDate": "08/12/1997",
     "Project_desc": "Space Launch",
-    "Contract$" : "13443.07",
+    "Contract$" : "382443.07",
     "Location" : {"State": "TX", "County":"San Francisco"} 
   },
   {  
@@ -588,7 +588,7 @@
     "Complete": "40",
     "AwardDate": "08/12/2012",
     "Project_desc": "horse camp montana",
-    "Contract$" : "1346.07",
+    "Contract$" : "946.07",
     "Location" : {"State": "MT", "County":"Sonoma"} 
   },
   {  
@@ -597,7 +597,7 @@
     "Complete": "90",
     "AwardDate": "08/12/2019",
     "Project_desc": "Mauna Kea ",
-    "Contract$" : "1346.07",
+    "Contract$" : "39456.07",
     "Location" : {"State": "HI", "County":"Sonoma"} 
   },
   {  
@@ -624,7 +624,7 @@
     "Complete": "20",
     "AwardDate": "08/12/1997",
     "Project_desc": "why are there so many states oh my",
-    "Contract$" : "13443.07",
+    "Contract$" : "999443.07",
     "Location" : {"State": "ME", "County":"San Francisco"} 
   },
   {  
@@ -633,7 +633,7 @@
     "Complete": "10",
     "AwardDate": "08/12/1997",
     "Project_desc": "regretting sleeping through US history ...",
-    "Contract$" : "1346.07",
+    "Contract$" : "1936.07",
     "Location" : {"State": "MO", "County":"Santa Cruz"} 
   }
 ]

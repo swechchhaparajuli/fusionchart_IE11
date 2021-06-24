@@ -157,16 +157,17 @@ const USMapComponent:FC<{type:string}> = (type) => {
       }
 
       const isBaseMounted = useRef(false);
-// fetches base map data 
+// fetches base map data for first render
     useEffect(() => {
       isBaseMounted.current = true;
       if(BaseData == undefined){
         console.log("FETCH BASE");
         dataSource.data = fetchBase();
+        // insert code for editing of color intervals on map depending on the data here //
       }
       console.log("useEffect 1");
       console.log(dataSource.data);
-         //FusionCharts.addEventListener('entityRollOut', setColor);
+        
       return () => {isBaseMounted.current = false};
     },[BaseData]);
 

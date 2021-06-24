@@ -2,19 +2,22 @@ import React, {useState} from "react";
 import {FC} from "react";
 
 
-
-
+// Redux
 import {useDispatch, useSelector} from 'react-redux';
 import {displayType} from '../actions/graphsDisplay'
+
+//Child Components
 import TopComponent from './YearTopSortBar'
+
+
+// React-Bootstrap 
 import Form from 'react-bootstrap/Form';
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-import { FOCUSABLE_ELEMENTS } from "@progress/kendo-react-data-tools";
-import { GridGroupCell } from "@progress/kendo-react-grid";
+
 
 
 var changeLabel = (val: string) =>{
