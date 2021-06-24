@@ -29,7 +29,7 @@ let dataSource = {
   };
 
 const getListFiltered = (parsedlist:string, count:number, time:Date) =>{
-    const items = JSON.parse(parsedlist).filter(item => {var temp = new Date(item.date); return temp>time}).sort((a,b) => 0 - (parseInt(a.value) > parseInt(b.value) ? -1 : 1));
+    const items = JSON.parse(parsedlist).filter(item => {var temp = new Date(item.date); return temp>time}).sort((a,b) => 0 - (parseInt(a.value) < parseInt(b.value) ? -1 : 1));
     const temp = items.slice(0,count);
     //console.log(temp);
     
@@ -51,7 +51,7 @@ const getListFiltered = (parsedlist:string, count:number, time:Date) =>{
 
 
 const getFilteredExact = (parsedlist:string, count:number, time:Date) =>{
-    const items = JSON.parse(parsedlist).filter(item => {var temp = new Date(item.date); return (temp.getUTCFullYear()==time.getUTCFullYear())}).sort((a,b) => 0 - (parseInt(a.value) > parseInt(b.value) ? -1 : 1));
+    const items = JSON.parse(parsedlist).filter(item => {var temp = new Date(item.date); return (temp.getUTCFullYear()==time.getUTCFullYear())}).sort((a,b) => 0 - (parseInt(a.value) < parseInt(b.value) ? -1 : 1));
     const temp = items.slice(0,count);
   
     var data = [];
