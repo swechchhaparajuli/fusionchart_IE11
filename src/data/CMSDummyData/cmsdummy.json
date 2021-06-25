@@ -3,7 +3,7 @@
     "Contact_info": {"Name": "LONG DENISE", "Cell": "15103920043"},
     "Complete": "100",
     "AwardDate": "08/12/2012",
-    "Project_desc": "People are very nice here and so are the trees",
+    "Project_desc": "North Carolina project example",
     "Contract$" : "1236.07",
     "Location" : {"State": "NC", "County":"Sonoma"} 
   },
@@ -12,16 +12,16 @@
     "Contact_info": {"Name": "LONG DENISE", "Cell": "15103920043"},
     "Complete": "100",
     "AwardDate": "08/12/2019",
-    "Project_desc": "Mount Bailey rock pickup",
+    "Project_desc": "Oregon project example",
     "Contract$" : "1646.07",
-    "Location" : {"State": "OR", "County":"Sonoma"} 
+    "Location" : {"State": "LA", "County":"Sonoma"} 
   },
   {  
     "id": 4334.936,
     "Contact_info": {"Name": "RUGGERI DENISE", "Cell": "15103920043"},
     "Complete": "100",
     "AwardDate": "08/12/2021",
-    "Project_desc": "Where is oklahoma and since when was it a state??",
+    "Project_desc": "oklahoma project example",
     "Contract$" : "20.00",
     "Location" : {"State": "OK", "County":"Yolo"} 
   },
@@ -30,7 +30,7 @@
     "Contact_info": {"Name": "VIVES MAR", "Cell": "15103920043"},
     "Complete": "100",
     "AwardDate": "08/12/1997",
-    "Project_desc": "i can't find rhode island on this map",
+    "Project_desc": "Rhode Island project example",
     "Contract$" : "146.07",
     "Location" : {"State": "RI", "County":"Yolo"} 
   },
@@ -39,7 +39,7 @@
     "Contact_info": {"Name": "GONZALES ANDREA", "Cell": "15103920043"},
     "Complete": "100",
     "AwardDate": "08/12/1997",
-    "Project_desc": "El paso cactus weeding",
+    "Project_desc": "Texas project example",
     "Contract$" : "1943.07",
     "Location" : {"State": "TX", "County":"San Francisco"} 
   },
@@ -48,7 +48,7 @@
     "Contact_info": {"Name": "GONZALES ANDREA", "Cell": "15103920043"},
     "Complete": "100",
     "AwardDate": "08/12/1997",
-    "Project_desc": "corn huskers unanimous meeting",
+    "Project_desc": "Iowa project example",
     "Contract$" : "130.07",
     "Location" : {"State": "IA", "County":"Santa Cruz"} 
   },{  
@@ -56,7 +56,7 @@
     "Contact_info": {"Name": "LONG DENISE", "Cell": "15103920043"},
     "Complete": "100",
     "AwardDate": "08/12/2012",
-    "Project_desc": "South of canada convention",
+    "Project_desc": "Washington project example",
     "Contract$" : "1202094.07",
     "Location" : {"State": "WA", "County":"Sonoma"} 
   },
@@ -65,16 +65,16 @@
     "Contact_info": {"Name": "LONG DENISE", "Cell": "15103920043"},
     "Complete": "100",
     "AwardDate": "08/12/2019",
-    "Project_desc": "Mount Bailey rock pickup",
+    "Project_desc": "Oregon project example",
     "Contract$" : "39283.07",
-    "Location" : {"State": "OR", "County":"Sonoma"} 
+    "Location" : {"State": "MI", "County":"Sonoma"} 
   },
   {  
     "id": 4331.936,
     "Contact_info": {"Name": "RUGGERI DENISE", "Cell": "15103920043"},
     "Complete": "100",
     "AwardDate": "08/12/2021",
-    "Project_desc": "Las Vegas ",
+    "Project_desc": "Nevada project example",
     "Contract$" : "40.00",
     "Location" : {"State": "NV", "County":"Yolo"} 
   },
@@ -83,7 +83,7 @@
     "Contact_info": {"Name": "VIVES MAR", "Cell": "15103920043"},
     "Complete": "100",
     "AwardDate": "08/12/1997",
-    "Project_desc": "lake oroville dam cleaning",
+    "Project_desc": "California project example",
     "Contract$" : "14639.07",
     "Location" : {"State": "CA", "County":"Yolo"} 
   },
@@ -92,7 +92,7 @@
     "Contact_info": {"Name": "GONZALES ANDREA", "Cell": "15103920043"},
     "Complete": "100",
     "AwardDate": "08/12/1997",
-    "Project_desc": "El Paso Cactus growing",
+    "Project_desc": "Another Texas project example",
     "Contract$" : "1443.07",
     "Location" : {"State": "TX", "County":"San Francisco"} 
   },
@@ -101,7 +101,7 @@
     "Contact_info": {"Name": "GONZALES ANDREA", "Cell": "15103920043"},
     "Complete": "100",
     "AwardDate": "08/12/1997",
-    "Project_desc": "Tractor rental",
+    "Project_desc": "Another Iowa project example",
     "Contract$" : "1346.07",
     "Location" : {"State": "IA", "County":"Santa Cruz"} 
   },{  
@@ -109,7 +109,7 @@
     "Contact_info": {"Name": "LONG DENISE", "Cell": "15103920043"},
     "Complete": "100",
     "AwardDate": "08/12/2012",
-    "Project_desc": "Long Island tree removal",
+    "Project_desc": "New York State project example",
     "Contract$" : "1396.07",
     "Location" : {"State": "NY", "County":"Sonoma"} 
   },
@@ -118,16 +118,16 @@
     "Contact_info": {"Name": "LONG DENISE", "Cell": "15103920043"},
     "Complete": "100",
     "AwardDate": "08/12/2019",
-    "Project_desc": "Mount Bailey rock pickup",
+    "Project_desc": "Oregon project example",
     "Contract$" : "139.07",
-    "Location" : {"State": "OR", "County":"Sonoma"} 
+    "Location" : {"State": "NJ", "County":"Sonoma"} 
   },
   {  
     "id": 4331.936,
     "Contact_info": {"Name": "RUGGERI DENISE", "Cell": "15103920043"},
     "Complete": "40",
     "AwardDate": "08/12/2021",
-    "Project_desc": "Desert Creek Campground Nevada",
+    "Project_desc": "Nevada project example",
     "Contract$" : "00.00",
     "Location" : {"State": "NV", "County":"Yolo"} 
   },
@@ -136,7 +136,7 @@
     "Contact_info": {"Name": "VIVES MAR", "Cell": "15103920043"},
     "Complete": "30",
     "AwardDate": "08/12/1997",
-    "Project_desc": "Arizona sand cleanup ",
+    "Project_desc": "Arizona project example",
     "Contract$" : "6.07",
     "Location" : {"State": "AZ", "County":"Yolo"} 
   },
@@ -145,7 +145,7 @@
     "Contact_info": {"Name": "GONZALES ANDREA", "Cell": "15103920043"},
     "Complete": "20",
     "AwardDate": "08/12/1997",
-    "Project_desc": "Space debris cleanup ",
+    "Project_desc": "Texas project example",
     "Contract$" : "33443.07",
     "Location" : {"State": "TX", "County":"San Francisco"} 
   },
@@ -154,7 +154,7 @@
     "Contact_info": {"Name": "GONZALES ANDREA", "Cell": "15103920043"},
     "Complete": "30",
     "AwardDate": "08/12/1997",
-    "Project_desc": "KFC ?",
+    "Project_desc": "Kentucky project example",
     "Contract$" : "13926.07",
     "Location" : {"State": "KY", "County":"Santa Cruz"} 
   },{  
@@ -162,7 +162,7 @@
     "Contact_info": {"Name": "LONG DENISE", "Cell": "15103920043"},
     "Complete": "40",
     "AwardDate": "08/12/2012",
-    "Project_desc": "horse camp montana",
+    "Project_desc": "Montana project example",
     "Contract$" : "2346.07",
     "Location" : {"State": "MT", "County":"Sonoma"} 
   },
@@ -171,7 +171,7 @@
     "Contact_info": {"Name": "LONG DENISE", "Cell": "15103920043"},
     "Complete": "90",
     "AwardDate": "08/12/2019",
-    "Project_desc": "Mauna Kea ",
+    "Project_desc": "Hawaii project example",
     "Contract$" : "3346.07",
     "Location" : {"State": "HI", "County":"Sonoma"} 
   },
@@ -189,7 +189,7 @@
     "Contact_info": {"Name": "VIVES MAR", "Cell": "15103920043"},
     "Complete": "40",
     "AwardDate": "08/12/1997",
-    "Project_desc": "Sweet home...",
+    "Project_desc": "Alabama project example",
     "Contract$" : "146.07",
     "Location" : {"State": "AL", "County":"Yolo"} 
   },
@@ -198,7 +198,7 @@
     "Contact_info": {"Name": "GONZALES ANDREA", "Cell": "15103920043"},
     "Complete": "20",
     "AwardDate": "08/12/1997",
-    "Project_desc": "colorado snowboard cleaning",
+    "Project_desc": "colorado project example",
     "Contract$" : "393.07",
     "Location" : {"State": "CO", "County":"San Francisco"} 
   },
@@ -207,7 +207,7 @@
     "Contact_info": {"Name": "GONZALES ANDREA", "Cell": "15103920043"},
     "Complete": "10",
     "AwardDate": "08/12/1997",
-    "Project_desc": "things to do in utah ...",
+    "Project_desc": "utah project example",
     "Contract$" : "9036.07",
     "Location" : {"State": "UT", "County":"Santa Cruz"} 
   },
@@ -216,7 +216,7 @@
     "Contact_info": {"Name": "LONG DENISE", "Cell": "15103920043"},
     "Complete": "100",
     "AwardDate": "08/12/2012",
-    "Project_desc": "North Carolina tree trimming",
+    "Project_desc": "North Carolina  project example",
     "Contract$" : "296.07",
     "Location" : {"State": "NC", "County":"Sonoma"} 
   },
@@ -225,16 +225,16 @@
     "Contact_info": {"Name": "LONG DENISE", "Cell": "15103920043"},
     "Complete": "100",
     "AwardDate": "08/12/2019",
-    "Project_desc": "Mount Bailey rock pickup",
+    "Project_desc": "Wyoming project example",
     "Contract$" : "2930.07",
-    "Location" : {"State": "OR", "County":"Sonoma"} 
+    "Location" : {"State": "WY", "County":"Sonoma"} 
   },
   {  
     "id": 4331.936,
     "Contact_info": {"Name": "RUGGERI DENISE", "Cell": "15103920043"},
     "Complete": "100",
     "AwardDate": "08/12/2021",
-    "Project_desc": "Where is oklahoma and since when was it a state??",
+    "Project_desc": "oklahoma project example",
     "Contract$" : "20.00",
     "Location" : {"State": "OK", "County":"Yolo"} 
   },
@@ -243,7 +243,7 @@
     "Contact_info": {"Name": "VIVES MAR", "Cell": "15103920043"},
     "Complete": "100",
     "AwardDate": "08/12/1997",
-    "Project_desc": "i can't find rhode island on this map",
+    "Project_desc": "Rhode Island project examplep",
     "Contract$" : "146.07",
     "Location" : {"State": "RI", "County":"Yolo"} 
   },
@@ -252,7 +252,7 @@
     "Contact_info": {"Name": "GONZALES ANDREA", "Cell": "15103920043"},
     "Complete": "100",
     "AwardDate": "08/12/1997",
-    "Project_desc": "El paso cactus weeding",
+    "Project_desc": "Texas  project example",
     "Contract$" : "3933213.07",
     "Location" : {"State": "TX", "County":"San Francisco"} 
   },
@@ -261,7 +261,7 @@
     "Contact_info": {"Name": "GONZALES ANDREA", "Cell": "15103920043"},
     "Complete": "100",
     "AwardDate": "08/12/1997",
-    "Project_desc": "corn huskers unanimous meeting",
+    "Project_desc": "Iowa  project example",
     "Contract$" : "3926.07",
     "Location" : {"State": "IA", "County":"Santa Cruz"} 
   },{  
@@ -269,7 +269,7 @@
     "Contact_info": {"Name": "LONG DENISE", "Cell": "15103920043"},
     "Complete": "100",
     "AwardDate": "08/12/2012",
-    "Project_desc": "Hoboken tree pickup",
+    "Project_desc": "New Jersey  project example",
     "Contract$" : "2346.07",
     "Location" : {"State": "NJ", "County":"Sonoma"} 
   },
@@ -278,7 +278,7 @@
     "Contact_info": {"Name": "LONG DENISE", "Cell": "15103920043"},
     "Complete": "100",
     "AwardDate": "08/12/2019",
-    "Project_desc": "Bilbo Baggins does not live here",
+    "Project_desc": "New Hampshire sproject example",
     "Contract$" : "2936.07",
     "Location" : {"State": "NH", "County":"Sonoma"} 
   },
@@ -287,7 +287,7 @@
     "Contact_info": {"Name": "RUGGERI DENISE", "Cell": "15103920043"},
     "Complete": "100",
     "AwardDate": "08/12/2021",
-    "Project_desc": "New Hampshire, almost the shire, but not quite",
+    "Project_desc": "New Hampshire project example",
     "Contract$" : "20.00",
     "Location" : {"State": "NH", "County":"Yolo"} 
   },
@@ -296,7 +296,7 @@
     "Contact_info": {"Name": "VIVES MAR", "Cell": "15103920043"},
     "Complete": "100",
     "AwardDate": "08/12/1997",
-    "Project_desc": "georgiaaaa",
+    "Project_desc": "georgia project example",
     "Contract$" : "146.07",
     "Location" : {"State": "GA", "County":"Yolo"} 
   },
@@ -305,7 +305,7 @@
     "Contact_info": {"Name": "GONZALES ANDREA", "Cell": "15103920043"},
     "Complete": "100",
     "AwardDate": "08/12/1997",
-    "Project_desc": "Vampire diaries was here",
+    "Project_desc": "Virginia  project example",
     "Contract$" : "2984.07",
     "Location" : {"State": "VA", "County":"San Francisco"} 
   },
@@ -314,7 +314,7 @@
     "Contact_info": {"Name": "GONZALES ANDREA", "Cell": "15103920043"},
     "Complete": "100",
     "AwardDate": "08/12/1997",
-    "Project_desc": "Maryland ",
+    "Project_desc": "Maryland  project example",
     "Contract$" : "49306.07",
     "Location" : {"State": "MD", "County":"Santa Cruz"} 
   },{  
@@ -322,7 +322,7 @@
     "Contact_info": {"Name": "LONG DENISE", "Cell": "15103920043"},
     "Complete": "100",
     "AwardDate": "08/12/2012",
-    "Project_desc": "not denmark",
+    "Project_desc": "delaware project example",
     "Contract$" : "396.07",
     "Location" : {"State": "DE", "County":"Sonoma"} 
   },
@@ -331,7 +331,7 @@
     "Contact_info": {"Name": "LONG DENISE", "Cell": "15103920043"},
     "Complete": "100",
     "AwardDate": "08/12/2019",
-    "Project_desc": "Mount Bailey rock pickup",
+    "Project_desc": "South Carolina  project example",
     "Contract$" : "5346.07",
     "Location" : {"State": "SC", "County":"Sonoma"} 
   },
@@ -340,7 +340,7 @@
     "Contact_info": {"Name": "RUGGERI DENISE", "Cell": "15103920043"},
     "Complete": "40",
     "AwardDate": "08/12/2021",
-    "Project_desc": "Missississsiiisissisisisipi :)",
+    "Project_desc": "Mississipi  project example",
     "Contract$" : "00.00",
     "Location" : {"State": "MS", "County":"Yolo"} 
   },
@@ -349,7 +349,7 @@
     "Contact_info": {"Name": "VIVES MAR", "Cell": "15103920043"},
     "Complete": "30",
     "AwardDate": "08/12/1997",
-    "Project_desc": "where the water tribe live",
+    "Project_desc": "Alaska  project example",
     "Contract$" : "146.07",
     "Location" : {"State": "AK", "County":"Yolo"} 
   },
@@ -358,7 +358,7 @@
     "Contact_info": {"Name": "GONZALES ANDREA", "Cell": "15103920043"},
     "Complete": "20",
     "AwardDate": "08/12/1997",
-    "Project_desc": "Space Launch inspection",
+    "Project_desc": "Tennessee  project example",
     "Contract$" : "23443.07",
     "Location" : {"State": "TN", "County":"San Francisco"} 
   },
@@ -367,7 +367,7 @@
     "Contact_info": {"Name": "GONZALES ANDREA", "Cell": "15103920043"},
     "Complete": "30",
     "AwardDate": "08/12/1997",
-    "Project_desc": "Kentucky tree removal",
+    "Project_desc": "Kentucky  project example",
     "Contract$" : "1346.07",
     "Location" : {"State": "KY", "County":"Santa Cruz"} 
   },{  
@@ -375,7 +375,7 @@
     "Contact_info": {"Name": "LONG DENISE", "Cell": "15103920043"},
     "Complete": "40",
     "AwardDate": "08/12/2012",
-    "Project_desc": "horse camp montana",
+    "Project_desc": " project example",
     "Contract$" : "1346.07",
     "Location" : {"State": "IN", "County":"Sonoma"} 
   },
@@ -384,7 +384,7 @@
     "Contact_info": {"Name": "LONG DENISE", "Cell": "15103920043"},
     "Complete": "90",
     "AwardDate": "08/12/2019",
-    "Project_desc": "Chicago Fire  ",
+    "Project_desc": "Chicago  project example",
     "Contract$" : "1346.07",
     "Location" : {"State": "IL", "County":"Sonoma"} 
   },
@@ -393,7 +393,7 @@
     "Contact_info": {"Name": "RUGGERI DENISE", "Cell": "15103920043"},
     "Complete": "60",
     "AwardDate": "08/12/2021",
-    "Project_desc": "Puʻu Kuku Lava pickup",
+    "Project_desc": "Winsconsin  project example",
     "Contract$" : "00.00",
     "Location" : {"State": "WI", "County":"Yolo"} 
   },
@@ -402,7 +402,7 @@
     "Contact_info": {"Name": "VIVES MAR", "Cell": "15103920043"},
     "Complete": "40",
     "AwardDate": "08/12/1997",
-    "Project_desc": "Minnesota stuff",
+    "Project_desc": "Minnesota  project example",
     "Contract$" : "146.07",
     "Location" : {"State": "MN", "County":"Yolo"} 
   },
@@ -411,7 +411,7 @@
     "Contact_info": {"Name": "GONZALES ANDREA", "Cell": "15103920043"},
     "Complete": "20",
     "AwardDate": "08/12/1997",
-    "Project_desc": "Street sweeping management",
+    "Project_desc": "North Dakota  project example",
     "Contract$" : "2443.07",
     "Location" : {"State": "ND", "County":"San Francisco"} 
   },
@@ -428,7 +428,7 @@
     "Contact_info": {"Name": "LONG DENISE", "Cell": "15103920043"},
     "Complete": "100",
     "AwardDate": "08/12/2012",
-    "Project_desc": "Tree cleanup north carolina",
+    "Project_desc": "north carolina  project example",
     "Contract$" : "1346.07",
     "Location" : {"State": "NC", "County":"Sonoma"} 
   },
@@ -437,16 +437,16 @@
     "Contact_info": {"Name": "LONG DENISE", "Cell": "15103920043"},
     "Complete": "100",
     "AwardDate": "08/12/2019",
-    "Project_desc": "Mount Bailey rock pickup",
+    "Project_desc": "West Virginia  project example",
     "Contract$" : "1346.07",
-    "Location" : {"State": "OR", "County":"Sonoma"} 
+    "Location" : {"State": "WV", "County":"Sonoma"} 
   },
   {  
     "id": 4331.936,
     "Contact_info": {"Name": "RUGGERI DENISE", "Cell": "15103920043"},
     "Complete": "100",
     "AwardDate": "08/12/2021",
-    "Project_desc": "Oklahoma details ... ",
+    "Project_desc": "Oklahoma  project example ",
     "Contract$" : "20.00",
     "Location" : {"State": "OK", "County":"Yolo"} 
   },
@@ -455,7 +455,7 @@
     "Contact_info": {"Name": "VIVES MAR", "Cell": "15103920043"},
     "Complete": "100",
     "AwardDate": "08/12/1997",
-    "Project_desc": "Rhode island boat pickup",
+    "Project_desc": "Rhode island  project example",
     "Contract$" : "146.07",
     "Location" : {"State": "RI", "County":"Yolo"} 
   },
@@ -464,7 +464,7 @@
     "Contact_info": {"Name": "GONZALES ANDREA", "Cell": "15103920043"},
     "Complete": "100",
     "AwardDate": "08/12/1997",
-    "Project_desc": "El paso cactus weeding",
+    "Project_desc": "El paso  project example",
     "Contract$" : "3943.07",
     "Location" : {"State": "TX", "County":"San Francisco"} 
   },
@@ -473,7 +473,7 @@
     "Contact_info": {"Name": "GONZALES ANDREA", "Cell": "15103920043"},
     "Complete": "100",
     "AwardDate": "08/12/1997",
-    "Project_desc": "corn huskers unanimous meeting",
+    "Project_desc": "Iowa  project example",
     "Contract$" : "1346.07",
     "Location" : {"State": "IA", "County":"Santa Cruz"} 
   },{  
@@ -481,7 +481,7 @@
     "Contact_info": {"Name": "LONG DENISE", "Cell": "15103920043"},
     "Complete": "100",
     "AwardDate": "08/12/2012",
-    "Project_desc": "South of canada convention",
+    "Project_desc": "South of canada  project example",
     "Contract$" : "1346.07",
     "Location" : {"State": "WA", "County":"Sonoma"} 
   },
@@ -490,7 +490,7 @@
     "Contact_info": {"Name": "LONG DENISE", "Cell": "15103920043"},
     "Complete": "100",
     "AwardDate": "08/12/2019",
-    "Project_desc": "Mount Bailey rock pickup",
+    "Project_desc": "Oregon  project example",
     "Contract$" : "1346.07",
     "Location" : {"State": "OR", "County":"Sonoma"} 
   },
@@ -499,7 +499,7 @@
     "Contact_info": {"Name": "RUGGERI DENISE", "Cell": "15103920043"},
     "Complete": "100",
     "AwardDate": "08/12/2021",
-    "Project_desc": "Las Vegas ",
+    "Project_desc": "Las Vegas  project example",
     "Contract$" : "20.00",
     "Location" : {"State": "NV", "County":"Yolo"} 
   },
@@ -508,7 +508,7 @@
     "Contact_info": {"Name": "VIVES MAR", "Cell": "15103920043"},
     "Complete": "100",
     "AwardDate": "08/12/1997",
-    "Project_desc": "lake oroville dam cleaning",
+    "Project_desc": "lake oroville project example",
     "Contract$" : "146.07",
     "Location" : {"State": "CA", "County":"Yolo"} 
   },
@@ -517,7 +517,7 @@
     "Contact_info": {"Name": "GONZALES ANDREA", "Cell": "15103920043"},
     "Complete": "100",
     "AwardDate": "08/12/1997",
-    "Project_desc": "El Paso Cactus growing",
+    "Project_desc": "El Paso  project example",
     "Contract$" : "13443.07",
     "Location" : {"State": "NB", "County":"San Francisco"} 
   },
@@ -526,7 +526,7 @@
     "Contact_info": {"Name": "GONZALES ANDREA", "Cell": "15103920043"},
     "Complete": "100",
     "AwardDate": "08/12/1997",
-    "Project_desc": "Tractor rental",
+    "Project_desc": "Iowa  project example",
     "Contract$" : "2226.07",
     "Location" : {"State": "IA", "County":"Santa Cruz"} 
   },{  
@@ -534,7 +534,7 @@
     "Contact_info": {"Name": "LONG DENISE", "Cell": "15103920043"},
     "Complete": "100",
     "AwardDate": "08/12/2012",
-    "Project_desc": "Long Island tree removal",
+    "Project_desc": "Long Island  project example",
     "Contract$" : "229.07",
     "Location" : {"State": "NY", "County":"Sonoma"} 
   },
@@ -543,7 +543,7 @@
     "Contact_info": {"Name": "LONG DENISE", "Cell": "15103920043"},
     "Complete": "100",
     "AwardDate": "08/12/2019",
-    "Project_desc": "Mount Bailey rock pickup",
+    "Project_desc": "Mount Bailey  project example",
     "Contract$" : "346.07",
     "Location" : {"State": "OR", "County":"Sonoma"} 
   },
@@ -552,7 +552,7 @@
     "Contact_info": {"Name": "RUGGERI DENISE", "Cell": "15103920043"},
     "Complete": "40",
     "AwardDate": "08/12/2021",
-    "Project_desc": "Desert Creek Campground Nevada",
+    "Project_desc": "Desert Creek Campground Nevada  project example",
     "Contract$" : "00.00",
     "Location" : {"State": "NV", "County":"Yolo"} 
   },
@@ -561,7 +561,7 @@
     "Contact_info": {"Name": "VIVES MAR", "Cell": "15103920043"},
     "Complete": "30",
     "AwardDate": "08/12/1997",
-    "Project_desc": "Arizona Camp fire  ",
+    "Project_desc": "Arizona Camp  project example",
     "Contract$" : "146.07",
     "Location" : {"State": "AZ", "County":"Yolo"} 
   },
@@ -570,7 +570,7 @@
     "Contact_info": {"Name": "GONZALES ANDREA", "Cell": "15103920043"},
     "Complete": "20",
     "AwardDate": "08/12/1997",
-    "Project_desc": "Space Launch",
+    "Project_desc": "Texas  project example",
     "Contract$" : "382443.07",
     "Location" : {"State": "TX", "County":"San Francisco"} 
   },
@@ -579,7 +579,7 @@
     "Contact_info": {"Name": "GONZALES ANDREA", "Cell": "15103920043"},
     "Complete": "30",
     "AwardDate": "08/12/1997",
-    "Project_desc": "KFC ?",
+    "Project_desc": "Kentucky  project example",
     "Contract$" : "1346.07",
     "Location" : {"State": "KY", "County":"Santa Cruz"} 
   },{  
@@ -587,7 +587,7 @@
     "Contact_info": {"Name": "LONG DENISE", "Cell": "15103920043"},
     "Complete": "40",
     "AwardDate": "08/12/2012",
-    "Project_desc": "horse camp montana",
+    "Project_desc": "montana project example",
     "Contract$" : "946.07",
     "Location" : {"State": "MT", "County":"Sonoma"} 
   },
@@ -596,7 +596,7 @@
     "Contact_info": {"Name": "LONG DENISE", "Cell": "15103920043"},
     "Complete": "90",
     "AwardDate": "08/12/2019",
-    "Project_desc": "Mauna Kea ",
+    "Project_desc": "Mauna Kea  project example",
     "Contract$" : "39456.07",
     "Location" : {"State": "HI", "County":"Sonoma"} 
   },
@@ -605,7 +605,7 @@
     "Contact_info": {"Name": "RUGGERI DENISE", "Cell": "15103920043"},
     "Complete": "60",
     "AwardDate": "08/12/2021",
-    "Project_desc": "Arkansas?",
+    "Project_desc": "Arkansas project example",
     "Contract$" : "00.00",
     "Location" : {"State": "AR", "County":"Yolo"} 
   },
@@ -614,7 +614,7 @@
     "Contact_info": {"Name": "VIVES MAR", "Cell": "15103920043"},
     "Complete": "40",
     "AwardDate": "08/12/1997",
-    "Project_desc": "Sweet home...",
+    "Project_desc": "Alabama  project example",
     "Contract$" : "146.07",
     "Location" : {"State": "AL", "County":"Yolo"} 
   },
@@ -623,7 +623,7 @@
     "Contact_info": {"Name": "GONZALES ANDREA", "Cell": "15103920043"},
     "Complete": "20",
     "AwardDate": "08/12/1997",
-    "Project_desc": "why are there so many states oh my",
+    "Project_desc": " project example",
     "Contract$" : "999443.07",
     "Location" : {"State": "ME", "County":"San Francisco"} 
   },
@@ -632,8 +632,8 @@
     "Contact_info": {"Name": "GONZALES ANDREA", "Cell": "15103920043"},
     "Complete": "10",
     "AwardDate": "08/12/1997",
-    "Project_desc": "regretting sleeping through US history ...",
+    "Project_desc": "Utah project example",
     "Contract$" : "1936.07",
-    "Location" : {"State": "MO", "County":"Santa Cruz"} 
+    "Location" : {"State": "UT", "County":"Santa Cruz"} 
   }
 ]
