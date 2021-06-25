@@ -32,8 +32,9 @@ const App:FC = () => {
           
           <MainMenu />
           
-          <USMapComponent type={"TopFifteen"}/>
+          
           {/*
+          <USMapComponent type={"TopFifteen"}/>
            <Navbar className="bg-light">  
           {!showmap &&<button className="btn" onClick={() =>  {setMap(true), setTop15(false)}} >Click for US Map</button>}
           {!showtop15 &&<button className="btn" onClick={() =>  {setTop15(true), setMap(false)}} >Click for Top 15</button>}
