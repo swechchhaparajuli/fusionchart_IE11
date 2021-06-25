@@ -1,210 +1,210 @@
 [
     {
         "state": "CA",
-        "nclients": 202385028
+        "total_value": 202385028
     },
     {
         "state": "WA",
-        "nclients": 239283
+        "total_value": 239283
     },
     {
         "state": "OR",
-        "nclients": 212048
+        "total_value": 212048
     },
     {
         "state": "AL",
-        "nclients": 23245
+        "total_value": 23245
     },
     {
         "state": "HI",
-        "nclients": 22345
+        "total_value": 22345
     },
     {
         "state": "NV",
-        "nclients": 22345
+        "total_value": 22345
     },
     {
         "state": "ID",
-        "nclients": 22345
+        "total_value": 22345
     },
     {
         "state": "MO",
-        "nclients": 23426
+        "total_value": 23426
     },
     {
         "state": "WY",
-        "nclients": 0
+        "total_value": 0
     },
     {
         "state": "CO",
-        "nclients": 21235
+        "total_value": 21235
     },
     {
         "state": "UT",
-        "nclients": 22346753
+        "total_value": 22346753
     },
     {
         "state": "AZ",
-        "nclients": 21234523
+        "total_value": 21234523
     },
     {
         "state": "NM",
-        "nclients": 0
+        "total_value": 0
     },
     {
         "state": "RI",
-        "nclients": 2234743
+        "total_value": 2234743
     },
     {
         "state": "OK",
-        "nclients": 2234535
+        "total_value": 2234535
     },
     {
         "state": "CA",
-        "nclients": 2234532
+        "total_value": 2234532
     },
     {
         "state": "KS",
-        "nclients": 0
+        "total_value": 0
     },
     {
         "state": "NE",
-        "nclients": 2324523
+        "total_value": 2324523
     },
     {
         "state": "SD",
-        "nclients": 2234532
+        "total_value": 2234532
     },
     {
         "state": "ND",
-        "nclients": 223525
+        "total_value": 223525
     },
     {
         "state": "MN",
-        "nclients": 223453252
+        "total_value": 223453252
     },
     {
         "state": "IA",
-        "nclients": 22345352
+        "total_value": 22345352
     },
     {
         "state": "WI",
-        "nclients": 25324523
+        "total_value": 25324523
     },
     {
         "state": "MI",
-        "nclients": 0
+        "total_value": 0
     },
     {
         "state": "IL",
-        "nclients": 2324535
+        "total_value": 2324535
     },
     {
         "state": "IN",
-        "nclients": 2324556
+        "total_value": 2324556
     },
     {
         "state": "KY",
-        "nclients": 2039258093
+        "total_value": 2039258093
     },
     {
         "state": "TN",
-        "nclients": 22398592
+        "total_value": 22398592
     },
     {
         "state": "AK",
-        "nclients": 22389459
+        "total_value": 22389459
     },
     {
         "state": "MS",
-        "nclients": 223845
+        "total_value": 223845
     },
     {
         "state": "SC",
-        "nclients": 229385
+        "total_value": 229385
     },
     {
         "state": "NC",
-        "nclients": 21234
+        "total_value": 21234
     },
     {
         "state": "VA",
-        "nclients": 21234
+        "total_value": 21234
     },
     {
         "state": "MD",
-        "nclients": 23214
+        "total_value": 23214
     },
     {
         "state": "DE",
-        "nclients": 24532
+        "total_value": 24532
     },
     {
         "state": "DC",
-        "nclients": 0
+        "total_value": 0
     },
     {
         "state": "GA",
-        "nclients": 2325345
+        "total_value": 2325345
     },
     {
         "state": "FL",
-        "nclients": 0
+        "total_value": 0
     },
     {
         "state": "LA",
-        "nclients": 0
+        "total_value": 0
     },
     {
         "state": "MA",
-        "nclients": 232523
+        "total_value": 232523
     },
     {
         "state": "NH",
-        "nclients": 22345325
+        "total_value": 22345325
     },
     {
         "state": "NJ",
-        "nclients": 2234522
+        "total_value": 2234522
     },
     {
         "state": "NY",
-        "nclients": 223452345
+        "total_value": 223452345
     },
     {
         "state": "ME",
-        "nclients": 22345235
+        "total_value": 22345235
     },
     {
         "state": "MT",
-        "nclients": 22345235
+        "total_value": 22345235
     },
     {
         "state": "OH",
-        "nclients": 223452345
+        "total_value": 223452345
     },
     {
         "state": "RI",
-        "nclients": 2234523
+        "total_value": 2234523
     },
     {
         "state": "WY",
-        "nclients": 22345325
+        "total_value": 22345325
     },
     {
         "state": "WV",
-        "nclients": 22345235
+        "total_value": 22345235
     },
     {
         "state": "VT",
-        "nclients": 0
+        "total_value": 0
     },
     {
         "state": "PA",
-        "nclients": 0
+        "total_value": 0
     },
     {
         "state": "AR",
-        "nclients": 2234523
+        "total_value": 2234523
     }
 ]

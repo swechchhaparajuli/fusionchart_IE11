@@ -40,7 +40,7 @@
 # Dummy Data being used in project example:
 
 - For Maps rendering when hovered over state 
-![For Maps rendering when hovered over state](images/dummydataexampleone.png "For Maps rendering when hovered over state")
+![For Maps rendering when hovered over state](images/USMap_dummy.png "For Maps rendering when hovered over state")
 
 - Detailed State Info (after click on maps, also currently used in top15)
 ![Detailed State Info](images/dummydataexample.png "Detailed State Info")

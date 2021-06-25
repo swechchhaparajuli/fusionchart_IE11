@@ -51,7 +51,7 @@ const getListFiltered = (parsedlist:string, count:number, time:Date) =>{
 
 
 const getFilteredExact = (parsedlist:string, count:number, time:Date) =>{
-    const items = JSON.parse(parsedlist).filter(item => {var temp = new Date(item.date); return (temp.getUTCFullYear()==time.getUTCFullYear())}).sort((a,b) => 0 - (parseInt(a.value) < parseInt(b.value) ? -1 : 1));
+    const items = JSON.parse(parsedlist).filter(item => {var temp = new Date(item.date); return (temp.getUTCFullYear()>=time.getUTCFullYear())}).sort((a,b) => 0 - (parseInt(a.value) < parseInt(b.value) ? -1 : 1));
     const temp = items.slice(0,count);
   
     var data = [];
@@ -70,20 +70,29 @@ const getFilteredExact = (parsedlist:string, count:number, time:Date) =>{
   }
 
 const filterAll = (loadeddata, count: number, time: number) => {
+    var now = 2021;
+    if(time>100){ //if 2020ish
+      now = time;
+      console.log(now);
+    //   let temp = String(time);
+    //   temp = "01/01/" + temp;
+    //   var actualtime = new Date(temp);
+      
+    } else { //if 1,2,3
+      now = 2021-time;
+      console.log(now);
 
-    if(time>100){
-      let temp = String(time);
-      temp = "01/01/" + temp;
-      var actualtime = new Date(temp);
-
-      return getFilteredExact(loadeddata,count,actualtime);
-
-    } else {
-      let temp = "0" + String(1012021-time);
-      temp = temp.substring(0,2) + "/" + temp.substring(2,4) + "/" + temp.substring(4,8);
-      var actualtime = new Date(temp);
-      return getListFiltered(loadeddata,count,actualtime)
+    //   let temp = "0" + String(1012021-time);
+    //   temp = temp.substring(0,2) + "/" + temp.substring(2,4) + "/" + temp.substring(4,8);
+    //   var actualtime = new Date(temp);
+    //   return getListFiltered(loadeddata,count,actualtime)
     }
+
+    
+    let temp = String(now);
+    temp = "01/01/" + temp;
+    var actualtime = new Date(temp);
+    return getFilteredExact(loadeddata,count,actualtime);
 }
 
 
@@ -96,7 +105,7 @@ const TopComponent:FC<{showChart, showDetail}> = (display) => {
 
     const [years, setYear] = useState();
     const [numSelection, setTopNum] = useState(15);
-    const [timeSelection, setTime] = useState(30);
+    const [timeSelection, setTime] = useState(0);
 
     const callAPI = (count:number, time:number) =>{
         var data = [];
@@ -116,7 +125,7 @@ const TopComponent:FC<{showChart, showDetail}> = (display) => {
         if(years == undefined){
           console.log("FETCH BASE");
           console.log(years);
-          callAPI(15,30);
+          callAPI(15,0);
         
         }
            //FusionCharts.addEventListener('entityRollOut', setColor);
@@ -146,7 +155,6 @@ const TopComponent:FC<{showChart, showDetail}> = (display) => {
                         <Col className="col-md-auto">
                             <Form.Group controlId="exampleForm.ControlSelect1">
                                 <Form.Control as="select"  onChange={e => setTime(parseInt(e.target.value))}>
-                                    <option value={30} ></option>
                                     <option value={2021} >2021</option>
                                     <option value={2020} >2020</option>
                                     <option value={2019} >2019</option>
@@ -165,10 +173,10 @@ const TopComponent:FC<{showChart, showDetail}> = (display) => {
                         <Col className="col-md-auto">
                             <Form.Group controlId="exampleForm.ControlSelect1">
                                 <Form.Control as="select"  onChange={e => setTime(parseInt(e.target.value))}>
-                                    <option value={30} ></option>
-                                    <option value={1} >Past Year</option>
-                                    <option value={2} >Past Two Years</option>
-                                    <option value={10} >Past Ten Years</option>
+                                    <option value={0} ></option>
+                                    <option value={1} >One Year</option>
+                                    <option value={2} >Two Years</option>
+                                    <option value={10} >Ten Years</option>
                                 </Form.Control>
                             </Form.Group>
                         </Col>
