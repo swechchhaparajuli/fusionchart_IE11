@@ -107,9 +107,9 @@ const MainMenu:FC = () => {
     }
 
 
-    useEffect(() => { 
+   /* useEffect(() => { 
         callDetailedAPI();
-    },[])
+    },[])*/
 
 
     return(
