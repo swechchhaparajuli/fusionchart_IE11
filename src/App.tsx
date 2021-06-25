@@ -18,6 +18,7 @@ import USMapComponent from "./components/cmscomponents/datadisplays/USAMap";
 
 import MainMenu from "./components/cmscomponents/navbars/ViewMenu";
 
+
 //const env = process.env.NODE_ENV;
 // <h1>{env}</h1>
 
@@ -31,7 +32,7 @@ const App:FC = () => {
           
           <MainMenu />
           
-          
+          <USMapComponent type={"TopFifteen"}/>
           {/*
            <Navbar className="bg-light">  
           {!showmap &&<button className="btn" onClick={() =>  {setMap(true), setTop15(false)}} >Click for US Map</button>}

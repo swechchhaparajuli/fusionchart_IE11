@@ -174,10 +174,12 @@ const USMapComponent:FC<{type:string}> = (type) => {
 
     const getInfo =(eventObj, dataObj)=>{ 
       setState((dataObj.id).toUpperCase());
+      setClick("");
     }
 
     const setInfo =(eventObj, dataObj)=>{
       setClick((dataObj.id).toUpperCase());
+      setState("");
     }
 
     FusionCharts.addEventListener('entityRollOver', getInfo);
